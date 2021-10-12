@@ -1,0 +1,25 @@
+\input{header}
+
+\begin{document}
+
+    \include{titelseite}
+    \tableofcontents
+    %\listoffigures % Momentam haben wir keine
+   % \listoftables % Momentam haben wir keine
+    \include{1_Einfuehrung}
+    \include{2_Ziele}
+    \include{3_Literatur}
+    \include{4_Technick}
+    \include{5_Forschungsplanx}
+    \include{6_Relefanz}
+    %\bibliography{Referenz}
+    %\bibliographystyle{plain} 
+   % \bibliography{bibliography}
+    %\bibliographystyle{plain} 
+    \nocite{*}
+    \addcontentsline{toc}{section}{References}
+    \bibliographystyle{chicago}
+    \bibliography{Referenz}
+
+
+\end{document}
