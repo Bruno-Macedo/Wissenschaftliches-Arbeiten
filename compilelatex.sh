@@ -1,0 +1,114 @@
+#!/bin/bash
+
+# Mit diesem Skript wird .tex und .bib Datei kompiliert, um einem PDF-Datei auszugeben.
+
+# Funktion zur Erklaerung, wie der Skript funktioniert
+usage () {
+    echo  >&2
+    echo "Nutzung: ${0} [-br] datei.tex" >&2
+    echo   >&2
+    echo "    -b	Fuer die Kompilierung von .bib Datei und an der .tex Datei anhaengen" >&2
+    echo "    -r	Fuer die Loeschung alle erstellten *.log, *.lot, *.aux Dateien" >&2
+    echo >&2
+    echo "Mit diesem Skript wird .tex Datei kompiliert, um die Erstellung einer PDF-Datei." >&2
+    echo >&2
+    exit 1
+}
+
+# Fehlermeldung
+fehlermeldung() {
+    local MESSAGE="{@}"
+    if [[ "${?}" -ne 0 ]]
+    then
+        echo "${@}" >&2
+	exit 1
+    fi
+}
+
+# Eingabe der Parameter/Optionen
+while getopts br OPTION
+do
+    case ${OPTION} in
+	b) 
+	    BIBDATEI='true' 
+	    #echo "Kompilierung .bib Datei"
+	    ;;
+	r) 
+	    LOESCHEN='true' 
+	    #echo "Loeschung von allen erstellten Datei ausser der .pdf" 
+	    ;;
+	?) usage 
+	    ;;
+    esac
+done
+
+# Alle Optionen wird aus der Parameterliste entfernt
+shift $((OPTIND-1))
+
+# Speicherung der .tex Datei in einer Variable
+TEXDATEI="${1}"
+
+# Hier nehmen wir die erstellte .aux Datei, damit biblatex sie kompilieren kann
+AUXDATEI=$(basename ${1} 2> /dev/null | awk -F "." '{print $1}')".aux" 
+#echo "Dateiname: ${AUXDATEI}"
+
+# Ueberpruefung, ob mindestens ein Argument/Datei eingegeben wurden.
+if [[ "${#}" -lt 1 ]] 
+then
+    usage
+fi
+
+# Die Parameter muessen .tex Datei sein
+if [[ ${@} != *.tex ]]
+then
+    echo "Die eigegebenen Dateien muessen von Typ .tex sein" >&2
+    exit 1
+fi
+
+# Kompilierung von .tex Datei und Erzeugung einer .pdf Datei: ${TEXDATEI}"
+pdflatex "${TEXDATEI}"
+fehlermeldung "PDF-Datei konnte nicht erzeugt werden."
+
+# Zur Kompilierung von .bib Datei, falls vorhanden
+if [[ ${BIBDATEI} = 'true' ]]
+then
+    echo "Kompilierung von .bib Datei aktiviert."
+   
+    # Anzahl von .bib-Datei vorhanden, falls es keine gibt, dann beendet sich der Skript
+    COUNT=$(ls -1 *.bib 2>/dev/null | wc -l)
+    
+    # Ueberpruefung, ob .bib Datei vorhanden ist
+    if [[ ${COUNT} -eq 0 ]]
+    then
+	echo ".bib Datei nicht vorhanden."
+	exit 1
+    fi
+    
+    bibtex "${AUXDATEI}"
+    fehlermeldung "AUX-Datei konnte nicht kompiliert werden."
+fi
+
+# Dritte Kompilierung von .tex Datei und Erzeugung einer endgueltigen .pdf Datei mit der Referezen aus .bib
+pdflatex "${TEXDATEI}"
+fehlermeldung "PDF-Datei konnte nicht erzeugt werden."
+
+# Zur Loeschung von allen erstellten Datei ausser .pdf
+if [[ ${LOESCHEN} = 'true' ]]
+then
+    DATEILOESCHEN=$(find *.aux *.bbl *.toc *.log *.blg 2> /dev/null)
+    #BBLDATEI=$(find *.bbl 2> /dev/null)
+    #TOCDATEI=$(find *.toc 2> /dev/null)
+    #LOGDATEI=$(find *.log 2> /dev/null)
+    #LOTDATEI=$(find *.lot &> /dev/null)
+    #LOTDATEI=$(find *.lot &> /dev/null)
+
+    echo
+    echo "Loeschen von erstellten Dateien aktiviert."
+    echo "Loeschen von Folgende Datei: ${DATEILOESCHEN}"
+      
+    rm ${DATEILOESCHEN} 
+    fehlermeldung "Datei ${DATEIZULOESCHEN} koennte nicht geloescht werden."
+fi
+exit 0
+
+
