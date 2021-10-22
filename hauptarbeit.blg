@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: hauptarbeit.aux
+A level-1 auxiliary file: titelseite.aux
+A level-1 auxiliary file: 1_Einfuehrung.aux
+A level-1 auxiliary file: 2_Ziele.aux
+A level-1 auxiliary file: 3_Stand_der_Forschung.aux
+A level-1 auxiliary file: 4_Technick.aux
+A level-1 auxiliary file: 5_Forschungsplan.aux
+A level-1 auxiliary file: 6_Relevanz.aux
+The style file: apalike.bst
+Database file #1: Literaturverzeichnis.bib
+Warning--I'm ignoring AQUILINA20191558's extra "note" field
+--line 187 of file Literaturverzeichnis.bib
+You've used 14 entries,
+            1935 wiz_defined-function locations,
+            582 strings with 7634 characters,
+and the built_in function-call counts, 5935 in all, are:
+= -- 572
+> -- 262
+< -- 12
++ -- 90
+- -- 88
+* -- 499
+:= -- 1037
+add.period$ -- 53
+call.type$ -- 14
+change.case$ -- 111
+chr.to.int$ -- 14
+cite$ -- 14
+duplicate$ -- 223
+empty$ -- 401
+format.name$ -- 108
+if$ -- 1177
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 18
+newline$ -- 83
+num.names$ -- 44
+pop$ -- 97
+preamble$ -- 1
+purify$ -- 113
+quote$ -- 0
+skip$ -- 170
+stack$ -- 0
+substring$ -- 364
+swap$ -- 39
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 0
+while$ -- 43
+width$ -- 0
+write$ -- 205
+(There was 1 warning)
