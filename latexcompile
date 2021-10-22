@@ -89,7 +89,8 @@ then
 fi
 
 # Dritte Kompilierung von .tex Datei und Erzeugung einer endgueltigen .pdf Datei mit der Referezen aus .bib
-pdflatex "${TEXDATEI}"
+pdflatex "${TEXDATEI}" &> /dev/null
+pdflatex "${TEXDATEI}" &> /dev/null
 fehlermeldung "PDF-Datei konnte nicht erzeugt werden."
 
 # Zur Loeschung von allen erstellten Datei ausser .pdf
