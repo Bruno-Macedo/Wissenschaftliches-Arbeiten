@@ -96,7 +96,7 @@ fehlermeldung "PDF-Datei konnte nicht erzeugt werden."
 # Zur Loeschung von allen erstellten Datei ausser .pdf
 if [[ ${LOESCHEN} = 'true' ]]
 then
-    DATEILOESCHEN=$(find *.aux *.bbl *.toc *.log *.blg 2> /dev/null)
+    DATEILOESCHEN=$(find *.aux *.bbl *.toc *.log *.blg *.fls *.out 2> /dev/null)
     #BBLDATEI=$(find *.bbl 2> /dev/null)
     #TOCDATEI=$(find *.toc 2> /dev/null)
     #LOGDATEI=$(find *.log 2> /dev/null)
