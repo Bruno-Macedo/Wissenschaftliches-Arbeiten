@@ -155,7 +155,6 @@ OUTPUT /home/bruno/git/Wissenschaftliches-Arbeiten/2_Ziele.aux
 INPUT /home/bruno/git/Wissenschaftliches-Arbeiten/2_Ziele.tex
 INPUT /home/bruno/git/Wissenschaftliches-Arbeiten/2_Ziele.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecsx1200.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm
 OUTPUT /home/bruno/git/Wissenschaftliches-Arbeiten/3_Stand_der_Forschung.aux
 INPUT /home/bruno/git/Wissenschaftliches-Arbeiten/3_Stand_der_Forschung.tex
 INPUT /home/bruno/git/Wissenschaftliches-Arbeiten/3_Stand_der_Forschung.tex
@@ -171,6 +170,7 @@ INPUT /home/bruno/git/Wissenschaftliches-Arbeiten/6_Relevanz.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
 INPUT /home/bruno/git/Wissenschaftliches-Arbeiten/hauptarbeit.bbl
 INPUT /home/bruno/git/Wissenschaftliches-Arbeiten/hauptarbeit.bbl
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
