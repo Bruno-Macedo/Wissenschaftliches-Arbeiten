@@ -1,9 +1,0 @@
-\contentsline {section}{\numberline {1}Einführung}{3}{section.1}%
-\contentsline {section}{\numberline {2}Forschungsziele}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Ziele aus dem Informatikbereich}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Ziele aus dem Tourismusbereich}{4}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Stand der Forschung}{5}{section.3}%
-\contentsline {section}{\numberline {4}Stand der Technik}{6}{section.4}%
-\contentsline {section}{\numberline {5}Forschungsplann}{7}{section.5}%
-\contentsline {section}{\numberline {6}Praktische Relevanz}{8}{section.6}%
-\contentsline {section}{Literaturverzeichnis}{9}{section*.2}%
