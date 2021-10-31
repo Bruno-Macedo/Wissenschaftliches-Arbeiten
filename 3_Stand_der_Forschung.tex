@@ -1,51 +1,78 @@
 \section{Stand der Forschung}
 
-Vertraulichkeit ist das erste Voraussetzung, das ein System erfüllt muss, um potenziellen neue 
-Kunden zu gewinnen. Unter diesem Begriff soll ein System nur auf autorisierte Informationen 
-zugreifen \cite{refbook:SWIS}. In dieser Hinsicht soll die Entwicklung einer Click and Buy Maschine 
-so konzipiert werden, damit sie einen sicheren Umgang mit den Kundendaten anbietet. Die anderen
-Schutzziele der IT-Sicherheit, Integrität, Verfügbarkeit und Authentifizierung sollen auch gewährleistet
-werden. Ein Zahlungsmethode, die alle diese Voraussetzung erfüllt, kann in der Lage sein, das Vertrauen
-und die Akzetanz von Nutzenden zu bekommen \cite{refart:HARE}.
 
-Die Interaktion zwischen verschiedene Aktueren kann in dem unteren Abbild dargestellt werden.
-Diese findet erfolgereich statt, wenn alle Sicherheitszielle erfüllt werden.
+Die zunehmende Tendenz in Deutschland von bargeldlose Bezahlung erfordert neuen Umgang mit der 
+eigegebenen Daten. Eine Studie von 2009 der Deutschen Bundesbank zeigte die rasante Anstieg von 
+bargeldlose Bezahlung in der Bundesrepublik seit der Einführung von solcher Zahlungsmethode 
+\cite{refrep:DBCP}.
 
 \begin{figure}[htb]
-    \centering{\includegraphics[width =5 cm]{Bilder/refark_HARE.png}}
-    \caption{Sicherheitseigenschaften von digitalen Zahlungsmethodne}
-    \label{fig:refark_HARE}
-\end{figure}
-
-Solche Maschine kann als Cyber-Physical System klazifiziert werden \cite{inbook:MHNS}, weil sie 
-eine Interaktion zwischen Nutzer und ein oder mehrere Systemen darstellt. In dieser Zusammenarbeit
-spielt den Datenaustausch eine wesentliche Rolle, besonders von der Seite der Nutzender. 
-Diese Technologie zielt eine günstigere Entwicklung, ohne auf die Sicherheit zu vernachlässigen.
-\textbf{ich habe keine Ahnung, wie ich hier erweitern kann.}
-
-
-Die zunehmende Tendenz von bargeldlose Bezahlung erfordert neuen Umgang mit der eigegebenen Daten.
-Laut einer Studie von 2009 der Deutschen Bundesbank stieg rasant die Anzahl von bargeldlose Bezahlung 
-in der Bundesrepublik \cite{refrep:DBCP}.
-
-\begin{figure}[htb]
-    \centering{\includegraphics[width =5 cm]{Bilder/refrep_DB.png}}
+    \centering{\includegraphics[width=5cm]{Bilder/refrep_DB.png}}
     \caption{Cashless payments via the Deutsche Bundesbank}
     \label{fig:refrep_DB}
 \end{figure}
 
+
+Laut einer Statistik des Handelsforschungsinstituts EHI von 2019 \cite{refart:KSDL} bezahlen 48,6\% 
+der deutschen ihre Waren mit Karte, wohingegen nur noch 46,9\% der deutschen den klassischen 
+Weg mit Bargeld gehen. Auch das kontaklose Bezahlen, bei dem bei kleinen Beträgen nicht 
+einmal eine PIN gefordert wird nimmt immer weiter zu. Doch gerade bei dieser Variante ist es 
+sehr einfach im Namen eines anderen zu bezahlen.
+
+\vspace{1cm}
+
+\textbf{Variante 1}
+\textcolor{blue}{Immer wenn mit Karte bezahlt wird, geht die Kundinnen davon aus, dass die Zahlungsabwicklung sicher ist.
+Wie kann es aber sichergestellt werden, dass bargeldlose Bezahlung sicher heutzutage sicher ist.}
+
+
+\textbf{Variante 2}  
+\textcolor{blue}{Wenn wir heutzutage in einem Supermarkt oder ähnliches mit unserer Karte bezahlen, gehen wir davon
+aus, dass die Zahlungsabwicklung sicher ist. Aber sollten wir das einfach so hinnehmen? Wie sicher
+ist das bargeldlose Zahlen heutzutage wirklich? \textcolor{red}{Was sagst du über diese Variante 2?}}
+
+\vspace{1cm}
+
+
+
+Aus diesem Grund ist Vertraulichkeit das erste und wichtgste Voraussetzung, dass ein solches System 
+erfüllt muss, um potenziellen neue Kunden zu gewinnen. Unter diesem Begriff soll ein System nur auf 
+autorisierte Informationen zugreifen \cite{refbook:SWIS}. In dieser Hinsicht ist die Entwicklung 
+einer Click and Buy Maschine so zu konzipieren, dass sie einen sicheren Umgang mit den Kundendaten
+anbietet. Diese Interaktion zwischen Kunde und systemkritischen Mechanismen wurde von \cite{refart:HARE}
+so gargestellt: 
+
+\begin{figure}[htb]
+    \centering{\includegraphics[width=5cm]{Bilder/refark_HARE.png}}
+    \caption{Sicherheitseigenschaften von digitalen Zahlungsmethodne}
+    \label{fig:refark_HARE}
+\end{figure}
+
+
+Außerdem sollen die anderen Schutzziele der IT-Sicherheit: Integrität, Verfügbarkeit und
+Authentifizierung auch berücksichtg werden, so dass die Systemen einwandfrei funktionieren können.
+Ein Zahlungsmethode, die alle diese Voraussetzung erfüllt, kann in der Lage sein, das Vertrauen und 
+die Akzetanz von Nutzenden zu bekommen \cite{refart:HARE}. \par
+
+
+\cite{inbook:MHNS} nennt solche Maschinen Cyber-Physical System (CPS), weil sie eine Interaktion zwischen 
+Nutzer und ein oder mehrere Systemen darstellt. In dieser Zusammenarbeit spielt den Datenaustausch 
+eine wesentliche Rolle, besonders von der Seite der Nutzender. Diese Technologie zielt eine günstigere 
+Entwicklung, ohne auf die Sicherheit zu vernachlässigen. Diese Interaktion findet erfolgereich statt, 
+wenn die genannten Sicherheitszielle erfüllt werden.
+
+
 Da es sich um einen dynamischen Sektor geht, finden die Änderungen sehr schnell statt, obwohl die 
 Sicherheitsmechanismen an diese Geschwindigkeit nicht immer anpassen können \cite{refbook:MNIT}.
+Das kann schlimme Folge für die Weiternutzung solcher Technologie. 
 
 
-\textbf{Haben wir hier gesagt, dass wir sicherer Zahlunsmethoden entwickeln wollen? In welcher Richtung
-sollen wir gehen:}
+\textcolor{red}{Ab hier können wir dann versuchen, die Informatien aus den Artikeln zu nehmen, solche
+die du hier hinzugefügt hast und solche, die ich dir am Fr schickte}
 
-\begin{itemize}
-    \item Kryptographie
-    \item Software
-    \item Oder Sicherheit im Allgemein.
-\end{itemize}
+
+
+
 
 
 
@@ -63,24 +90,12 @@ in diese Region zu ziehen. Denn jedem ist klar, dass ein guter Internetausbau es
 
 
 
--------------------------------------------------------------------------   Dominic
-Wenn wir heutzutage in einem Supermarkt oder ähnliches mit unserer Karte bezahlen, gehen wir davon aus, dass die Zahlungsabwicklung sicher ist. 
-Aber sollten wir das einfach so hinnehmen? Wie sicher ist das bargeldlose Zahlen heutzutage wirklich?
-Laut einer Statistik des Handelsforschungsinstituts EHI (https://www.welt.de/wirtschaft/article193063435/Zahlungsmittel-Karte-schlaegt-in-Deutschland-erstmals-Bargeld.html,07.05.2019)
-bezahlen 48,6% der deutschen ihre Waren mit Karte, wohingegen nur noch 46,9% der deutschen den klassischen Weg mit Bargeld gehen.
-Auch das kontaklose Bezahlen, bei dem bei kleinen Beträgen nicht einmal eine PIN gefordert wird nimmt immer weiter zu.
-Doch gerade bei dieser Variante ist es sehr einfach im Namen eines anderen zu bezahlen.
-
-Hier würde ich den Stand der Forschung schreiben, aber ich finde es ist echt schwer etwas im Internet zu finden
 
 
 
 
 
 
-https://www.emsec.ruhr-uni-bochum.de/media/attachments/files/2012/04/Master-Arbeit-public.pdf 
-https://www.researchgate.net/profile/Lukas-Kolde-2/publication/328028083_wissenschaftliche_Arbeit_Smartcards/links/5bb38b44299bf13e605a5569/wissenschaftliche-Arbeit-Smartcards.pdf
-https://books.google.de/books?hl=de&lr=&id=MxGgY52VIy0C&oi=fnd&pg=PR6&dq=NFC+bargeldloses+bezahlen+sicherheit&ots=4Nf0bbSj1y&sig=ie4fSDV66oqpgHDNWKT0iVZbo2s#v=onepage&q=NFC%20bargeldloses%20bezahlen%20sicherheit&f=false
-https://books.google.de/books?hl=de&lr=&id=vCgYBQAAQBAJ&oi=fnd&pg=PA3&dq=NFC+bargeldloses+bezahlen+sicherheit&ots=dxHYT76aMX&sig=8V-k0Azcgn3UuHQBRclzSryAOeQ#v=onepage&q=NFC%20bargeldloses%20bezahlen%20sicherheit&f=false
---> das könnte eventuell interresannt sein
--------------------------------------------------------------------------
+
+
+
