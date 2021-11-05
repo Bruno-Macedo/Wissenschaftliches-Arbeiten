@@ -110,6 +110,15 @@ then
     rm ${DATEILOESCHEN} 
     fehlermeldung "Datei ${DATEIZULOESCHEN} koennte nicht geloescht werden."
 fi
+
+# Speicherung der erstellten Datei in dem lokalen Verzeichnis
+DATEI="hauptarbeit.pdf"
+NAME="Macedo_da_Silva_Bruno_Meyer_Dominic_wa_ws2022.pdf"
+mv ${DATEI} ${NAME}
+
+
+
+
 exit 0
 
 
