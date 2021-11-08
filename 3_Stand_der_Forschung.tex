@@ -1,9 +1,9 @@
 \section{Stand der Forschung}
 
 
-Die zunehmende Tendenz in Deutschland von bargeldlose Bezahlung erfordert neuen Umgang mit den 
-eigegebenen Daten. Eine Studie von 2009 der Deutschen Bundesbank zeigte die rasante Anstieg von 
-bargeldlose Bezahlung in der Bundesrepublik seit der Einführung von solcher Zahlungsmethode 
+Die zunehmende Tendenz in Deutschland von bargeldloser Bezahlung erfordert neuen Umgang mit den 
+eigegebenen Daten. Eine Studie von 2009 der Deutschen Bundesbank zeigte den rasanten Anstieg von 
+bargeldloser Bezahlung in der Bundesrepublik seit der Einführung von solchen Zahlungsmethoden 
 \cite{refrep:DBCP}.
 
 \begin{figure}[htb]
@@ -15,8 +15,8 @@ bargeldlose Bezahlung in der Bundesrepublik seit der Einführung von solcher Zah
 
 Laut einer Statistik des Handelsforschungsinstituts EHI von 2019 \cite{refart:KSDL} bezahlen 48,6\% 
 der deutschen ihre Waren mit Karte, wohingegen nur noch 46,9\% der deutschen den klassischen 
-Weg mit Bargeld gehen. Auch das kontaklose Bezahlen, bei dem bei kleinen Beträgen nicht einmal eine
-PIN gefordert wird, nimmt immer weiter zu. Doch gerade bei dieser Variante ist es sehr einfach
+Weg mit Bargeld gehen. Auch das kontaklose Bezahlen, bei dem kleine Beträge nicht einmal mit einer 
+PIN bestätigt werden müssen, nimmt immer weiter zu. Doch gerade bei dieser Variante ist es sehr einfach
 im Namen eines anderen zu bezahlen, was eine Sicherheitsrisiko darstellt.
 
 
@@ -40,7 +40,7 @@ anbietet. Diese Interaktion zwischen Kunde und systemkritischen Mechanismen wurd
 \vfill
 
 Außerdem sollen die anderen Schutzziele der IT-Sicherheit: Integrität, Verfügbarkeit und
-Authentifizierung auch berücksichtg werden, so dass die Systemen einwandfrei funktionieren können.
+Authentizität auch berücksichtigt werden, sodass die Systemen einwandfrei und sicher funktionieren.
 Eine Zahlungsmethode, bei der alle Vorraussetzungen erfüllt werden, kann in der Lage sein, das Vertrauen und 
 die Akzeptanz von den Nutzenden zu bekommen \cite{refart:HARE}. 
 
@@ -52,10 +52,10 @@ Entwicklung, ohne die Sicherheit zu vernachlässigen. Diese Interaktion findet e
 wenn die genannten Sicherheitszielle erfüllt werden.
 
 
-Da es um einen dynamischen Sektor geht, wo die Änderungen sehr schnell stattfinden, \cite{refip:NYRS} 
-muss die Technologie stets weiterentwickelt und angepasst werden, um Vertraulichkeitverlust von seitens
-der Kunden zu vermeiden. Dieser Mangel an Vertraulichkt ist das größte Hindernis, warum viele Kunden sich 
-verweigern, auf diese Zahlungsmethode zuzugreifen.
+Da es um einen dynamischen Sektor geht, bei dem es sehr schnell zu Änderungen kommen kann, \cite{refip:NYRS} 
+muss die Technologie stets weiterentwickelt und angepasst werden, um Vertraulichkeitsverlust seitens
+der Kunden zu vermeiden. Da die Vertraulichkeit noch nicht zu 100 Prozent gewähleistet werden kann,
+verweigern viele Kunden das bargeldlose Bezahlen.
 
 \textbf{\textcolor{red}{Ab hier können wir dann versuchen, die Informatien aus den Artikeln zu nehmen, solche
 die du hier hinzugefügt hast und solche, die ich dir am Fr schickte}}
@@ -63,41 +63,41 @@ die du hier hinzugefügt hast und solche, die ich dir am Fr schickte}}
 \subsection{Drahtlose Verbindungen und Sicherheit bei Bezahlungen}
 
 Viele digitale Zahlungen finden über WLAN statt, das kann eine großere Risiko darstellen \cite{refip:NYRS}, 
-da WLAN-Verbindungen als unsicher als normale Kabelverbindungen gilt. Maßnahmen zu entwickeln, die sich an 
+da WLAN-Verbindungen nicht so sicher sind wie Kabelverbindungen. Maßnahmen zu entwickeln, die sich an 
 verschiedenen Systemen anpassen, kosten Zeit und Investitionen von Banken und Sicherheitsfirmen. Für jeden 
-möglichen Angriffe sollen Maßnahmen zur Verfügung gestellt werden, so dass die Integrität des Kunden
+möglichen Angriffe sollte präventiv etwas getan werden, sodass die Integrität des Kunden
 geschützt bleibt. Die folgenden Schwachstellen bei digitaler Zahlung wurden von \cite{refip:NYRS} 
 zusammengefasst:
 
 \begin{itemize}
-    \item Erstellung von Dateien in dem Opfersystem mit umfangreichen Privillegen;
+    \item Erstellung von Dateien in dem Opfersystem mit umfangreichen Privilegien;
     \item Unzureichende Sicherheit bei der Validierung von Zertifikaten;
-    \item Öffentlichkeit des Quellcodes, sodass das System Opfer von Reverse Engineering gezielt ist.
+    \item Quellcode ist öffentlich zugänglich, sodass das Opfersystem von Reverse Engineering betroffen sein könnte
     \item Unsicherer Umgang mit Cookies-Einstellungen
 \end{itemize}
 
 \cite{refip:NYRS} schlägt einige Sicherheitsmechanismen vor, die die oben gennanten Schwachstellen bei 
-kabelosen Verbindungen vermindern können. Unter denen wird folgende hervorgehoben: 
+kabelosen Verbindungen reduzieren können. Unter denen werden folgende hervorgehoben: 
 
 \begin{itemize}
     \item Nutzung von modernen kryptographischen Standards für die Validierung von Zertifikaten;
     \item Erstellung von Loggdatei, sodass jeder Anormalität schnell überprüft werden kann;
-    \item Zwei-Faktor-Authentisierung;
-    \item Digitaler und zufällige geordnete Tastatur;
-    \item Schwierigkeitsgrad bei der Erstellung von Passwörter;
+    \item Zwei-Faktor-Authentifizierung;
+    \item Digitale und zufällig geordnete Tastatur;
+    \item Schwierigkeitsgrad bei der Erstellung von Passwörtern;
     \item Besserer Umgang mit der Verwaltung von Cookies;
     \item Registrierung von Geräten;
-    \item Künstliche Intelligenz (KI) für die Detektion von abnormalen Verhalten;
-    \item Ständig Kontroll gegen Social Engineering.
+    \item Künstliche Intelligenz (KI) für die Detektion von abweichenden Verhalten;
+    \item Ständige Kontrolle gegen Social Engineering.
 \end{itemize}
 
 Da drahtlose Zahlungen bei Campingplätzen eine wesentliche Rolle spielen kann, muss die Sicherheit solcher
-Zahlungsart gewährleistet werden. Das kann erfolgreich passieren, wenn Banken und andere finanziellen 
+Zahlungsart gewährleistet werden. Das kann erfolgreich passieren, wenn Banken und andere Finanz
 Institutionen sich intensiv mit den verschiedenen Angriffsmöglichkeiten und deren Schutzmaßnahmen beschäftigen.
 
-Zahlungskarte wie Kredit- oder EC-Karte sollen auch Zahlungsoptionen von einem Click and Buy Maschinen
-zur Verfügung gestellt werden. In Bezug auf diese Modalitäten werden die verschiedenen Aspekten der 
-Sicherheit dieser Zahlungsart unter beschrieben.
+Zahlungskarten wie Kredit- oder EC-Karte sollen auch Zahlungsmittel bei einem Click and Buy Maschinen
+zur Verfügung gestellt werden. In Bezug auf diese Modalitäten werden die verschiedenen Aspekte der 
+Sicherheit dieser Zahlungsart unten beschrieben.
 
 
 \subsection{Anwendung von Smartcards und sicheres Bezahlen}
@@ -112,10 +112,10 @@ einen Mikroprozessor und minimale Funktionalitäten besitzt \ref{fig:eigenes_Bil
 \end{figure}
 \vfill
 
-Sie wurde vor mehr als 40 Jahre erfunden und ihr Ziel ist die Sicherheit von Kartenzahlung und allgemeine
+Sie wurde vor mehr als 40 Jahren erfunden und ihr Ziel ist die Sicherheit von Kartenzahlung und allgemeine
 Authentifizierungsverfahren zu erhöhen \cite{refip:JFSB}. Sie unterscheiden sich von traditionelen 
-Magnetstreifenkarten, weil sie verschiedene Authentifizierungsmethode ermöglichen auch ohne direkte 
-Verbindung mit der Bank funktionieren könnne \cite{refbook:ATMS}. Unter wird das Authentifizierungsprozess
+Magnetstreifenkarten, weil sie verschiedene Authentifizierungsmethoden ermöglichen auch ohne direkte 
+Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierungsprozess
 einer Smartcard \ref{fig:refbook_ATMS} dargestellt. 
 
 \vfill
