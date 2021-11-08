@@ -115,16 +115,44 @@ einen Mikroprozessor und minimale Funktionalitäten besitzt \ref{fig:eigenes_Bil
 Sie wurde vor mehr als 40 Jahren erfunden und ihr Ziel ist die Sicherheit von Kartenzahlung und allgemeine
 Authentifizierungsverfahren zu erhöhen \cite{refip:JFSB}. Sie unterscheiden sich von traditionelen 
 Magnetstreifenkarten, weil sie verschiedene Authentifizierungsmethoden ermöglichen auch ohne direkte 
-Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierungsprozess
-einer Smartcard \ref{fig:refbook_ATMS} dargestellt. 
+Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierungsprozess einer Smartcard 
+\ref{fig:refbook_ATMS} dargestellt. 
 
-\vfill
-\begin{figure}[htb]
-   \centering{\includegraphics[width=10cm]{Bilder/refbook_ATMS.png}}
+
+%\vfill
+%htb
+\begin{figure}[H]
+    \centering{\includegraphics[width=10cm]{Bilder/refbook_ATMS.png}}
    \caption{Authentifizierungsprozess von Smartcards\\(Tanenbaum, 2009, S.755)}
    \label{fig:refbook_ATMS}
 \end{figure}
-\vfill
+%\vfill
+
+
+Wenn es um die Sicherheit von Smartcards geht, beschreibt \cite{refmas:ASSS}, dass die Angriffe sich auf 
+Hardwareebene konzentrieren. Er beschreibt folgende Techniken für Angriffe:
+
+\begin{itemize}
+    \item Protokollanalyse: schwache Konzipierung oder mangelnde Verschlüsselung ermöglichen den Zugang 
+    zu dem Klartext; 
+    \item Relay: Konzentriert auf kontaktlose Smartcards, um den Inhalt umzuleiten;
+    \item Seitenkanal-Attacken: zielt nicht direkt den Inhalt des Kommunikation, sondern versucht sie
+    irgendwie zu stören;
+    \item Hardware Reverse Engineering: Verständnis über die Algorithmen oder Extrahieren des Schlüssels.
+\end{itemize}
+
+
+Die Schutzmaßnahmen können sich laut \cite{refmas:ASSS} in drei Gruppe geteilt werden: physikalisch,
+logisch und organisatorisch. Auf der physikalischen Ebene soll der Hardware robust aufgebaut werden,
+um Angriffe schwieriger zu machen. Dieser Konstruktion soll komplex mit zusätzlichen Elementen eingebaut
+werden und Sensoren können auch dazu beitragen, das System auszuschalten bzw. zu blockieren, falls es zu 
+einer verdächtigen Nutzung kommt. Auf der logischen Ebenen sollen moderne und starke Verschlüsselungsmechanismen
+eingesetzt werden, dessen Verfahren gegen Sicherheitslücken überprüft wurde. Die Bearbeitungszeit spielt hier
+eine wesentliche Rolle gegen Angriffe, die auf Seitkanäle basiert sind. Letztendlich sollen solche Smartcards
+auf dem organisatorischen Ebenen in der Lage sein, Angriffe schnell zu detektieren und zu verhindern. Zu dieser
+Ebene gehören auch die Sperre der Karte, die Überprüfung von Logdateien, um Klone zu identifizieren, und
+die Verwendung von Zwei-Faktor-Authentisierung.
+
 
 
 \begin{enumerate}
