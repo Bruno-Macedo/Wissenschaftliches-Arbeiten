@@ -1,19 +1,99 @@
 \section{Stand der Technik}
 
-Hier wird später mit Text befüllt.
+Für die Bezahlungsmethoden werden hier zwei/drei verschiedene Arten in Hinsicht auf ihrer Schwachstellen
+und ihrer Hartungen betrachtet: drahtlose Zahlung und Kartenzahlung.
 
-\begin {table}
-\centering
-\begin{tabular}{c|c|c|c}
-    \textbf{Produkt} & \textbf{Produkt 1} & \textbf{Produkt 2} & \textbf{Produkt 3} \\
-    Eigenschaft 1:   & 111111111          &  1111111111111111  &  1111111111111111111 \\
-    Eigenschaft 2:   & 222222222          &  2222222222222222  &  2222222222222222 \\
-    Eigenschaft 3:   & 333333333          &  3333333333333333  &  3333333333333333 \\
-    Eigenschaft 4:   & 444444444          &  4444444444444444  &  4444444444444444 \\
-    Eigenschaft 5:   & 555555555          &  5555555555555555  &  5555555555555555 \\
-    Eigenschaft 6:   & 666666666          &  6666666666666666  &  6666666666666666 \\
-    Eigenschaft 7:   & 777777777          &  7777777777777777  &  7777777777777777 \\
-    Eigenschaft 8:   & 888888888          &  8888888888888888  &  8888888888888888 \\
+\subsection{Drahtlose Verbindungen und Sicherheit bei Bezahlungen}
 
-\end{tabular}
-\end {table}
+Viele digitale Zahlungen finden über WLAN statt, das kann eine großere Risiko darstellen \cite{refip:NYRS}, 
+da WLAN-Verbindungen nicht so sicher sind wie Kabelverbindungen. Maßnahmen zu entwickeln, die sich an 
+verschiedenen Systemen anpassen, kosten Zeit und Investitionen von Banken und Sicherheitsfirmen. Für jeden 
+möglichen Angriffe sollte präventiv etwas getan werden, sodass die Integrität des Kunden
+geschützt bleibt. Die folgenden Schwachstellen bei digitaler Zahlung wurden von \cite{refip:NYRS} 
+zusammengefasst:
+
+\begin{itemize}
+    \item Erstellung von Dateien in dem Opfersystem mit umfangreichen Privilegien;
+    \item Unzureichende Sicherheit bei der Validierung von Zertifikaten;
+    \item Quellcode ist öffentlich zugänglich, sodass das Opfersystem von Reverse
+    Engineering betroffen sein könnte
+    \item Unsicherer Umgang mit Cookies-Einstellungen
+\end{itemize}
+
+\cite{refip:NYRS} schlägt einige Sicherheitsmechanismen vor, die die oben gennanten Schwachstellen bei 
+kabelosen Verbindungen reduzieren können. Unter denen werden folgende hervorgehoben: 
+
+\begin{itemize}
+    \item Nutzung von modernen kryptographischen Standards für die Validierung von Zertifikaten;
+    \item Erstellung von Loggdatei, sodass jeder Anormalität schnell überprüft werden kann;
+    \item Zwei-Faktor-Authentifizierung;
+    \item Digitale und zufällig geordnete Tastatur;
+    \item Schwierigkeitsgrad bei der Erstellung von Passwörtern;
+    \item Besserer Umgang mit der Verwaltung von Cookies;
+    \item Registrierung von Geräten;
+    \item Künstliche Intelligenz (KI) für die Detektion von abweichenden Verhalten;
+    \item Ständige Kontrolle gegen Social Engineering.
+\end{itemize}
+
+Da drahtlose Zahlungen bei Campingplätzen eine wesentliche Rolle spielen kann, muss die Sicherheit 
+solcher Zahlungsart gewährleistet werden. Das kann erfolgreich passieren, wenn Banken und andere Finanz
+Institutionen sich intensiv mit den verschiedenen Angriffsmöglichkeiten und deren Schutzmaßnahmen 
+beschäftigen.
+
+Zahlungskarten wie Kredit- oder EC-Karte sollen auch Zahlungsmittel bei einem Click and Buy Maschinen
+zur Verfügung gestellt werden. In Bezug auf diese Modalitäten werden die verschiedenen Aspekte der 
+Sicherheit dieser Zahlungsart unten beschrieben.
+
+
+\subsection{Anwendung von Smartcards und sicheres Bezahlen}
+Der Begriff Smartcards bezeichnet eine Plastikkarte mit einem eingebauten Chip, der ein eigenes 
+Betriebssystem, einen Mikroprozessor und minimale Funktionalitäten besitzt \ref{fig:eigenes_Bild}. 
+
+\vfill
+\begin{figure}[htb]
+   \centering{\includegraphics[width=10cm]{Bilder/eigenes_Bild_Karte.png}}
+   \caption{Eine Smartcard und deren eingebetete Mikrochip\\(eigene Quelle)}
+   \label{fig:eigenes_Bild}
+\end{figure}
+\vfill
+
+Sie wurde vor mehr als 40 Jahren erfunden und ihr Ziel ist die Sicherheit von Kartenzahlung und allgemeine
+Authentifizierungsverfahren zu erhöhen \cite{refip:JFSB}. Sie unterscheiden sich von traditionelen 
+Magnetstreifenkarten, weil sie verschiedene Authentifizierungsmethoden ermöglichen auch ohne direkte 
+Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierungsprozess einer Smartcard 
+\ref{fig:refbook_ATMS} dargestellt. 
+
+
+%\vfill
+%htb
+\begin{figure}[H]
+    \centering{\includegraphics[width=10cm]{Bilder/refbook_ATMS.png}}
+   \caption{Authentifizierungsprozess von Smartcards\\(Tanenbaum, 2009, S.755)}
+   \label{fig:refbook_ATMS}
+\end{figure}
+%\vfill
+
+
+Wenn es um die Sicherheit von Smartcards geht, beschreibt \cite{refmas:ASSS}, dass die Angriffe sich auf 
+Hardwareebene konzentrieren. Er beschreibt folgende Techniken für Angriffe:
+
+\begin{itemize}
+    \item Protokollanalyse: schwache Konzipierung oder mangelnde Verschlüsselung ermöglichen den Zugang 
+    zu dem Klartext; 
+    \item Relay: Konzentriert auf kontaktlose Smartcards, um den Inhalt umzuleiten;
+    \item Seitenkanal-Attacken: zielt nicht direkt den Inhalt des Kommunikation, sondern versucht sie
+    irgendwie zu stören;
+    \item Hardware Reverse Engineering: Verständnis über die Algorithmen oder Extrahieren des Schlüssels.
+\end{itemize}
+
+
+Die Schutzmaßnahmen können sich laut \cite{refmas:ASSS} in drei Gruppe geteilt werden: physikalisch,
+logisch und organisatorisch. Auf der physikalischen Ebene soll der Hardware robust aufgebaut werden,
+um Angriffe schwieriger zu machen. Dieser Konstruktion soll komplex mit zusätzlichen Elementen eingebaut
+werden und Sensoren können auch dazu beitragen, das System auszuschalten bzw. zu blockieren, falls es zu 
+einer verdächtigen Nutzung kommt. Auf der logischen Ebenen sollen moderne und starke Verschlüsselungsmechanismen
+eingesetzt werden, dessen Verfahren gegen Sicherheitslücken überprüft wurde. Die Bearbeitungszeit spielt hier
+eine wesentliche Rolle gegen Angriffe, die auf Seitkanäle basiert sind. Letztendlich sollen solche Smartcards
+auf dem organisatorischen Ebenen in der Lage sein, Angriffe schnell zu detektieren und zu verhindern. Zu dieser
+Ebene gehören auch die Sperre der Karte, die Überprüfung von Logdateien, um Klone zu identifizieren, und
+die Verwendung von Zwei-Faktor-Authentisierung.
