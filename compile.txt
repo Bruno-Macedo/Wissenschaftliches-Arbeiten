@@ -1,3 +1,4 @@
 pdflatex hauptarbeit.txt
 bibtex hauptarbeit.aux
 pdflatex hauptarbeit.txt
+pdflatex hauptarbeit.txt
