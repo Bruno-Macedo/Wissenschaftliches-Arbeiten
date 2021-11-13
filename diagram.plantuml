@@ -1,0 +1,21 @@
+@startwbs
+*:Sicherheit eines Click 
+and Buy Supermarkts;
+**:Entwicklung einer stabilen und
+zuverlässigen Software;
+**:sicherer Umgang mit
+personenbezogenen Daten;
+**:Gewährleistung eines sicheren
+bargeldlosen Zahlungsverfahren;
+*** Zahlungsmethode
+**** Drahtlose Zahlungsmethode
+***** Konzept
+***** Schwachstelle
+***** Hartungsmaßnahmen
+**** Smartcards
+***** Konzept
+***** Schwachstelle
+***** Hartungsmaßnahmen
+**:Gewährliestung der Verfügbarkeit 
+der technischen Resourcen;
+@endwbs
