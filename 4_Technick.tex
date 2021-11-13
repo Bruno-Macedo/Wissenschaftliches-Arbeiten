@@ -1,11 +1,11 @@
 \section{Stand der Technik}
 
 Für die Bezahlungsmethoden werden hier zweiverschiedene Arten von Zahlungsverfahren analysiert und deren
-Vorteile in bezug auf Sicherheit und Hartungsmaßnahmen dargestellt: drahtlose Zahlung und Kartenzahlung.
+Vorteile in Bezug auf Sicherheit und Härtungsmaßnahmen dargestellt: drahtlose Zahlung und Kartenzahlung.
 
 \subsection{Drahtlose Verbindungen und Sicherheit bei Bezahlungen}
 
-Viele digitale Zahlungen finden über WLAN statt, das kann eine großere Risiko darstellen \cite{refip:NYRS}, 
+Viele digitale Zahlungen finden über WLAN statt, was ein großes Risiko darstellen kann \cite{refip:NYRS}, 
 da WLAN-Verbindungen nicht so sicher sind wie Kabelverbindungen. Maßnahmen zu entwickeln, die sich an 
 verschiedenen Systemen anpassen, kosten Zeit und Investitionen von Banken und Sicherheitsfirmen. Für jeden 
 möglichen Angriffe sollte präventiv etwas getan werden, sodass die Integrität des Kunden geschützt bleibt. 
@@ -34,14 +34,15 @@ kabelosen Verbindungen reduzieren können. Unter denen werden folgende hervorgeh
     \item Ständige Kontrolle gegen Social Engineering.
 \end{itemize}
 
+================================= --> das würde ich rausschmeißen
 Da drahtlose Zahlungen bei Campingplätzen eine wesentliche Rolle spielen kann, muss die Sicherheit 
 solcher Zahlungsart gewährleistet werden. Das kann erfolgreich passieren, wenn Banken und andere Finanz
 Institutionen sich intensiv mit den verschiedenen Angriffsmöglichkeiten und deren Schutzmaßnahmen 
 beschäftigen.
+=================================
 
-Zahlungskarten wie Kredit- oder EC-Karte sollen auch Zahlungsmittel bei einem Click and Buy Maschinen
-zur Verfügung gestellt werden. In Bezug auf diese Modalitäten werden die verschiedenen Aspekte der 
-Sicherheit dieser Zahlungsart unten beschrieben.
+Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem Click and Buy Automat
+akzeptiert werden. In Bezug auf diese Zahlungsmittel, wird die Sicherheit im folgenden untersucht.
 
 
 \subsection{Anwendung von Smartcards und sicheres Bezahlen}
@@ -72,9 +73,8 @@ Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierung
 \end{figure}
 %\vfill
 
-
-Wenn es um die Sicherheit von Smartcards geht, beschreibt \cite{refmas:ASSS}, dass die Angriffe sich auf 
-Hardwareebene konzentrieren. Er beschreibt folgende Techniken für Angriffe:
+Die meisten Angriffe bei Smartcards geschehen laut \cite{refmas:ASSS} auf Hardwareebene.
+Er beschreibt folgende Techniken für Angriffe:
 
 \begin{itemize}
     \item Protokollanalyse: schwache Konzipierung oder mangelnde Verschlüsselung ermöglichen den Zugang 
@@ -87,12 +87,19 @@ Hardwareebene konzentrieren. Er beschreibt folgende Techniken für Angriffe:
 
 
 Die Schutzmaßnahmen können sich laut \cite{refmas:ASSS} in drei Gruppe geteilt werden: physikalisch,
-logisch und organisatorisch. Auf der physikalischen Ebene soll der Hardware robust aufgebaut werden,
-um Angriffe schwieriger zu machen. Dieser Konstruktion soll komplex mit zusätzlichen Elementen eingebaut
-werden und Sensoren können auch dazu beitragen, das System auszuschalten bzw. zu blockieren, falls es zu 
-einer verdächtigen Nutzung kommt. Auf der logischen Ebenen sollen moderne und starke Verschlüsselungsmechanismen
-eingesetzt werden, dessen Verfahren gegen Sicherheitslücken überprüft wurde. Die Bearbeitungszeit spielt hier
-eine wesentliche Rolle gegen Angriffe, die auf Seitkanäle basiert sind. Letztendlich sollen solche Smartcards
-auf dem organisatorischen Ebenen in der Lage sein, Angriffe schnell zu detektieren und zu verhindern. Zu dieser
-Ebene gehören auch die Sperre der Karte, die Überprüfung von Logdateien, um Klone zu identifizieren, und
-die Verwendung von Zwei-Faktor-Authentisierung.
+logisch und organisatorisch. Auf der physikalischen Ebene soll die Hardware "robust" aufgebaut werden,
+um Angriffe schwieriger zu machen. Diese Konstruktion soll komplex mit zusätzlichen Elementen erstellt
+werden. 
+================== --> das würde ich auch weglassen
+Sensoren können dazu beitragen, das System auszuschalten bzw. zu blockieren, falls es zu 
+einer verdächtigen Nutzung kommt. 
+==================
+================== --> das verstehe ich auch nicht so ganz 
+Auf der logischen Ebenen sollen moderne und starke Verschlüsselungsverfahren
+eingesetzt werden, die gegen Sicherheitslücken überprüft wurde. Die Bearbeitungszeit spielt hier
+eine wesentliche Rolle gegen Angriffe, die auf Seitkanäle basiert sind. 
+==================
+Letztendlich sollen Smartcards
+in der Lage sein, Angriffe schnell zu detektieren und zu verhindern. Zu dieser
+Ebene gehört auch das Sperren der Karte, falls die Karte unautorisiert genutzt wurde, die Überprüfung von Logdateien, 
+um Klone zu identifizieren und die Verwendung von Zwei-Faktor-Authentisierung.
