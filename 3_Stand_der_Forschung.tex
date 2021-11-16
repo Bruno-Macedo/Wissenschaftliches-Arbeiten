@@ -43,6 +43,27 @@ so dargestellt:
 \end{figure}
 \vfill
 
+
+Um das IT-Sicherheitsziel der Vertraulichkeit zu gewährleisten, wird das PCMS Protokol verwendet. 
+Im ersten Schritt, sendet der Client, also der Nutzer seinen Namen, generiert einen "Session Key" und sendet 
+eine Anfrage für eine Transaktion. Diese Anfrage wird daraufhin an den Händler geschickt, der diese wiederrum bearbeitet.
+Nachdem das abgeschlossen wurde, sendet der Händler seine Antwort an das Bezahlgerät, das wiederrum die Antwort an den Client 
+weiterleitet. 
+Im zweiten Schritt wird die eigentliche Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem den Preis und die 
+Uhrzeit enthält. Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. 
+Dieser empfängt die Daten und prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich war, 
+wird wieder eine Nachricht an das Bezahlgerät geschickt.
+Dieses schickt die Daten dann wiederrum an die Bank, welche überprüft, ob das Geld von dem Konto abgebucht werden kann oder nicht.
+Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerät gesendet, in der steht, dass das Geld abgebucht wurde. 
+Hinzuzufügen ist, dass bei jeder Kommunikation die Daten verschlüsselt werden, sodass es einem potenziellen Angreifer
+nicht möglich ist, Daten zu ändern oder zu entschlüsseln.
+
+Zudem ist anzumerken, dass diese Beschreibung nur sehr vereinfacht dargestellt ist. Durch die Abbildung werden weitere Details
+aufgezeigt: 
+
+--> die Quelle ist folgende: https://reader.elsevier.com/reader/sd/pii/S1877050912004541?token=0E45127D6DCF84CE00C725A75CEFC8E766524AF67BB96135E235D4DFEAA50064787B95399B0EA7F9152532C56884250D&originRegion=eu-west-1&originCreation=20211116114920
+
+
 Zudem sollten die weiteren Schutzziele der IT-Sicherheit: Integrität, Verfügbarkeit und Authentizität
 berücksichtigt werden, sodass die Systeme einwandfrei und sicher funktionieren \cite{refip:GMPS}. 
 Eine Zahlungsmethode, bei der alle Vorraussetzungen erfüllt werden, kann in der Lage sein, das Vertrauen 
