@@ -45,46 +45,52 @@ anbietet. Die Interaktion zwischen einem Kunden und systemkritischen Mechanismen
 \vfill
 
 
-Um das IT-Sicherheitsziel der Vertraulichkeit zu gewährleisten, wird das Payment Gateway Centric Scenario 
-auch \textbf{PCMS hier ein Fussnote} genannt, verwendet. Im ersten Schritt, sendet der Client, also der Nutzer 
-seinen Namen, generiert einen Session Key und sendet eine Anfrage für eine Transaktion \cite{refart:JTAS}. 
-Diese Anfrage wird daraufhin an den Händler geschickt,der diese wiederrum bearbeitet. Nachdem das abgeschlossen 
-wurde, sendet der Händler seine Antwort an das Bezahlgerät, das wiederrum die Antwort an den Client weiterleitet.
-Im zweiten Schritt wird die eigentliche Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem 
-den Preis und die Uhrzeit enthält. Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. 
-Dieser empfängt die Daten und prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich war, 
-wird wieder eine Nachricht an das Bezahlgerät geschickt. Dieses schickt die Daten dann wiederrum 
-an die Bank, welche überprüft, ob das Geld von dem Konto abgebucht werden kann oder nicht.
-Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerät gesendet, in der steht, dass das
-Geld abgebucht wurde. Hinzuzufügen ist, dass bei jeder Kommunikation die Daten verschlüsselt werden, 
-sodass es einem potenziellen Angreifer nicht möglich ist, Daten zu ändern oder zu entschlüsseln.
+%Um das IT-Sicherheitsziel der Vertraulichkeit zu gewährleisten, wird das Payment Gateway Centric Scenario 
+%auch \textbf{PCMS hier ein Fussnote} genannt, verwendet. Im ersten Schritt, sendet der Client, also der Nutzer 
+%seinen Namen, generiert einen Session Key und sendet eine Anfrage für eine Transaktion \cite{refart:JTAS}. 
+%Diese Anfrage wird daraufhin an den Händler geschickt,der diese wiederrum bearbeitet. Nachdem das abgeschlossen 
+%wurde, sendet der Händler seine Antwort an das Bezahlgerät, das wiederrum die Antwort an den Client weiterleitet.
+%Im zweiten Schritt wird die eigentliche Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem 
+%den Preis und die Uhrzeit enthält. Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. 
+%Dieser empfängt die Daten und prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich war, 
+%wird wieder eine Nachricht an das Bezahlgerät geschickt. Dieses schickt die Daten dann wiederrum 
+%an die Bank, welche überprüft, ob das Geld von dem Konto abgebucht werden kann oder nicht.
+%Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerät gesendet, in der steht, dass das
+%Geld abgebucht wurde. Hinzuzufügen ist, dass bei jeder Kommunikation die Daten verschlüsselt werden, 
+%sodass es einem potenziellen Angreifer nicht möglich ist, Daten zu ändern oder zu entschlüsseln.
 
-\textbf{Vllt noch eine Quelle hier oben.}
-
-
-Zudem ist anzumerken, dass diese Beschreibung nur sehr vereinfacht dargestellt ist. Durch die 
-\cite{refart:JTAS} Abbildung werden weitere Details aufgezeigt: 
-
-%\vfill
-\begin{figure}[H]
-    \centering{\includegraphics[width=4cm]{Bilder/refart_JTAS_1.png}}
-    \caption{Muster für den Payment Gateway Centric Scenario\cite{refart:JTAS}}
-    \label{fig:refart:JTAS}
-\end{figure}
-%\vfill
-
-In dem folgenden Sequenzdiagramm \textbf{Hier auch auch ein Fussnote, der beschreibt, was ein Sequenzdiagramm ist.}
-wird der Nachrichtenflussaustausch zwischen den Mitglieder bei der Ausführung des PCSM Zahlungsmethode dargestellt:
+%\textbf{Vllt noch eine Quelle hier oben.}
 
 
-\textbf{Ich habe diese Figur nicht ganz. Wir sollten hier dann irgendwie erklären was es ist.}
+%Zudem ist anzumerken, dass diese Beschreibung nur sehr vereinfacht dargestellt ist. Durch die 
+%\cite{refart:JTAS} Abbildung werden weitere Details aufgezeigt: 
 
 %\vfill
-\begin{figure}[H]
-    \centering{\includegraphics[width=7cm]{Bilder/refart_JTAS_2.png}}
-    \caption{Nachrichtenflussaustausch beim PCSM \cite{refart:JTAS}}
-    \label{fig:refart:JTAS_2}
-\end{figure}
+%\begin{figure}[H]
+%    \centering{\includegraphics[width=4cm]{Bilder/refart_JTAS_1.png}}
+%    \caption{Muster für den Payment Gateway Centric Scenario\cite{refart:JTAS}}
+%    \label{fig:refart:JTAS}
+%\end{figure}
+%\vfill
+
+%Im folgenden Sequenzdiagramm 
+
+%Definition: Ein Sequenzdiagramm (englisch sequence diagram) ist ein Verhaltensdiagramm,
+%welches eine Interaktion im Sinne der Unified Modeling Language (UML) grafisch darstellt.
+%https://de.wikipedia.org/wiki/Sequenzdiagramm
+
+%\textbf{Hier auch auch ein Fussnote, der beschreibt, was ein Sequenzdiagramm ist.}
+%wird der Nachrichtenflussaustausch zwischen den Mitgliedern bei der Ausführung des PCSM Zahlungsmethode dargestellt:
+
+
+%\textbf{Ich habe diese Figur nicht ganz. Wir sollten hier dann irgendwie erklären was es ist.}
+
+%\vfill
+%\begin{figure}[H]
+%    \centering{\includegraphics[width=7cm]{Bilder/refart_JTAS_2.png}}
+%    \caption{Nachrichtenflussaustausch beim PCSM \cite{refart:JTAS}}
+%    \label{fig:refart:JTAS_2}
+%\end{figure}
 %\vfill
 
 %\vfill
