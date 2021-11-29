@@ -1,7 +1,11 @@
 \section{Stand der Forschung}
 
-\textbf{Hier müssen wir diesen Text noch in zwei Abschnitt teilen. Darüber können wir später reden}
+Im folgenden Abschnitt behandeln wir Wissenschaftliche Literatur zum Thema sichere bargeldlose
+Zahlungsverfahren. Zusätzlich beleuchten wir die Entwicklung vom bargeldlosen Bezahlen in Deutschland 
+und die daraus resultierenden Schwachstellen und Schutzmechanismen.
 
+
+\subsection{Chanchen und Risiken vom bargeldlosen Bezahlen}
 
 Die zunehmende Tendenz in Deutschland von bargeldloser Bezahlung erfordert neuen Umgang mit den 
 eigegebenen Daten. Eine Studie von 2009 der Deutschen Bundesbank zeigte den rasanten Anstieg von 
@@ -28,13 +32,15 @@ Immer wenn mit Karte bezahlt wird, gehen die Kunden davon aus, dass die Zahlungs
 Wie sicher ist das bargeldlose Zahlen heutzutage wirklich? 
 
 
-Aus diesem Grund ist Vertraulichkeit die erste und wichtigste Voraussetzung, das ein solches System 
-erfüllen muss, um neue potenzielle Kunden zu gewinnen. Unter diesem Begriff Vertraulichkeit verstehen wir, 
-dass es keine unautorisierte Informtionsgewinnung gibt \cite{refbook:SWIS} .Unter diesem Begriff soll
-ein System nur auf autorisierte Informationen zugreifen. In dieser Hinsicht ist die Entwicklung 
-einer Click-and-Buy-Supermarkt so zu konzipieren, dass sie einen sicheren Umgang mit den Kundendaten
-anbietet. Die Interaktion zwischen einem Kunden und systemkritischen Mechanismen wurde von
-\cite{refart:HARE} so dargestellt:
+\subsection{IT-Schutzziele vom bargeldlosen Zahlungsverfahren}
+
+
+Vertraulichkeit ist die erste und  wichtigste Voraussetzung, das ein solches Zahlungssystem erfüllen muss, 
+um neue potenzielle Kunden zu gewinnen. Unter diesem Begriff Vertraulichkeit verstehen wir, dass es keine 
+unautorisierte Informtionsgewinnung gibt \cite{refbook:SWIS} .Unter diesem Begriff soll ein System nur auf
+autorisierte Informationen zugreifen. In dieser Hinsicht ist die Entwicklung einer Click-and-Buy-Automat 
+so zu konzipieren, dass sie einen sicheren Umgang mit den Kundendaten anbietet. Die Interaktion zwischen
+einem Kunden und systemkritischen Mechanismen wurde von \cite{refart:HARE} so dargestellt:
 
 \vfill
 \begin{figure}[htb]
@@ -45,61 +51,40 @@ anbietet. Die Interaktion zwischen einem Kunden und systemkritischen Mechanismen
 \vfill
 
 
-%Um das IT-Sicherheitsziel der Vertraulichkeit zu gewährleisten, wird das Payment Gateway Centric Scenario 
-%auch \textbf{PCMS hier ein Fussnote} genannt, verwendet. Im ersten Schritt, sendet der Client, also der Nutzer 
-%seinen Namen, generiert einen Session Key und sendet eine Anfrage für eine Transaktion \cite{refart:JTAS}. 
-%Diese Anfrage wird daraufhin an den Händler geschickt,der diese wiederrum bearbeitet. Nachdem das abgeschlossen 
-%wurde, sendet der Händler seine Antwort an das Bezahlgerät, das wiederrum die Antwort an den Client weiterleitet.
-%Im zweiten Schritt wird die eigentliche Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem 
-%den Preis und die Uhrzeit enthält. Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. 
-%Dieser empfängt die Daten und prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich war, 
-%wird wieder eine Nachricht an das Bezahlgerät geschickt. Dieses schickt die Daten dann wiederrum 
-%an die Bank, welche überprüft, ob das Geld von dem Konto abgebucht werden kann oder nicht.
-%Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerät gesendet, in der steht, dass das
-%Geld abgebucht wurde. Hinzuzufügen ist, dass bei jeder Kommunikation die Daten verschlüsselt werden, 
-%sodass es einem potenziellen Angreifer nicht möglich ist, Daten zu ändern oder zu entschlüsseln.
+Um das IT-Sicherheitsziel der Vertraulichkeit zu gewährleisten, sollten einige Schritte berücksichtigt
+werden. Im ersten Schritt, sendet der Client, also der Nutzer seinen Namen, generiert einen Session Key 
+und sendet eine Anfrage für eine Transaktion. Diese Anfrage wird daraufhin an den Händler
+geschickt,der diese wiederrum bearbeitet \cite{refart:JTAS}. Nachdem das abgeschlossen wurde, sendet der Händler 
+seine Antworz an das Bezahlgerät, das wiederrum die Antwort an den Client weiterleitet. Im zweiten Schritt wird die 
+eigentliche Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem den Preis und die Uhrzeit enthält.
+Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. Dieser empfängt die Daten und 
+prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich war, wird wieder eine Nachricht an das 
+Bezahlgerät geschickt. Dieses schickt die Daten dann wiederrum an die Bank, welche überprüft, ob das
+Geld von dem Konto abgebucht werden kann oder nicht. Wenn das geprüft wurde, wird eine Nachricht an
+das Bezahlgerät gesendet, in der steht, dass das Geld abgebucht wurde. Hinzuzufügen ist, dass bei jeder
+Kommunikation die Daten verschlüsselt werden, sodass es einem potenziellen Angreifer nicht möglich ist,
+Daten zu ändern oder zu entschlüsseln. In der Folgenden Abbildung wird da oben genannten Verfahren
+dargestellt:
 
-%\textbf{Vllt noch eine Quelle hier oben.}
+\vfill
+\begin{figure}[H]
+    \centering{\includegraphics[width=6cm]{Bilder/refart_JTAS_1.png}}
+    \caption{Muster für den Payment Gateway Centric Scenario\cite{refart:JTAS}}
+    \label{fig:refart:JTAS}
+\end{figure}
+\vfill
 
+Das folgende Sequenzdiagramm\footnote{Ein Sequenzdiagramm ist ein Verhaltensdiagramm, welches
+eine Interaktion im Sinne der Unified Modeling Language (UML) grafisch darstellt \cite{refbook:IASE}} 
+stellt den Nachrichtenaustausch zwischen den Elemeten dieser Zahlungsmethode dar:
 
-%Zudem ist anzumerken, dass diese Beschreibung nur sehr vereinfacht dargestellt ist. Durch die 
-%\cite{refart:JTAS} Abbildung werden weitere Details aufgezeigt: 
-
-%\vfill
-%\begin{figure}[H]
-%    \centering{\includegraphics[width=4cm]{Bilder/refart_JTAS_1.png}}
-%    \caption{Muster für den Payment Gateway Centric Scenario\cite{refart:JTAS}}
-%    \label{fig:refart:JTAS}
-%\end{figure}
-%\vfill
-
-%Im folgenden Sequenzdiagramm 
-
-%Definition: Ein Sequenzdiagramm (englisch sequence diagram) ist ein Verhaltensdiagramm,
-%welches eine Interaktion im Sinne der Unified Modeling Language (UML) grafisch darstellt.
-%https://de.wikipedia.org/wiki/Sequenzdiagramm
-
-%\textbf{Hier auch auch ein Fussnote, der beschreibt, was ein Sequenzdiagramm ist.}
-%wird der Nachrichtenflussaustausch zwischen den Mitgliedern bei der Ausführung des PCSM Zahlungsmethode dargestellt:
-
-
-%\textbf{Ich habe diese Figur nicht ganz. Wir sollten hier dann irgendwie erklären was es ist.}
-
-%\vfill
-%\begin{figure}[H]
-%    \centering{\includegraphics[width=7cm]{Bilder/refart_JTAS_2.png}}
-%    \caption{Nachrichtenflussaustausch beim PCSM \cite{refart:JTAS}}
-%    \label{fig:refart:JTAS_2}
-%\end{figure}
-%\vfill
-
-%\vfill
-%\begin{figure}[htb]
-%    \centering{\includegraphics[width=5cm]{Bilder/refart_JTAS_2.png}
-%    \caption{Sicherheitseigenschaften von digitalen Zahlungsmethode (Hassan et al. 2020, S8)}
-%    \label{fig:refart:JTAS}
-%\end{figure}
-%\vfill
+\vfill
+\begin{figure}[H]
+    \centering{\includegraphics[width=10cm]{Bilder/refart_JTAS_2.png}}
+    \caption{Nachrichtenflussaustausch \cite{refart:JTAS}}
+    \label{fig:refart:JTAS_2}
+\end{figure}
+\vfill
 
 Zudem sollten die weiteren Schutzziele der IT-Sicherheit: Integrität, Verfügbarkeit und Authentizität
 berücksichtigt werden, sodass die Systeme einwandfrei und sicher funktionieren \cite{refip:GMPS}. 
@@ -107,13 +92,6 @@ Eine Zahlungsmethode, bei der alle Vorraussetzungen erfüllt werden, kann in der
 und die Akzeptanz von den Nutzenden zu bekommen \cite{refart:HARE}. Besonders im deutschen Markt, spielen
 die oben genannten Schutzziele eine wesentliche Rolle \cite{refip:DKAM}, da sie ein Entscheidungsfaktor 
 dafür sind, ob ein System genutzt wird oder nicht.
-
-
-%\cite{inbook:MHNS} nennt solche Maschinen Cyber-Physical System (CPS), weil sie eine Interaktion zwischen 
-%Nutzer und einem oder vielen Systemen darstellt. In dieser Zusammenarbeit spielt der Datenaustausch 
-%eine wesentliche Rolle, besonders von der Seite des Nutzenden. Diese Technologie zielt eine günstigere 
-%Entwicklung ab, ohne die Sicherheit zu vernachlässigen. Eine Interaktion is erfolgereich, 
-%wenn die genannten Sicherheitszielle erfüllt wurden.
 
 
 Da es um einen dynamischen und breiten Bereich geht, bei dem es sehr schnell zu Änderungen kommen kann, 
