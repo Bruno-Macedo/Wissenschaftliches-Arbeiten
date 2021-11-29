@@ -30,17 +30,31 @@ Sicherheitslücken und Gegenmaßnahmen von den oben genannten Elementen zusammen
 
 
 
-\clearpage
-\newgeometry{margin=2cm} 
-\begin{landscape}\centering
-\vspace*{\fill}
-\begin{figure}[htpb]
+%\clearpage
+%\newgeometry{margin=2cm} 
+%\begin{landscape}\centering
+%\vspace*{\fill}
+%\begin{figure}[htpb]
+%  \centering
+%  \includegraphics[height=0.7\textheight, width=1.2\textwidth]{Bilder/Diagram2.png}
+%  \caption{Forschungsfrage (eigenes Bild)}
+%  \label{fig:diagramfrage}
+%\end{figure}
+%\vfill
+%\end{landscape}
+%\restoregeometry 
+
+
+\begin{landscape}
+  \thispagestyle{mylandscape} %Call our predefined page type
+  
+  % Put your figure, table, whatever, here
+  \begin{figure}[h]  
   \centering
-  \includegraphics[height=0.7\textheight, width=1.2\textwidth]{Bilder/Diagram2.png}
-  \caption{Forschungsfrage (eigenes Bild)}
-  \label{fig:diagramfrage}
-\end{figure}
-\vfill
-\end{landscape}
-\restoregeometry 
-\clearpage
+    \centering{\includegraphics[width=20cm]{Bilder/Diagram2.png}}
+         \caption{Recherchespfad (eigenes Bild)}
+          \label{fig:diagramfrage}
+  \end{figure}
+  
+  %End lanscape to go back to portrait
+  \end{landscape}
