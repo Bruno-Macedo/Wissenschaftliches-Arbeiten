@@ -1,14 +1,15 @@
 \section{Stand der Forschung}
 
-Die Sicherheit in dem Netzwerkbereich besitzt eine umfangreiche Literatur, die sich um die verschiedenen
-Facetten dieses Thema bezieht. Es wurde schon viel über die verschiedenen Sicherheitslücken und 
-Härtungsmaßnahmen der Elementen des bekannten Topologie-Struktur, TCP/IP-Protokollfamilie\footnote{Die
-TCP/IP-Protokollfamilie oder TCP/IP-Referenmodell bezieht sich auf die Aufteilung der verschiedenen 
-Ebenen der Diensten und Regel, die in der Netzkommunikation existieren \cite{refbook:SWIS}.} geschrieben.
-Im folgenden Abschnitt kozentrieren wir uns auf die Entwicklung von Zahlungsverfahren in Deutschland
-und bilden einen Zusammenhang zwischen sicherer Zahlung und die Netzwerkschutzziele\footnote{Die 
-Netzwerkschutzziele oder IT-Schutzziele sind internationalen Zielen, die in dem Netzwerkbereich
-erreicht werden sollen. Diese Ziele sind Vertraulichkeit, Integrität und Authentizität.}.
+Die Sicherheit in dem TCP/IP-Protokollfamilie\footnote{Die TCP/IP-Protokollfamilie bezieht sich auf die Aufteilung 
+der verschiedenen Ebenen der Diensten und Regel, die in der Netzkommunikation existieren \cite{refbook:SWIS}.} ist 
+ein sehr umfangreiches Thema, das sehr viele Facette besitzt. Das Thema beschäftigt sich mit physikalischen 
+Koponenten, wie Kabellung und Antennen, und mit abstrakten , wie logische Adressierung oder Übertragung von Signalen.
+Die meisten Elementen, die zu Netzwerk gehören, spielen eine wesentliche Rolle für die Gewährleistung
+der Netzwerkschutzziele\footnote{Die Netzwerkschutzziele oder IT-Schutzziele sind internationalen Zielen, 
+die in dem Netzwerkbereich erreicht werden sollen. Diese Ziele sind Vertraulichkeit, Integrität und 
+Authentizität.}. Im folgenden Abschnitt kozentrieren wir uns auf die Gewährleistung der Netzwerkschutzzielen
+bei bargeldlosen Zahlungsverfahren. Bevor geben wir eine kurze Einleitung über die Entwicklung von bargeldlosen
+Zahlungsmethoden in Deutschland.
 
 
 \subsection{Chanchen und Risiken vom bargeldlosen Bezahlen}
@@ -41,12 +42,13 @@ Wie sicher ist das bargeldlose Zahlen heutzutage wirklich?
 \subsection{IT-Schutzziele vom bargeldlosen Zahlungsverfahren}
 
 
-Vertraulichkeit ist die erste und  wichtigste Voraussetzung, das ein solches Zahlungssystem erfüllen muss, 
+Vertraulichkeit ist die erste und wichtigste Voraussetzung, das ein solches Zahlungssystem erfüllen muss, 
 um neue potenzielle Kunden zu gewinnen. Unter diesem Begriff Vertraulichkeit verstehen wir, dass es keine 
-unautorisierte Informtionsgewinnung gibt \cite{refbook:SWIS}. Unter diesem Begriff soll ein System nur auf
-autorisierte Informationen zugreifen. In dieser Hinsicht ist die Entwicklung einer Click-and-Buy-Automat 
-so zu konzipieren, dass sie einen sicheren Umgang mit den Kundendaten anbietet. Die Interaktion zwischen
-einem Kunden und systemkritischen Mechanismen wurde von \cite{refart:HARE} so dargestellt:
+unautorisierte Informtionsgewinnung gibt \cite{refbook:SWIS}.
+%Unter diesem Begriff soll ein System nur auf autorisierte Informationen zugreifen. 
+In dieser Hinsicht ist die Entwicklung einer Click-and-Buy-Automat  so zu konzipieren, dass sie einen sicheren
+Umgang mit den Kundendaten anbietet. Die Interaktion zwischen einem Kunden und systemkritischen Mechanismen 
+wurde von \cite{refart:HARE} so dargestellt:
 
 \vfill
 \begin{figure}[htb]
@@ -56,63 +58,60 @@ einem Kunden und systemkritischen Mechanismen wurde von \cite{refart:HARE} so da
 \end{figure}
 \vfill
 
+\cite{refart:JTAS} beschreibt didaktisch ein Zahlungsverfahren, dass die Vertraulichkeit gewährleisten kann.
+Dieses findet in verschieden 2 getrennte Schritten statt.
 
-Um das IT-Sicherheitsziel der Vertraulichkeit zu gewährleisten, sollten einige Schritte berücksichtigt
-werden. Im ersten Schritt, sendet der Client, also der Nutzer seinen Namen, generiert einen Session Key 
-und sendet eine Anfrage für eine Transaktion. Diese Anfrage wird daraufhin an den Händler
-geschickt,der diese wiederrum bearbeitet \cite{refart:JTAS}. Nachdem das abgeschlossen wurde, sendet der Händler 
-seine Antworz an das Bezahlgerät, das wiederrum die Antwort an den Client weiterleitet. Im zweiten Schritt wird die 
-eigentliche Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem den Preis und die Uhrzeit enthält.
-Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. Dieser empfängt die Daten und 
-prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich war, wird wieder eine Nachricht an das 
-Bezahlgerät geschickt. Dieses schickt die Daten dann wiederrum an die Bank, welche überprüft, ob das
-Geld von dem Konto abgebucht werden kann oder nicht. Wenn das geprüft wurde, wird eine Nachricht an
-das Bezahlgerät gesendet, in der steht, dass das Geld abgebucht wurde. Hinzuzufügen ist, dass bei jeder
-Kommunikation die Daten verschlüsselt werden, sodass es einem potenziellen Angreifer nicht möglich ist,
-Daten zu ändern oder zu entschlüsseln. In der Folgenden Abbildung wird da oben genannten Verfahren
-dargestellt:
+Im ersten Schritt, sendet der Nutzer seinen Namen, generiert einen Sitzungsschlüssel und sendet eine Anfrage für
+eine Transaktion. Diese Anfrage wird daraufhin an den Händler geschickt, der diese wiederrum bearbeitet. Nachdem 
+das abgeschlossen wurde, sendet der Händler seine Antwort an das Bezahlgerät, das wiederrum die Antwort an den Nutzer
+weiterleitet. 
 
+Im zweiten Schritt wird die Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem den Preis und die Uhrzeit enthält.
+Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. Dieser empfängt die Daten und prüft auf
+Aktualität der Daten. Wenn dieser Test erfolgreich ist, wird wieder eine Nachricht an das Bezahlgerät geschickt. 
+Dieses schickt die Daten dann wiederrum an die Bank, welche überprüft, ob das Geld von dem Konto abgebucht werden
+kann oder nicht. Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerät gesendet, in der steht, dass das 
+Geld abgebucht wurde. 
 
-\vfill
+Besonders wichtig ist, dass bei jeder Kommunikation die Daten kryptographisch verschlüsselt werden, sodass es einem 
+potenziellen Angreifer nicht möglich ist, Daten zu ändern oder zu entschlüsseln. In der Folgenden Abbildung wird
+da oben genannten Verfahren dargestellt:
+
 \begin{figure}[H]
     \centering{\includegraphics[width=6cm]{Bilder/refart_JTAS_1.png}}
     \caption{Abbildung des Zahlungsverahren \cite{refart:JTAS}}
     \label{fig:refart:JTAS}
 \end{figure}
-\vfill
 
-
-Das folgende Sequenzdiagramm\footnote{Ein Sequenzdiagramm ist ein Verhaltensdiagramm, welches
-eine Interaktion im Sinne der Unified Modeling Language (UML) grafisch darstellt \cite{refbook:IASE}} 
-stellt den Nachrichtenaustausch zwischen den Elemeten dieser Zahlungsmethode dar:
+Das folgende Sequenzdiagramm\footnote{Ein Sequenzdiagramm ist ein Verhaltensdiagramm, welches eine Interaktion
+im Sinne der Unified Modeling Language (UML) grafisch darstellt \cite{refbook:IASE}.} stellt den 
+Nachrichtenaustausch zwischen den Elemeten dieser Zahlungsmethode dar:
 
 \vfill
 \begin{figure}[H]
-    \centering{\includegraphics[width=10cm]{Bilder/refart_JTAS_2.png}}
+    \centering{\includegraphics[width=8cm]{Bilder/refart_JTAS_2.png}}
     \caption{Nachrichtenflussaustausch \cite{refart:JTAS}}
     \label{fig:refart:JTAS_2}
 \end{figure}
 \vfill
 
 
-Zudem sollten die weiteren Schutzziele der IT-Sicherheit: Integrität, Verfügbarkeit und Authentizität
-berücksichtigt werden, sodass die Systeme einwandfrei und sicher funktionieren \cite{refip:GMPS}. 
-Eine Zahlungsmethode, bei der alle Vorraussetzungen erfüllt werden, kann in der Lage sein, das Vertrauen 
-und die Akzeptanz von den Nutzenden zu bekommen \cite{refart:HARE}. Besonders im deutschen Markt, spielen
-die oben genannten Schutzziele eine wesentliche Rolle \cite{refip:DKAM}, da sie ein Entscheidungsfaktor 
-dafür sind, ob ein System genutzt wird oder nicht.
+Zudem sollten die weiteren Schutzziele der IT-Sicherheit: Integrität und Authentizität berücksichtigt werden, 
+sodass die Zahlungsystemen einwandfrei und sicher funktionieren \cite{refip:GMPS}. Eine Zahlungsmethode, bei der 
+alle Vorraussetzungen erfüllt werden, kann in der Lage sein, das Vertrauen und die Akzeptanz von den Nutzenden 
+zu bekommen \cite{refart:HARE}. Besonders im deutschen Markt, spielen die oben genannten Schutzziele eine 
+wesentliche Rolle für die Akzeptanz irgendwelchen neues Systemens \cite{refip:DKAM}.
 
 
 Da es um einen dynamischen und breiten Bereich geht, bei dem es sehr schnell zu Änderungen kommen kann, 
-besonders bei den Angriffstechniken, müssen die dazu gehörige \cite{refip:NYRS} Technologie stets 
-weiterentwickelt und angepasst werden, um Vertraulichkeitsverlust seitens der Kunden zu vermeiden. 
+besonders bei den Angriffstechniken, müssen die dazu gehörige Technologie stets weiterentwickelt und 
+angepasst werden \cite{refip:NYRS}, um Vertraulichkeitsverlust seitens der Kunden zu vermeiden. 
 Da die Vertraulichkeit noch nicht zu 100 Prozent gewähleistet werden kann, verweigern viele Kunden
 das bargeldlose Bezahlen.
 
 
 Viele Studien befassen sich mit den verschiedenen Aspekten der Sicherheit bei bargeldlosen Zahlungsmethoden.
-Die Literatur dieses Forschungsfeldes ist sehr umfangreich und kümmert sich um die Vielfältigkeit 
-dieser heterogen \cite{refip:GMPS} Umgebung. Im nachfolgenden Artikel sollen zwei dieser Technologien 
-in Bezug auf Angriffstechniken und Gegenmaßnahmen genauer betrachtet werden: drahtlose Verbindungen und 
-Smartcards.
+Da die Literatur dieses Forschungsfeldes sehr umfangreich ist und da dieses Thema eine breite Vielfältigkeit 
+besitzt \cite{refip:GMPS}, sollen hier zwei dieser Technologien in Bezug auf Angriffstechniken und
+Gegenmaßnahmen genauer betrachtet werden: drahtlose Verbindungen und Smartcards.
 
