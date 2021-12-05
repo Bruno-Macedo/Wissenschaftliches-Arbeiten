@@ -2,13 +2,13 @@
 
 Die Sicherheit in dem TCP/IP-Protokollfamilie\footnote{Die TCP/IP-Protokollfamilie bezieht sich auf die Aufteilung 
 der verschiedenen Ebenen der Diensten und Regel, die in der Netzkommunikation existieren \cite{refbook:SWIS}.} ist 
-ein sehr umfangreiches Thema, das sehr viele Facette besitzt. Das Thema beschäftigt sich mit physikalischen 
-Koponenten, wie Kabellung und Antennen, und mit abstrakten, wie logische Adressierung oder Übertragung von Signalen.
-Die meisten Elementen, die zu Netzwerk gehören, spielen eine wesentliche Rolle für die Gewährleistung
+ein sehr umfangreiches Thema, das sehr viele Facetten besitzt. Das Thema beschäftigt sich mit physikalischen 
+Komponenten, wie zum Beispiel der Verkabelung und Antennen oder auch mit abstrakten, wie logische Adressierung oder Übertragung von Signalen.
+Die meisten Elemente, die zum Oberbegriff Netzwerk gehören, spielen eine wesentliche Rolle für die Gewährleistung
 der Netzwerkschutzziele\footnote{Die Netzwerkschutzziele oder IT-Schutzziele sind internationalen Zielen, 
 die in dem Netzwerkbereich erreicht werden sollen. Diese Ziele sind Vertraulichkeit, Integrität und 
-Authentizität.}. Im folgenden Abschnitt kozentrieren wir uns auf die Gewährleistung der Netzwerkschutzzielen
-bei bargeldlosen Zahlungsverfahren. Bevor geben wir eine kurze Einleitung über die Entwicklung von bargeldlosen
+Authentizität.}. Im folgenden Abschnitt kozentrieren wir uns auf die Gewährleistung von Netzwerkschutzzielen
+bei bargeldlosen Zahlungsverfahren. Zu Beginn geben wir eine kurze Einleitung über die Entwicklung von bargeldlosen
 Zahlungsmethoden in Deutschland.
 
 
@@ -42,10 +42,10 @@ Wie sicher ist das bargeldlose Zahlen heutzutage wirklich?
 
 
 Vertraulichkeit ist die erste und wichtigste Voraussetzung, das ein solches Zahlungssystem erfüllen muss, 
-um neue potenzielle Kunden zu gewinnen. Unter diesem Begriff Vertraulichkeit verstehen wir, dass es keine 
+um neue potenzielle Kunden zu gewinnen. Unter dem Begriff Vertraulichkeit verstehen wir, dass es keine 
 unautorisierte Informtionsgewinnung gibt \cite{refbook:SWIS}.
 %Unter diesem Begriff soll ein System nur auf autorisierte Informationen zugreifen. 
-In dieser Hinsicht ist die Entwicklung einer Click-and-Buy-Automat so zu konzipieren, dass sie einen sicheren
+In dieser Hinsicht sollte ein Click-and-Buy-Automat so konzipiert werden, dass er einen sicheren
 Umgang mit den Kundendaten anbietet. Die Interaktion zwischen einem Kunden und systemkritischen Mechanismen 
 wurde von \cite{refart:HARE} so dargestellt:
 
@@ -73,8 +73,8 @@ kann oder nicht. Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerä
 Geld abgebucht wurde. 
 
 Besonders wichtig ist, dass bei jeder Kommunikation die Daten kryptographisch verschlüsselt werden, sodass es einem 
-potenziellen Angreifer nicht möglich ist, Daten zu ändern oder zu entschlüsseln. In der Folgenden Abbildung wird
-da oben genannten Verfahren dargestellt:
+potenziellen Angreifer nicht möglich ist, Daten zu ändern oder zu entschlüsseln. In den folgenden Abbildungen wird
+das oben beschriebene Verfahren dargestellt:
 
 \begin{figure}[H]
     \centering{\includegraphics[width=6cm]{Bilder/refart_JTAS_1.png}}
@@ -94,19 +94,18 @@ Nachrichtenaustausch zwischen den Elemeten dieser Zahlungsmethode dar:
 \end{figure}
 
 Zudem sollten die weiteren Schutzziele der IT-Sicherheit: Integrität und Authentizität berücksichtigt werden, 
-sodass die Zahlungsystemen einwandfrei und sicher funktionieren \cite{refip:GMPS}. Eine Zahlungsmethode, bei der 
+sodass das Zahlungsystem einwandfrei und sicher funktioniert \cite{refip:GMPS}. Eine Zahlungsmethode, bei der 
 alle Vorraussetzungen erfüllt werden, kann in der Lage sein, das Vertrauen und die Akzeptanz von den Nutzenden 
 zu bekommen \cite{refart:HARE}. Besonders im deutschen Markt, spielen die oben genannten Schutzziele eine 
-wesentliche Rolle für die Akzeptanz irgendwelchen neues Systemens \cite{refip:DKAM}.
+wesentliche Rolle für die Akzeptanz von neuen unbekannten Systemen \cite{refip:DKAM}.
 
-Da es um einen dynamischen und breiten Bereich geht, bei dem es sehr schnell zu Änderungen kommen kann, 
-besonders bei den Angriffstechniken, müssen die dazu gehörige Technologie stets weiterentwickelt und 
+Da wir hier von einem dynamischen und breiten Bereich reden, bei dem es sehr schnell zu Änderungen kommen kann, 
+besonders bei den Angriffstechniken, müssen die dazu gehörigen Technologien stets weiterentwickelt und 
 angepasst werden \cite{refip:NYRS}, um Vertraulichkeitsverlust seitens der Kunden zu vermeiden. 
 Da die Vertraulichkeit noch nicht zu 100 Prozent gewähleistet werden kann, verweigern viele Kunden
-das bargeldlose Bezahlen.
+das bargeldlose Bezahlen. Aber wird es jemals eine 100 prozentige Sicherheit geben?
 
 Viele Studien befassen sich mit den verschiedenen Aspekten der Sicherheit bei bargeldlosen Zahlungsmethoden.
-Da die Literatur dieses Forschungsfeldes sehr umfangreich ist und da dieses Thema eine breite Vielfältigkeit 
-besitzt \cite{refip:GMPS}, sollen hier zwei dieser Technologien in Bezug auf Angriffstechniken und
+Da die Literatur dieses Forschungsfeldes sehr umfangreich ist und da dieses Thema sehr Vielfältig ist 
+\cite{refip:GMPS}, sollen hier zwei dieser Technologien in Bezug auf Angriffstechniken und
 Gegenmaßnahmen genauer betrachtet werden: drahtlose Verbindungen und Smartcards.
-
