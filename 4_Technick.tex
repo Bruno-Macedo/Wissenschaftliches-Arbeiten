@@ -16,9 +16,17 @@ zusammengefasst:
     \item Erstellung von Dateien in dem Opfersystem mit umfangreichen Privilegien
     \item unzureichende Sicherheit bei der Validierung von Zertifikaten
     \item Quellcode ist öffentlich zugänglich, sodass das Opfersystem von Reverse
-    Engineering betroffen sein könnte
-    \item Unsicherer Umgang mit Cookies-Einstellungen.
+    Engineering\footnote{Reverse Engineering ist das Prozess von Identifzierung der Bestandteilen 
+    eines Systems(Hardware bzw. Software) und von Wiederherstellung dieses Systems in einer anderen Format
+    \cite{refart:CHRE}. In der Sicherheitsbereich wird Reverser Engineering verwendent, um Schwachstellen 
+    von Hardware bzw. von Software zu entedecken, sodass diese ausgenutzt werden können \cite{refip:CMBM}.}: 
+    betroffen werden kann
+    \item Unsicherer Umgang mit Cookies-Einstellungen\footnote{Cookies sind Textdateien, die verwendet werden, um Nutzer und
+    dessen Einstellungen im Netz zu identifizieren. Verschiedene Angriffe oder Manipulationen können stattfinden,
+    wenn die Sicherheit bei der Erstellung von Cookies nicht berücksichtig ist \cite{refart:HSSC}.}.
 \end{itemize}
+
+
 
 \cite{refip:NYRS} schlägt einige Sicherheitsmechanismen vor, die die oben gennanten Schwachstellen bei 
 kabelosen Verbindungen reduzieren können. Unter denen werden folgende hervorgehoben: 
@@ -38,7 +46,7 @@ kabelosen Verbindungen reduzieren können. Unter denen werden folgende hervorgeh
 \end{itemize}
 
 
-\textbf{Was können wir noch hinzufügen???}
+\textbf{Was können wir noch hinzufügen??? Lieber nichts!!!!}
 
 Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem Click-and-Buy-Automat
 akzeptiert werden. In Bezug auf diese Zahlungsmittel, wird die Sicherheit im folgenden untersucht.
@@ -62,7 +70,6 @@ Authentifizierungsverfahren zu erhöhen \cite{refip:JFSB}. Sie unterscheiden sic
 Magnetstreifenkarten, weil sie verschiedene Authentifizierungsmethoden ermöglichen auch ohne direkte 
 Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierungsprozess einer Smartcard 
 \ref{fig:refbook_ATMS} dargestellt. 
-
 
 \vfill
 %htb
@@ -99,3 +106,10 @@ Letztendlich sollen Smartcards in der Lage sein, Angriffe schnell zu detektieren
 Zu dieser Ebene gehört auch das Sperren der Karte, falls die Karte unautorisiert genutzt wurde, 
 die Überprüfung von Logdateien, um Klone zu identifizieren und die Verwendung von Zwei-Faktor-
 Authentisierung.
+
+
+\subsection{Fazit}
+
+
+\textbf{Herr Rutter hat vorgeschlagen, dass wir unsere Meinung zu den beiden Elementen geben und uns für 
+eins entscheiden. Wir müssen unsere Entscheidung begründen. Damit kriegen wir eine sehr gute Note sagte er.}
