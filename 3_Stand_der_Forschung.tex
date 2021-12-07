@@ -19,7 +19,7 @@ Eine Studie von 2009 der Deutschen Bundesbank zeigte den rasanten Anstieg von ba
 Bundesrepublik seit der Einführung von solchen Zahlungsmethoden \cite{refrep:DBCP}.
 
 \begin{figure}[H]
-    \centering{\includegraphics[width=3cm]{Bilder/refrep_DB.png}}
+    \centering{\includegraphics[width=7cm]{Bilder/refrep_DB.png}}
     \caption{Bargeldlose Zahlung über die Deutsche Bundesbank\\ (Bundesbank, 2009, S.52)}
     \label{fig:refrep_DB}
 \end{figure}
@@ -43,11 +43,9 @@ Wie sicher ist das bargeldlose Zahlen heutzutage wirklich?
 
 Vertraulichkeit ist die erste und wichtigste Voraussetzung, das ein solches Zahlungssystem erfüllen muss, 
 um neue potenzielle Kunden zu gewinnen. Unter dem Begriff Vertraulichkeit verstehen wir, dass es keine 
-unautorisierte Informtionsgewinnung gibt \cite{refbook:SWIS}.
-%Unter diesem Begriff soll ein System nur auf autorisierte Informationen zugreifen. 
-In dieser Hinsicht sollte ein Click-and-Buy-Automat so konzipiert werden, dass er einen sicheren
-Umgang mit den Kundendaten anbietet. Die Interaktion zwischen einem Kunden und systemkritischen Mechanismen 
-wurde von \cite{refart:HARE} so dargestellt:
+unautorisierte Informtionsgewinnung gibt \cite{refbook:SWIS}. In dieser Hinsicht sollte ein Click-and-Buy-Automat
+so konzipiert werden, dass er einen sicheren Umgang mit den Kundendaten anbietet. Die Interaktion zwischen
+einem Kunden und systemkritischen Mechanismen wurde von \cite{refart:HARE} so dargestellt:
 
 \vfill
 \begin{figure}[htb]
@@ -60,17 +58,17 @@ wurde von \cite{refart:HARE} so dargestellt:
 \cite{refart:JTAS} beschreibt didaktisch ein Zahlungsverfahren, dass die Vertraulichkeit gewährleisten kann.
 Dieses findet in verschieden 2 getrennte Schritten statt.
 
-Im ersten Schritt, sendet der Nutzer seinen Namen, generiert einen Sitzungsschlüssel und sendet eine Anfrage für
-eine Transaktion. Diese Anfrage wird daraufhin an den Händler geschickt, der diese wiederrum bearbeitet. Nachdem 
-das abgeschlossen wurde, sendet der Händler seine Antwort an das Bezahlgerät, das wiederrum die Antwort an den Nutzer
-weiterleitet. 
+Im ersten Schritt sendet der Nutzer seinen Namen. Es wird da einen einen Sitzungsschlüssel generiert und 
+eine Anfrage für die Transaktion wird gesendet. Diese Anfrage wird daraufhin an den Händler geschickt, der 
+diese wiederrum bearbeitet. Nachdem das abgeschlossen wurde, sendet der Händler seine Antwort an das Bezahlgerät, 
+das wiederrum die Antwort an den Nutzer weiterleitet. 
 
-Im zweiten Schritt wird die Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem den Preis und die Uhrzeit enthält.
-Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. Dieser empfängt die Daten und prüft auf
-Aktualität der Daten. Wenn dieser Test erfolgreich ist, wird wieder eine Nachricht an das Bezahlgerät geschickt. 
-Dieses schickt die Daten dann wiederrum an die Bank, welche überprüft, ob das Geld von dem Konto abgebucht werden
-kann oder nicht. Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerät gesendet, in der steht, dass das 
-Geld abgebucht wurde. 
+Im zweiten Schritt wird die Bezahl Anfrage an das Bezahlgerät gesendet, die unter anderem den Preis und die 
+Uhrzeit enthält. Das Bezahlgerät leitet die empfangene Nachricht an den Händler weiter. Dieser empfängt die Daten 
+und prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich ist, wird wieder eine Nachricht an das Bezahlgerät 
+geschickt. Dieses schickt die Daten dann wiederrum an die Bank, welche überprüft, ob das Geld von dem Konto 
+abgebucht werden kann. Wenn das geprüft wurde, wird eine Nachricht an das Bezahlgerät gesendet, in der steht, 
+dass das Geld abgebucht wurde. 
 
 Besonders wichtig ist, dass bei jeder Kommunikation die Daten kryptographisch verschlüsselt werden, sodass es einem 
 potenziellen Angreifer nicht möglich ist, Daten zu ändern oder zu entschlüsseln. In den folgenden Abbildungen wird
@@ -100,12 +98,18 @@ zu bekommen \cite{refart:HARE}. Besonders im deutschen Markt, spielen die oben g
 wesentliche Rolle für die Akzeptanz von neuen unbekannten Systemen \cite{refip:DKAM}.
 
 Da wir hier von einem dynamischen und breiten Bereich reden, bei dem es sehr schnell zu Änderungen kommen kann, 
-besonders bei den Angriffstechniken, müssen die dazu gehörigen Technologien stets weiterentwickelt und 
-angepasst werden \cite{refip:NYRS}, um Vertraulichkeitsverlust seitens der Kunden zu vermeiden. 
-Da die Vertraulichkeit noch nicht zu 100 Prozent gewähleistet werden kann, verweigern viele Kunden
-das bargeldlose Bezahlen. Aber wird es jemals eine 100 prozentige Sicherheit geben?
+besonders bei den Angriffstechniken, müssen die dazu gehörigen Technologien stets weiterentwickelt und angepasst
+werden \cite{refip:NYRS}, um Vertraulichkeitsverlust seitens der Kunden zu vermeiden. Da die Vertraulichkeit noch
+nicht zu 100 Prozent gewähleistet werden kann, verweigern viele Kunden das bargeldlose Bezahlen. Aber
+wird es jemals eine 100 prozentige Sicherheit geben?
 
 Viele Studien befassen sich mit den verschiedenen Aspekten der Sicherheit bei bargeldlosen Zahlungsmethoden.
 Da die Literatur dieses Forschungsfeldes sehr umfangreich ist und da dieses Thema sehr Vielfältig ist 
-\cite{refip:GMPS}, sollen hier zwei dieser Technologien in Bezug auf Angriffstechniken und
-Gegenmaßnahmen genauer betrachtet werden: drahtlose Verbindungen und Smartcards.
+\cite{refip:GMPS}, sollen hier zwei dieser Technologien in Bezug auf Angriffstechniken und Gegenmaßnahmen 
+genauer betrachtet werden: drahtlose Verbindungen mit \textit{New Field Communication}\footnote{Nahfeldkommunikation
+oder NFC ist eine auf Radio Frequenz basierte Technologie, die der kabelose Austausch von Nachrichten in kürzer
+Distanz zwischen elektronischen Gerät, wie Handys, Computer, ermöglicht \cite{refart:NFNK}.} und Smartcards\footnote{Der
+Begriff Smartcards bezeichnet eine Plastikkarte mit einem eingebauten Chip, der ein eigenes Betriebssystem, einen
+Mikroprozessor und minimale Funktionalitäten besitzt \cite{refip:JFSB}.}.
+
+
