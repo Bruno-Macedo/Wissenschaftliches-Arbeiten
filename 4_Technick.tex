@@ -7,9 +7,9 @@ Kartenzahlung mit Smartcards.
 \subsection{Drahtlose Verbindungen und Sicherheit bei Bezahlungen}
 
 Viele digitale Zahlungen finden kontaktlos über NFC statt. Diese Technologie ermöglicht das Zahlungs- und
-das Identifizierungsverfahren, indem ein passives Gerät oder Tag genannt sich mit einem aktiven 
-auch Ermitter genanntkommuniziert. In dieser Situation will das passive Gerät eine Authorisierung,
-während das aktive für das Erlaubnis zuständig ist \cite{refart:NFNK}. 
+das Identifizierungsverfahren, indem ein passives Gerät oder auch Tag genannt sich mit einem aktiven 
+auch Ermitter genannt kommuniziert. In dieser Situation will das passive Gerät eine Autorisierung,
+während das aktive Gerät für die Erlaubnis zuständig ist \cite{refart:NFNK}. 
 
 \begin{figure}[H]
    \centering{\includegraphics[width=8cm]{Bilder/refart_GPIN}}
@@ -20,22 +20,22 @@ während das aktive für das Erlaubnis zuständig ist \cite{refart:NFNK}.
 
 \subsubsection{Angriffsmöglichkeit auf NFC}
 
-Da diese Technologie relativ neu \cite{refip:NTAS}, sie existiert seit 2006, ist sind deren Schwachstelle 
-und Hartungsmaßnahmen nicht in ihrer Vollständigkeit bekannt. Die drahtlose Verbindungen ist für ihre Schattenseite 
+Da diese Technologie relativ neu ist \cite{refip:NTAS}, sie existiert seit 2006, sind deren Schwachstelle 
+und Härtungsmaßnahmen nicht in ihrer Vollständigkeit bekannt. Drahtlose Verbindungen sind auch für ihre Schattenseite 
 bekannt \cite{refip:NYRS}. Maßnahmen zu entwickeln, die sich an verschiedenen Systeme anpassen, kosten Zeit 
-und Investitionen von Banken und Sicherheitsfirmen. Für jeden möglichen Angriffe sollte Gegenmaßnahmen existieren, 
-sodass die Integrität\footnote{Es ist Subjekten nicht möglich, die zu schützenden Daten unatorisiert und 
-unbemerkt zu manipulieren \cite{refbook:SWIS}.} unverletzt bleibt.
+und Investitionen von Banken und Sicherheitsfirmen. Für jeden möglichen Angriffe sollten Gegenmaßnahmen existieren, 
+sodass das Schutzziel der Integrität\footnote{Es ist Subjekten nicht möglich, die zu schützenden Daten unatorisiert und 
+unbemerkt zu manipulieren \cite{refbook:SWIS}.} nicht verletzt wird.
 
-Bekannte Angriffe für normale kabelose Verbindung können auch bei NFC verwendet werden\cite{refip:NYRS}, wie
-Erstellung und Hinzufügen von Dateien in dem Opfersystem mit umfangreichen Privilegien; die Konzupierung
-von schwachen digitalen Zertifikaten oder auf die Verwendung von Reverse Engineering\footnote{Reverse
-Engineering ist das Prozess von Identifzierung der Bestandteilen eines Systems und von Wiederherstellung 
-dieses in einer anderen Format \cite{refart:CHRE}. In der Sicherheitsbereich wird Reverser Engineering 
-verwendent, um Schwachstellen von Systemen zu entedecken, sodass diese ausgenutzt werden können \cite{refip:CMBM}.} 
-gegen das Hardware oder die Software. \cite{refart:ALSI} hebt andere Schwachstelle hervor: 
-\textit{Eavesdropping}\footnote{Eavesdropping ist das unauthorisierte Mithören von Kummunikation \cite{refbook:SWIS}.}
-je nachdem, wie viele Ressource investiert sind, sodass der Angreifer in der Lage sein, die Kommunikation
+Bekannte Angriffe für kabelose Verbindungen können auch bei NFC verwendet werden\cite{refip:NYRS}, wie die
+Erstellung und das Hinzufügen von Dateien in einem Opfersystem mit umfangreichen Privilegien; die Konzipierung
+von schwachen digitalen Zertifikaten oder auch die Verwendung von Reverse Engineering\footnote{Reverse
+Engineering ist ein Prozess von der Identifzierung von Bestandteilen eines Systems und von die Wiederherstellung 
+dieser in einem anderen Format \cite{refart:CHRE}. Im Bereich der Cyber-Security wird Reverse Engineering 
+verwendent, um Schwachstellen von Systemen zu entedecken, sodass diese gegen Hardware und Software ausgenutzt werden können \cite{refip:CMBM}.} 
+\cite{refart:ALSI} hebt andere Schwachstelle hervor: 
+\textit{Eavesdropping}\footnote{Eavesdropping ist das unauthorisierte Mithören von einer Kummunikation \cite{refbook:SWIS}.}
+je nachdem, wie viele Ressourcen investiert werden, kann ein Angreifer in der Lage sein, der Kommunikation
 zu lauschen; \textit{Denial-of-Service}\footnote{Bei solchen Angriffen wird die Verfügbarkeit des Dienstes verletzt, 
 sodass die Kommunikation nicht mehr einwandfrei stattfinden kann \cite{refbook:SWIS}.}, um die Authentifizierung
 und Verfügbarkeit der Kommunikation zu beeinträchtigen.
@@ -44,10 +44,10 @@ und Verfügbarkeit der Kommunikation zu beeinträchtigen.
 \subsubsection{Gegenmaßnahmen für die Härtung von drahtlose Verbindung}
 
 Um die Risiken bei der Verwendung von NFC zu abzuschwächen, schlägt \cite{refip:NYRS} einige Sicherheitsmechanismen vor, 
-die sich eher auf allgemeine drahtlose Verbindung beziehen, aber die für NFC verwendet werden können: Nutzung von modernen 
+die sich eher auf allgemeine drahtlose Verbindungen beziehen, die auch für NFC verwendet werden können: Nutzung von modernen 
 kryptographischen Standards für die Validierung von Zertifikaten; Verwendung von Zwei-Faktor-Authentifizierung; Erstellung
-von schwierige zu erratenden Passwörter; Registrierung von authorisierten Geräten; Einsetzung von künstlichem Intelligenz 
-(KI) für die Detektion von abweichenden Verhalten; Kontrolle gegen Social Engineering \footnote{Beim Social-Engineering
+von schwer zu erratenden Passwörtern; Registrierung von authorisierten Geräten; Einsetzung von künstlicher Intelligenz 
+(KI) für die Detektion von abweichendem Verhalten; Kontrolle gegen Social Engineering \footnote{Beim Social-Engineering
 nutzt der Täter den ``Faktor Mensch'' als vermeintlich schwächstes Glied der Sicherheitskette aus, um seine kriminelle
  Absicht zu verwirklichen.\cite{booklet:BSSE}}
 
