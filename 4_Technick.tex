@@ -93,15 +93,15 @@ Möglichkeit wäre, die Schwachstellen eines bestimmten Protokolls, das für die
 
 \subsubsection{Gegenmaßnahmen für die Härtung von Smartcards}
 Um einen Angriff auf die Hardware möglichst zu vermeiden, ist es sinnvoll den Chip nicht rekonstruierbar zu machen,
-d.h. dass es keine Standardzellen oder ähnliches verwendet werden. Zusätzlich spielt die Verschlüsselung 
+d.h. dass keine Standardzellen oder ähnliches verwendet werden. Zusätzlich spielt die Verschlüsselung 
 der Daten eine große Rolle und erhöht die Sicherheit enorm \cite{refst:ARES}. Außerdem können Mechanismen in 
 die Smartcard eingebaut werden, die permanent die Spannung oder Frequenz überprüfen und sobald etwas
 nicht dem Normalzustand entspricht, wird der Chip ausgeschaltet, sodass kein Lesegerät mit der 
 Karte kommunizieren kann. Letztlich ist es wichtig, dass jede Karte individuell ist, sodass ein 
 erfolgreicher Angriff kein Sicherheitsrisiko für andere Karten darstellt \cite{refmas:ASSS}. 
 Dazu wären asymmetrische Verschlüsselungsverfahren sinnvoller als symmetrische, da jede Karte bei
-asymmetrischer Verschlüsselung einen öffentlichen und privaten Schlüssel hat und nicht alle den
-selben Schlüssel haben.
+asymmetrischer Verschlüsselung einen öffentlichen und privaten Schlüssel hat und somit alle einen unterschiedlichen
+Schlüssel haben.
 
 
 %- Smartcards sind auf der Hardwareebene extrem sicher. \cite{refmas:ASSS}  bezeichent Smartcards auch als 
@@ -154,9 +154,9 @@ selben Schlüssel haben.
 NFC ist eine Technologie die viele Vorteile bietet. Sie ermöglicht in nur einem Gerät die Anwendung verschiedener
 Aktivitäten, wie Zahlung, Identifizierung und Authentifizierung, ohne dass ein Nutzer unterschiedliche Karten bei
 sich haben muss. Die Nachteile beziehen sich auf die Neuigkeit dieser Technologie, die mehr Forschung verlangt, 
-damit deren Schachstelle weiter erforscht werden \cite{refart:ALSI}.  Die Technologie der Smartcards ist bereits
+damit deren Schwachstellen weiter erforscht werden \cite{refart:ALSI}.  Die Technologie der Smartcards ist bereits
 breit erforscht, sodass sowohl Schwachstellen, als auch Härtungsmaßnahmen bekannt sind. Die Akzeptanz und die 
-Verwendung von Smartcards sind auch umfangreicher, besonders weil auch Non-Native sie eher nutzen.
+Verwendung von Smartcards sind auch größer, da besonders Non-Natives eher auf Smartcards zurückgreifen.
 
 Aus den obigen genannten Gründen können wir sagen, dass Smartcards der bessere Einsatz für einen Click-and-Buy-Automat
 neben einem Campingplatz wäre, solange die Technologie von NFC noch nicht so weit erforscht ist und in der 
