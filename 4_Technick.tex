@@ -2,13 +2,13 @@
 
 Für die Bezahlungsmethoden werden hier zwei verschiedene Arten von Zahlungsverfahren analysiert und deren
 Vorteile in Bezug auf Sicherheit und Härtungsmaßnahmen dargestellt: drahtlose Zahlung mit NFC und 
-Kartenzahlung mit Smartcards.
+Smartcards.
 
 \subsection{Drahtlose Verbindungen und Sicherheit bei Bezahlungen}
 
-Viele digitale Zahlungen finden kontaktlos über NFC statt. Diese Technologie ermöglicht das Zahlungs- und
-das Identifizierungsverfahren, indem ein passives Gerät oder auch Tag genannt mit einem aktiven 
-auch Ermitter genannt kommuniziert. In dieser Situation will das passive Gerät eine Autorisierung,
+Viele digitale Zahlungen finden kontaktlos über NFC statt. Diese Technologie ermöglicht ein Zahlungs- und
+Identifizierungsverfahren, indem ein passives Gerät oder auch Tag genannt mit einem aktiven Gerät,
+auch Ermitter genannt, kommuniziert. In dieser Situation will das passive Gerät eine Autorisierung initiieren,
 während das aktive Gerät für die Erlaubnis zuständig ist \cite{refart:NFNK}. 
 
 \begin{figure}[H]
@@ -20,14 +20,14 @@ während das aktive Gerät für die Erlaubnis zuständig ist \cite{refart:NFNK}.
 
 \subsubsection{Angriffsmöglichkeit auf NFC}
 
-Da diese Technologie relativ neu ist \cite{refip:NTAS}, sie existiert seit 2006, sind deren Schwachstellen 
+Da diese Technologie relativ neu ist \cite{refip:NTAS}, sie existiert seit 2006, sind Schwachstellen 
 und Härtungsmaßnahmen nicht in ihrer Vollständigkeit bekannt. Drahtlose Verbindungen sind auch für ihre Schattenseite 
 bekannt \cite{refip:NYRS}. Maßnahmen zu entwickeln, die sich an verschiedene Systeme anpassen, kosten Zeit 
-und Investitionen von Banken und Sicherheitsfirmen. Für jeden möglichen Angriffe sollten Gegenmaßnahmen existieren, 
+und Investitionen von Banken und Sicherheitsfirmen. Für jeden möglichen Angriffe müssten Gegenmaßnahmen existieren, 
 sodass das Schutzziel der Integrität\footnote{Es ist Subjekten nicht möglich, die zu schützenden Daten unatorisiert und 
 unbemerkt zu manipulieren \cite{refbook:SWIS}.} nicht verletzt wird.
 
-Bekannte Angriffe für kabelose Verbindungen können auch bei NFC verwendet werden\cite{refip:NYRS}, wie die
+Bekannte Angriffe für kabellose Verbindungen können auch bei NFC verwendet werden\cite{refip:NYRS}, wie die
 Erstellung und das Hinzufügen von Dateien in einem Opfersystem mit umfangreichen Privilegien; die Konzipierung
 von schwachen digitalen Zertifikaten oder auch die Verwendung von Reverse Engineering\footnote{Reverse
 Engineering ist ein Prozess von der Identifzierung von Bestandteilen eines Systems und von die Wiederherstellung 
@@ -52,13 +52,13 @@ nutzt der Täter den ``Faktor Mensch'' als vermeintlich schwächstes Glied der S
 Absicht zu verwirklichen.\cite{booklet:BSSE}}
 
 
-Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem Click-and-Buy-Automat akzeptiert werden. 
+ Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem Click-and-Buy-Automat akzeptiert werden. 
 In Bezug auf diese Zahlungsmittel, wird die Sicherheit im folgenden untersucht.
 
 \subsection{Anwendung von Smartcards und sicheres Bezahlen}
-Smartcards sind heutzutage sehr stark verwendet, nicht nur für Bezahlung sondern auch für Identifizierung.
-Viele Ausweise wie Reisepass und Krankenkassenkarte verwenden auch diese Technologie zur Authentifizierung
-des Nutzender. Im folgenden ist ein Beispiel von einer Smartcard für eine zahlende Karte zu sehen: 
+Smartcards sind heutzutage sehr stark verbreitet, nicht nur für eine Zahlungsabwicklung, sondern auch für die Identifizierung.
+Viele Ausweise wie zum Beispiel der Reisepass und die Krankenkassenkarte verwenden diese Technologie zur Authentifizierung
+des Nutzenden. Im folgenden ist ein Beispiel von einer Smartcard für eine zahlende Karte zu sehen: 
 
 \begin{figure}[H]
    \centering{\includegraphics[width=4cm]{Bilder/eigenes_Bild_Karte.png}}
@@ -66,7 +66,7 @@ des Nutzender. Im folgenden ist ein Beispiel von einer Smartcard für eine zahle
    \label{fig:eigenes_Bild}
 \end{figure}
 
-Sie wurde vor mehr als 40 Jahren erfunden und ihr Ziel ist die Sicherheit von Kartenzahlung und allgemeine
+Die Smartcard wurde vor mehr als 40 Jahren erfunden und ihr Ziel ist die Sicherheit von Kartenzahlungen und allgemeine
 Authentifizierungsverfahren zu erhöhen \cite{refip:JFSB}. Sie unterscheiden sich von traditionelen 
 Magnetstreifenkarten, weil sie verschiedene Authentifizierungsmethoden ermöglichen auch ohne eine direkte 
 Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierungsprozess einer Smartcard 
@@ -92,20 +92,20 @@ Tresor für Informationen. Wenn eine Smartcard für das Bezahlen verwendet wird,
 denn alle wichtigen Informationen wie das Guthaben sind direkt auf der Karte gespeichert. Aus diesem Grund können
 keine Daten abgefangen werden, die auf dem Weg vom Lesegerät zum Backend-System sind, was den Bezahlprozess
 deutlich sicherer macht. Zudem muss jede Kommunikation vom Lesegerät initiiert werden, die Karte selber startet
-also nie eine Kommunikation. Da die wichtigsten Daten direkt auf der Karte gespeichert sind, muss ein Angriff
-auf die Hardware gestartet werden, um an relevante Informationen zu kommen. Eine andere Möglichkeit wäre es 
-die Schwachstellen eines bestimmten Protokolls das für die Kommunikation verwendet wird auszunutzen.
+also in keinem Fall eine Kommunikation. Da die wichtigsten Daten direkt auf der Karte gespeichert sind, muss ein Angriff
+auf die Hardware initiiert werden, um an relevante Informationen zu gelangen. Eine weitere Möglichkeit wäre,
+die Schwachstellen eines bestimmten Protokolls, das für die Kommunikation verwendet wird auszunutzen.
 
 \subsubsection{Gegenmaßnahmen für die Härtung von Smartcards}
 Um einen Angriff auf die Hardware möglichst zu vermeiden, ist es sinnvoll den Chip nicht rekonstruierbar zu machen,
 das heißt es werden keine Standardzellen oder ähnliches verwendet. Zusätzlich spielt die Verschlüsselung 
-der Daten eine große und erhöht die Sicherheit enorm. Außerdem können Mechanismen in die Smartcard 
-eingebaut werden, die zum Beispiel permanent die Spannung oder Frequenz überprüfen und sobald etwas
+der Daten eine große Rolle und erhöht die Sicherheit enorm. Außerdem können Mechanismen in die Smartcard 
+eingebaut werden, die permanent die Spannung oder Frequenz überprüfen und sobald etwas
 nicht dem Normalzustand entspricht, wird der Chip ausgeschaltet, sodass kein Lesegerät mit der 
 Karte kommunizieren kann. Letztlich ist es wichtig, dass jede Karte individuell ist, sodass ein 
-erfolgreicher Angriff kein Sicherheitsrisiko für andere Karten dargestellt \cite{refmas:ASSS}. 
+erfolgreicher Angriff kein Sicherheitsrisiko für andere Karten darstellt \cite{refmas:ASSS}. 
 Dazu wären asymmetrische Verschlüsselungsverfahren sinnvoller als symmetrische, da jede Karte bei
-asymmetrischer Verschlüsselung einen öffentlichen und privaten Schlüssel hat und nicht jeder den
+asymmetrischer Verschlüsselung einen öffentlichen und privaten Schlüssel hat und nicht alle den
 selben Schlüssel haben.
 
 
@@ -158,13 +158,12 @@ selben Schlüssel haben.
 
 \subsection{Fazit}
 
-NFC ist eine Technologie die viele Vorteile anbietet. Sie ermöglicht in nur einem Gerät die Anwendung verschiedener
-Aktivitäten, wie Zahlung, Identifizierung und Authentifizierung, ohne dass die Nutzer viele Karte tragen müssen.
-Sie kann mit eigenen Gerät verwendet werden und beim Verlust kann das Gerät schnell gesperrt werdern. Die Nachteile
-beziehen sich auf die Neuigkeit dieser Technologie, die mehr Forschung verlangt, damit deren Schachstelle voll bekannt
-werden \cite{refart:ALSI}. Smartcards ihrerseits besitzen eine breite forschende Technologie, deren Schwachstelle und
-Hartungsmaßnahmen voll bekannt und recherchiert sind. Die Akzeptanz und die Verwendung von Smartcards sind auch
-umfangreicher, besonders weil auch Non-Native auf sie zugreifen.
+NFC ist eine Technologie die viele Vorteile bietet. Sie ermöglicht in nur einem Gerät die Anwendung verschiedener
+Aktivitäten, wie Zahlung, Identifizierung und Authentifizierung, ohne dass ein Nutzer unterschiedliche Karten bei sich haben muss. Die 
+Nachteile beziehen sich auf die Neuigkeit dieser Technologie, die mehr Forschung verlangt, damit deren Schachstelle weiter erforscht
+werden \cite{refart:ALSI}.  Die Technologie der Smartcards ist bereits breit erforscht, sodass sowohl Schwachstellen, als auch 
+Härtungsmaßnahmen bekannt sind. Die Akzeptanz und die Verwendung von Smartcards sind auch
+umfangreicher, besonders weil auch Non-Native sie eher nutzen.
 
-Aus den obigen genannten Gründen können wir sagen, dass Smartcards der beste Einsatz für einen Click-and-Buy-Automat
-nebem einem Campingplatz wäre, sobald die Technologie von NFC noch nicht in der Gesellschaft so etabliert ist.
+Aus den obigen genannten Gründen können wir sagen, dass Smartcards der bessere Einsatz für einen Click-and-Buy-Automat
+neben einem Campingplatz wäre, solange die Technologie von NFC noch nicht so weit erforscht ist und in der Gesellschaft nicht so etabliert ist.
