@@ -1,7 +1,7 @@
 \section{Stand der Technik}
 
 Für die Bezahlungsmethoden werden hier zwei verschiedene Arten von Zahlungsverfahren analysiert und deren
-Vorteile in Bezug auf Sicherheit und Härtungsmaßnahmen dargestellt: drahtlose Zahlung mit NFC und 
+Vorteile in Bezug auf Sicherheit und Härtungsmaßnahmen dargestellt: drahtlose Zahlung mit \acrshort{nfc} und 
 Smartcards.
 
 \subsection{Drahtlose Verbindungen und Sicherheit bei Bezahlungen}
@@ -13,12 +13,12 @@ während das aktive Gerät für die Erlaubnis zuständig ist \cite{refart:NFNK}.
 
 \begin{figure}[H]
    \centering{\includegraphics[width=8cm]{Bilder/refart_GPIN}}
-   \caption{Teilnehmer der Kommunikation über NFC\\Quelle: Proehl, 2021}
+   \caption{Teilnehmer der Kommunikation über \acrshort{nfc}\\Quelle: Proehl, 2021}
    \label{fig:refart_GPIN}
 \end{figure}
 % \cite{refart:GPIN}
 
-\subsubsection{Angriffsmöglichkeit auf NFC}
+\subsubsection{Angriffsmöglichkeit auf \acrshort{nfc}}
 
 Da diese Technologie neu ist \cite{refip:NTAS}, sie existiert seit 2006, sind Schwachstellen 
 und Härtungsmaßnahmen nicht in ihrer Vollständigkeit bekannt. Drahtlose Verbindungen sind auch für ihre 
@@ -27,31 +27,31 @@ kosten Zeit und Investitionen von Banken und Sicherheitsfirmen. Für jeden mögl
 Gegenmaßnahmen existieren, sodass das Schutzziel der Integrität\footnote{Es ist Subjekten nicht möglich, 
 die zu schützenden Daten unatorisiert und unbemerkt zu manipulieren \cite{refbook:SWIS}.} nicht verletzt wird.
 
-Bekannte Angriffe für kabellose Verbindungen können auch bei NFC verwendet werden\cite{refip:NYRS}, wie die
+Bekannte Angriffe für kabellose Verbindungen können auch bei \acrshort{nfc} verwendet werden\cite{refip:NYRS}, wie die
 Erstellung und das Hinzufügen von Dateien in einem Opfersystem mit umfangreichen Privilegien; die Konzipierung
 von schwachen digitalen Zertifikaten oder auch die Verwendung von Reverse Engineering\footnote{Reverse
 Engineering ist ein Prozess von der Identifzierung von Bestandteilen eines Systems und von die Wiederherstellung 
-dieser in einem anderen Format \cite{refart:CHRE}. Im Bereich der Cyber-Security wird Reverse-Engineering 
+dieser in einem anderen Format \cite{refart:CHRE}. Im Bereich der Cybersicherheit wird Reverse Engineering 
 verwendent, um Schwachstellen von Systemen zu entedecken, sodass diese gegen Hardware und Software ausgenutzt
 werden können \cite{refip:CMBM}.}. \cite{refart:ALSI} hebt andere Schwachstellen hervor: 
 \textit{Eavesdropping}\footnote{Eavesdropping ist das unauthorisierte Mithören von einer Kummunikation 
 \cite{refbook:SWIS}.} je nachdem, wie viele Ressourcen investiert werden, kann ein Angreifer in der 
-Lage sein, der Kommunikation zu lauschen; \textit{Denial-of-Service}\footnote{Bei solchen Angriffen wird die
+Lage sein, der Kommunikation zu lauschen; \acrfull{dos}\footnote{Bei solchen Angriffen wird die
 Verfügbarkeit des Dienstes verletzt, sodass die Kommunikation nicht mehr einwandfrei stattfinden kann 
 \cite{refbook:SWIS}.}, um die Authentifizierung und Verfügbarkeit der Kommunikation zu beeinträchtigen.
 
 
 \subsubsection{Gegenmaßnahmen für die Härtung von drahtlose Verbindung}
 
-Um die Risiken bei der Verwendung von NFC zu abzuschwächen, schlägt \cite{refip:NYRS} einige Sicherheitsmechanismen vor, 
-die sich eher auf allgemeine drahtlose Verbindungen beziehen und die auch für NFC verwendet werden können: Nutzung von modernen 
+Um die Risiken bei der Verwendung von \acrshort{nfc} zu abzuschwächen, schlägt \cite{refip:NYRS} einige Sicherheitsmechanismen vor, 
+die sich eher auf allgemeine drahtlose Verbindungen beziehen und die auch für \acrshort{nfc} verwendet werden können: Nutzung von modernen 
 kryptographischen Standards für die Validierung von Zertifikaten; Verwendung von Zwei-Faktor- Authentifizierung; Erstellung
 von schwer zu erratenden Passwörtern; Registrierung von authorisierten Geräten; Einsetzung von künstlicher Intelligenz 
 (KI) für die Detektion von abweichendem Verhalten; Kontrolle gegen Social Engineering \footnote{Beim Social Engineering
 nutzt der Täter den ``Faktor Mensch'' als vermeintlich schwächstes Glied der Sicherheitskette aus, um seine kriminelle
 Absicht zu verwirklichen.\cite{booklet:BSSE}}
 
-Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem Click-and-Buy-Automat akzeptiert werden. 
+Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem \acrshort{cba} akzeptiert werden. 
 In Bezug auf diese Zahlungsmittel, wird die Sicherheit im folgenden untersucht.
 
 \subsection{Anwendung von Smartcards und sicheres Bezahlen}
@@ -152,13 +152,14 @@ Schlüssel haben.
 
 \subsection{Fazit}
 
-NFC ist eine Technologie die viele Vorteile bietet. Sie ermöglicht in nur einem Gerät die Anwendung verschiedener
-Aktivitäten, wie Zahlung, Identifizierung und Authentifizierung, ohne dass ein Nutzer unterschiedliche Karten bei
-sich haben muss. Die Nachteile beziehen sich auf die Neuigkeit dieser Technologie, die mehr Forschung verlangt, 
-damit deren Schwachstellen weiter erforscht werden \cite{refart:ALSI}.  Die Technologie der Smartcards ist bereits
-breit erforscht, sodass sowohl Schwachstellen, als auch Härtungsmaßnahmen bekannt sind. Die Akzeptanz und die 
-Verwendung von Smartcards sind auch größer, da besonders Non-Natives eher auf Smartcards zurückgreifen.
+NFC ist eine Technologie die viele Vorteile bietet. Sie ermöglicht in nur einem Gerät die Anwendung
+verschiedener Aktivitäten, wie Zahlung, Identifizierung und Authentifizierung, ohne dass ein Nutzer 
+unterschiedliche Karten bei sich haben muss. Die Nachteile beziehen sich auf die Neuigkeit dieser Technologie,
+die mehr Forschung verlangt, damit deren Schwachstellen weiter erforscht werden \cite{refart:ALSI}. Die
+Technologie der Smartcards ist bereits breit erforscht, sodass sowohl Schwachstellen, als auch Härtungsmaßnahmen
+bekannt sind. Die Akzeptanz und die Verwendung von Smartcards sind auch größer, da besonders Non-Natives eher auf
+Smartcards zurückgreifen.
 
-Aus den obigen genannten Gründen können wir sagen, dass Smartcards der bessere Einsatz für einen Click-and-Buy-Automat
+Aus den obigen genannten Gründen können wir sagen, dass Smartcards der bessere Einsatz für einen \acrshort{cba}
 neben einem Campingplatz wäre, solange die Technologie von NFC noch nicht so weit erforscht ist und in der 
 Gesellschaft nicht so etabliert ist.

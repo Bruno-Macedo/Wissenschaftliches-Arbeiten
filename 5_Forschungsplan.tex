@@ -2,12 +2,12 @@
 
 Das Thema Netzwerksicherheit beinhalt viele Forschungsrichtungen, die zu umfangreich für eine einfache
 Recherche sind. Aus diesem Grund und aus Knappheit von Platz konzentrierte sich diese Untersuchung auf zwei
-spezifische Aspekte des Themas, und zwar auf Schwachstelle und auf Härtungsmaßnahmen von NFC und von Smartcards.
+spezifische Aspekte des Themas, und zwar auf Schwachstelle und auf Härtungsmaßnahmen von \acrshort{nfc} und von Smartcards.
 Diese Untersuchung wurde auch konzipert, indem folgende Methode benutzen wurden, um die vertrauenswürdigen
 Daten zu sammeln:
 
 \begin{itemize}
-  \item Durchführung von Experimenten mit Smartcards und mit NFC
+  \item Durchführung von Experimenten mit Smartcards und mit \acrshort{nfc}
   \item Beobachtung von Angriffsmöglichkeiten
   \item Interview mit IT-SicherheitsFirmen
   \item Literaturrecherche
@@ -55,7 +55,7 @@ In dem erstem Experiment kann der Host normale Anfrage an dem Server schicken. D
 ohne irgendwelche Sicherheitsmechanismen, wie Authentifizierung, Überprüfung von Anzahl von Verbindungen oder Anfrage
 nach Zertifikaten.
 
-Der erste Angriff kann leicht mithilfe des Tools Nmap\footnote{Nmap, Network Mapper, ist eine freie und Open Source Anwendung
+Der erste Angriff kann leicht mithilfe des Tools \acrfull{nmap}\footnote{\acrshort{nmap} ist eine freie und Open Source Anwendung
 für die Entdeckung und Sicherheitsüberprüfung von Netzwerken \cite{refst:nmap}.} durchgeführt werden. In diesem Angriff benutzt
 der Angreifer andere Maschine, um sich selbst zu verbergen und um den Angriff zu verstärken. Der Angreifer extreme viele
 Pakete\footnote{Pakete sind im Netzwerk die Einkapselung von Metainformationen, wie Quell- und Zieladresse Protokolltyp 
@@ -64,7 +64,7 @@ Servers komplett auszunutzen \cite{refip:KSDD}. Unten gibt es eine Abbildung die
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refip_VDSD.png}}
-  \caption{\textit{Denial-of-Service Angriff}\\ Quelle: Durcekova et al., 2012}
+  \caption{\acrfull{dos}\\ Quelle: Durcekova et al., 2012}
   \label{fig:VDSD}
 \end{figure}
 %\cite{refip:VDSD}
@@ -90,7 +90,7 @@ Unter gibt es eine Abbildung, wie das Wireshark die Kommunikation aufzeichnet:
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refst_wisa.png}}
-  \caption{\textit{Denial-of-Service Angriff}\\Quelle: Wireshark, 2021}
+  \caption{Ausgabe von Wireshark \\Quelle: Wireshark, 2021}
   \label{fig:refst_wisa}
 \end{figure}
 %\cite{refst:wisa}

@@ -1,4 +1,16 @@
 \input{header}
+\makeglossaries
+
+\newacronym{cba}{CBA}{Click-and-Buy-Automat}
+\newacronym{tcpip}{TCP/IP}{Transmission Control Protocol/Internet Protocol}
+\newacronym{ehi}{EHI}{Handelsforschungsinstituts}
+\newacronym{pin}{PIN}{Persönliche Identifikationsnummer}
+\newacronym{uml}{UML}{Unified Modeling Language}
+\newacronym{nfc}{NFC}{New Field Communication}
+\newacronym{dos}{DoS}{Denial-of-Service}
+\newacronym{nmap}{Nmap}{Network Mapper}
+
+
 
 
 \fancypagestyle{mylandscape}{
@@ -14,12 +26,16 @@
 }
 
 
+
 \begin{document}
     \include{titelseite}
     \tableofcontents
     \newpage
     \listoffigures % Momentam haben wir keine
    % \listoftables % Momentam haben wir keine
+   \clearpage
+   \printglossary[type=acronym,title=Abkürzungsverzeichnis,toctitle=Abkürzungsverzeichnis]
+	  \clearpage
     \include{1_Einfuehrung}
     \include{2_Ziele}
     \include{3_Stand_der_Forschung}
