@@ -1,30 +1,30 @@
 \section{Forschungsplan}
 
-Das Thema Netzwerksicherheit beinhalt viele Forschungsrichtungen, die zu umfangreich für eine einfache
-Recherche sind. Aus diesem Grund und aus Knappheit von Platz konzentrierte sich diese Untersuchung auf zwei
-spezifische Aspekte des Themas, und zwar auf Schwachstelle und auf Härtungsmaßnahmen von \acrshort{nfc} und von Smartcards.
-Diese Untersuchung wurde auch konzipert, indem folgende Methode benutzen wurden, um die vertrauenswürdigen
-Daten zu sammeln:
+Das Thema Netzwerksicherheit beinhaltet viele Forschungsrichtungen, die zu umfangreich für eine einfache
+Recherche sind. Aus diesem Grund und aus Knappheit von Platz konzentrieren wir uns in der geplanten wissenschaftlichen Arbeit auf zwei
+spezifische Aspekte dieses Themas, und zwar auf Schwachstellen und auf Härtungsmaßnahmen von \acrshort{nfc} und von Smartcards.
+Um an vertrauenswürdige und wissenschaftliche Informationen für die geplante wissenschaftliche Arbeit zu gelangen, werden wir 
+folgende Dinge durchführen:
 
 \begin{itemize}
-  \item Durchführung von Experimenten mit Smartcards und mit \acrshort{nfc}
+  \item Durchführung von Experimenten mit Smartcards und \acrshort{nfc}
   \item Beobachtung von Angriffsmöglichkeiten
-  \item Interview mit IT-SicherheitsFirmen
+  \item Interview mit IT-Sicherheitsfirmen
   \item Literaturrecherche
 \end{itemize}
 
-Der IT-Bereich entwickelte seine eigene Forschungsmethode mit Basis von anderen Fachrichtungen \cite{inbook:AHDS}.
-Aus diesem Grund müssen sowohl die Recherche als auch ihre Darstellung so angepasst werden, sodass die Recherche selbst
-und deren Ergebnis deutlich präsentiert werden können. Da Forschung und ihre Methode kein fester Bau darstellen, 
-sind Flexibilität und Vielvaltigkeit der Quellen eine wichtige Voraussetzung für die Entwicklung eine erfolgreiche und
-glaubwürdige Untersuchung.
+Der IT-Bereich entwickelte seine eigenen Forschungsmethode auf Basis von anderen Fachrichtungen \cite{inbook:AHDS}.
+Aus diesem Grund müssen sowohl die Recherche als auch ihre Darstellung entsprechend angepasst werden, sodass die Recherche selbst
+und deren Ergebnisse verständlich präsentiert werden können. Da Forschung und ihre Methoden nicht in Stein gemeißelt sind, 
+spielen Flexibilität und Vielfältigkeit der Quellen eine wichtige Rolle für die Entwicklung einer erfolgreichen und
+glaubwürdigen Untersuchung.
 
 
-Jedes Element dieser wissenschaftlichen Arbeit wurde so konzipert, sodass sie der Richtlinien von \cite{refip:SGRM} für 
-die Entwicklung von Forschungen in dem IT-Bereich entsprechen. Die verwendten Methoden baten eine theoretische
-und praktische Abbildung des Objekts dieser Untersuchung an, um ihre Anwendung direkt in der realen Welt darzustellen. 
-Im Nachhinein werden die Durchführungsverfahren jeder Methode dieser Arbeit ausführlich beschrieben. Die folgende Abbildung 
-zeigt zuerst den Rechercheweg dieser Untersuchung.
+Jedes Element der geplanten wissenschaftlichen Arbeit soll so konzipert werden, sodass sie der Richtlinien von \cite{refip:SGRM} für 
+die Entwicklung von Forschungen im IT-Bereich entsprechen. Die verwendeten Methoden sollen eine theoretische
+und praktische Abbildung des Objekts dieser Untersuchung zeigen, um ihre Anwendung direkt in der realen Welt darzustellen. 
+Im folgenden werden die diversen Methoden der geplanten wissenschaftlichen Arbeit ausführlich beschrieben. Die folgende Abbildung 
+soll den Rechercheweg der geplanten wissenschaftlichen Arbeit verdeutlichen.
 
 \begin{landscape}
   \thispagestyle{mylandscape}
@@ -41,26 +41,27 @@ zeigt zuerst den Rechercheweg dieser Untersuchung.
 \textbf{Hier testen wir NFC und Smartcard vllt ohne und mit Hartungsmassnahmen, um zu zeigen, dass Massnahmen X gegen
 Angriff Y geschützt ist}
 
-Die Tests für die Objekte dieser Untersuchung wurden in dem Labor der Hochschule Worms durchgeführt. 
-Dazu würden 3 Maschinen verwenden, die folgenden Rollen übernahmen: Server, Host und Angreifer. 
-Der Host sollte eine Anfrage an dem Server schicken, die eine Simulation eines Zahlungsverfahren darstellen sollte.
-Der Server sollte unter normalen Umstände auf diese Anfrage antworten und unter einem Angriff keine Antwort
-geben. Dieses Verfahren fand sowohl für die Drahloste-Verbindung als auch für die Smartcards statt.
+Die Tests für die Objekte dieser Untersuchung sollen im Labor der Hochschule Worms durchgeführt werden. 
+Dazu werden 3 Maschinen verwendet, die folgende Rollen übernahmen sollen: Server, Host und Angreifer. 
+Der Host soll eine Anfrage an den Server schicken, die eine Simulation von einem Bezahlvorgang darstellen soll.
+Der Server soll unter normalen Umstände auf diese Anfrage antworten und unter einem Angriff keine Antwort
+geben. Dieses Verfahren findet sowohl bei Drahtlosen Verbindungen als auch bei Smartcards statt.
 
 
 \subsubsection{Angriff und Härtungsmaßnahme einer drahtlosen Server}
-Für dieses Experiment wurde folgende Angriffstechnik verwendet: \textit{Denial-of-Service}.
+Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \textit{Denial-of-Service}.
 
-In dem erstem Experiment kann der Host normale Anfrage an dem Server schicken. Dieser würde standarmäßig konfiguriert
-ohne irgendwelche Sicherheitsmechanismen, wie Authentifizierung, Überprüfung von Anzahl von Verbindungen oder Anfrage
+Im erstem Experiment wird der Host eine normale Anfrage an den Server schicken. Dieser wird standarmäßig konfiguriert,
+also ohne irgendwelche Sicherheitsmechanismen, wie Authentifizierung, Überprüfung der Anzahl von Verbindungen oder Anfragen
 nach Zertifikaten.
 
-Der erste Angriff kann leicht mithilfe des Tools \acrfull{nmap}\footnote{\acrshort{nmap} ist eine freie und Open Source Anwendung
+Der erste Angriff wird mithilfe des Tools \acrfull{nmap}\footnote{\acrshort{nmap} ist eine freie und Open Source Anwendung
 für die Entdeckung und Sicherheitsüberprüfung von Netzwerken \cite{refst:nmap}.} durchgeführt werden. In diesem Angriff benutzt
-der Angreifer andere Maschine, um sich selbst zu verbergen und um den Angriff zu verstärken. Der Angreifer extreme viele
+der Angreifer eine weitere Maschine, um sich selbst zu verbergen und um den Angriff zu verstärken. Der Angreifer schickt extrem viele
 Pakete\footnote{Pakete sind im Netzwerk die Einkapselung von Metainformationen, wie Quell- und Zieladresse Protokolltyp 
-und Größe die Nutzdaten, wie Text, Videos oder Bilder \cite{refbook:SWIS}.} in sehr kürzem Abstand, um die Ressource des 
-Servers komplett auszunutzen \cite{refip:KSDD}. Unten gibt es eine Abbildung dieser Angriffstechnik:
+und Größe die Nutzdaten, wie Text, Videos oder Bilder \cite{refbook:SWIS}.} in sehr kürzem Abstand, um die Ressourcen des 
+Servers komplett auszunutzen, sodass er auf keine Anfragen mehr antworten kann \cite{refip:KSDD}. 
+Im folgenden gibt es eine Abbildung zu dieser Angriffstechnik:
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refip_VDSD.png}}
