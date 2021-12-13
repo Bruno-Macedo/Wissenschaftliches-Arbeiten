@@ -79,15 +79,15 @@ viele Seite haben}
 \textbf{Hier können wir sagen, dass wir in einem Labor einige Angriffe durchgeführt haben. Wir beschreiben alle Elementen
 dieses Labor und was wir von diesem Experimenten erwarten. Auch die Quelle für solche Beobachtung.}
 
-Bevor des Angriffes konnte der Host sich normal mit dem Server kommunizieren und Anfrage schicken und Antwort bekommen.
-Während des Angriffes war die Kommunikation mit dem Server entweder zu langsam oder sogar unterbrochen. In diesem Fall
-konnte konnte der Host selten Antwort auf Anfrage bekommen. In einigen Momenten gab es überhaubt keine Antwort. 
+Vor dem Angriff konnte der Host normal mit dem Server kommunizieren, also Anfragen schicken und er hat eine Antwort bekommen.
+Während des Angriffes war die Kommunikation mit dem Server entweder sehr langsam oder sogar unterbrochen. In diesem Fall
+bekam der Host selten eine Antwort auf seine Anfrage. In einigen Momenten gab es überhaubt keine Antwort. 
 
-Von seits des Servers wurde das Tool Wireshark\footnote{Wireshark ist eine Anwendung für die Analyse von Networkprotoklle.
-Es beschreibt ein- und ausgehende Pakete und dessen Bestandteile \cite{refst:wisa}.} verwendet, um die Ein- und Ausgehende
-Pakete zu beobachten und zu analysieren \cite{refart:UBEC}. Unter normalen Umstände kamen die Pakete mit einem angemessen
-Zeitabstand. Während des Angriffes bekem der Server viele kleine Pakete ohne nützlichen Inhalt und in sehr kürzem Zeitabstand.
-Unter gibt es eine Abbildung, wie das Wireshark die Kommunikation aufzeichnet:
+Seitens des Servers wurde das Tool Wireshark\footnote{Wireshark ist eine Anwendung für die Analyse von Networkprotoklle.
+Es beschreibt ein- und ausgehende Pakete und dessen Bestandteile \cite{refst:wisa}.} verwendet, um die Ein- und Ausgehenden
+Pakete zu beobachten und zu analysieren \cite{refart:UBEC}. Unter normalen Umstände kamen die Pakete in einem angemessenen
+Zeitabstand. Während des Angriffes bekam der Server viele kleine Pakete ohne nützlichen Inhalt und in sehr kurzem Zeitabstand.
+Im folgenden gibt es eine Abbildung, wie Wireshark die Kommunikation aufezeichnet hat:
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refst_wisa.png}}
@@ -96,9 +96,9 @@ Unter gibt es eine Abbildung, wie das Wireshark die Kommunikation aufzeichnet:
 \end{figure}
 %\cite{refst:wisa}
 
-Wie \cite{refip:NYRS} vorschlug, um den Angriff zu verhindern wurde der Server erneut konfigurieren, indem er nur
-Kommunikation von registrierten Hosts zu akzeptierte. Nach dieser Anpassung war der Angreifer nicht mehr in der Lage, 
-sich mit dem Server zu verbinden, da er keine registrierte Nutzer war. Aus der Aufzeichnung von Wireshark wurden nicht 
+Wie \cite{refip:NYRS} vorschlug, Um den Angriff zu verhindern, schlug  \cite{refip:NYRS} vor, den Server erneut zu konfigurieren, indem er nur
+Anfragen von registrierten Hosts akzeptiert. Nach dieser Anpassung konnte sich der Angreifer nicht mehr  
+mit dem Server verbinden, da er kein registrierter Nutzer war. In der Aufzeichnung von Wireshark wurden nicht 
 angemeldete Pakete direkt verworfen.
 
 \subsection{Interview mit IT-SicherheitsFirmen}
@@ -109,12 +109,12 @@ wie eine wissenschaftliche Interview aussehen sollte.}
 
 \subsection{Literaturrecherche}
 
-Die Literatur bezüglich Netzwerksicherheit, bargeldlose Zahlungsverfahren und Vending Machines ist in den 
-letzten 20 Jahren deutlich umfangreicher geworden. Da diese Begriffe viele und fast unendliche Konzepte 
+Die Literatur bezüglich Netzwerksicherheit, bargeldlose Zahlungsverfahren und Vending Machines, ist in den 
+letzten 20 Jahren deutlich umfangreicher geworden. Da diese Begriffe viele und nahezu unendlich Konzepte 
 decken, gehen wir hier auf spezifische Aspekte dieser Begriffe ein und zwar auf die Sicherheit von drahtlosen 
 Zahlungsmethode und von Smartcards. 
 
-Folgende Quelle trugen zu der Suchen nach vertrauenswürdigen Literaturquelle bei:
+Folgende Quelle trugen zu der Suche nach vertrauenswürdiger Literatur bei:
 
 \begin{itemize}
     \item ScienceDirect
@@ -123,5 +123,5 @@ Folgende Quelle trugen zu der Suchen nach vertrauenswürdigen Literaturquelle be
     \item Google Scholar.
 \end{itemize}
 
-Diese Quellen ermöglichten ein allgemeines theoretisches Kenntnis über das Objekt dieser Untersuchung und dessen aktuellen 
-Stand der Entwicklung.
+Diese Quellen ermöglichten eine allgemein theoretische Kenntnis über das Objekt dieser Untersuchung und dessen aktuellen 
+Stand der Forschung.
