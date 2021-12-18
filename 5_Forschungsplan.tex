@@ -6,8 +6,8 @@ wissenschaftlichen Arbeit auf zwei spezifische Aspekte dieses Themas, und zwar a
 auf Härtungsmaßnahmen von \acrshort{nfc} und von Smartcards. Die verwendeten Methoden dieser Untersuchung 
 sollen sowohl quantitative als auch qualitative Daten hervorheben, die dabei helfen sollen, die Sicherheit
 von Zahlungsverfahren, festzulegen und zu implementieren \cite{refbook:RMJL}. Um an vertrauenswürdige 
-und wissenschaftliche Informationen für die geplante wissenschaftliche Arbeit zu gelangen, verwenden wir die unten
-beschriebenen Methoden:
+und wissenschaftliche Informationen für die geplante wissenschaftliche Arbeit zu gelangen, verwenden wir 
+die unten beschriebenen Methoden:
 
 \begin{itemize}
   \item Interview mit einer Firma, die \acrfull{cba} erstellt
@@ -50,17 +50,17 @@ Arbeit verdeutlichen.
 
 \subsection{Interview mit Click-and-Buy-Automat Firma}
 
-Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. 
-Für diese Recherche wollen wir Interviews mit IT-Sicherheitsfirmen führen. Dazu haben wir zwei in Deutschland sitzende Firmen rausgesucht, 
+Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. Für diese Recherche wollen
+wir Interviews mit IT-Sicherheitsfirmen führen. Dazu haben wir zwei in Deutschland sitzende Firmen rausgesucht, 
 die diese Art von Geschäft schon anbieten: ``REWE digital'' und ``myenso''. In diesem Fall arbeiten wir mit Firmen, 
-die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze haben. Während die erste Firma ein großes Unternehmen
-ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist die zweite Firma ein kleines und neues Unternehmen, das weniger
+die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze haben. Während die erste ein großes Unternehmen
+ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist die zweite ein kleines und neues Unternehmen, das weniger
 als 100 Mitarbeiter beschäftigt \cite{refst:MYENSO}.
 
 ``REWE digital'' gehört der REWE Group und ist dafür zuständig, die Marke zu digitalisieren. Die Firma hat sich
-in verschiedenen Bereichen der Digitalisierung entwickelt, wie Liefer- und Abholservice, sowie Mobile Awnedungen. ``myenso'' 
-will ein neues Konzept vom Einkauf anbieten, indem die Kunden mehr Entscheidungen selber treffen können. Im Vergleich 
-zu größeren Ketten will ``myenso'' Kunden in Orten erreichen, wo es weniger Einkaufsmöglichkeiten gibt
+in verschiedenen Bereichen der Digitalisierung entwickelt, wie Liefer- und Abholservice, sowie Mobile Awnedungen. 
+``myenso'' will ein neues Konzept vom Einkauf anbieten, indem die Kunden mehr Entscheidungen selber treffen können. 
+Im Vergleich zu größeren Ketten will ``myenso'' Kunden in Orten erreichen, wo es weniger Einkaufsmöglichkeiten gibt
 oder die kein Interesse an großen Ketten haben.
 
 
@@ -74,8 +74,8 @@ sollen in dieser Umfrage gedeckt sein. Für die qualitative Datenerhebung werden
 aus dem Englischen ``focus group'' bezeichnet eine Art von qualitativen Diskussionen, wo die Teilnehmer mithilfe eines 
 Moderators ein Thema besprechen \cite{refbook:APGF}.} verwendet, um die wichtigsten Anforderungen in Bezug auf Sicherheit von 
 Zahlungsverfahren aufzudecken, zu analysieren und zu bewerten. Die gezielten und auch gleichzeitig offenen Fragen sollen dem
-Befragten die Möglichkeite anbieten \cite{refbook:EFAF}, sich über die existierenden Schwachstellen des angebotenen Dienstes zu äußern 
-und auch über verwendete oder in Naher Zukunft verwendete Sicherheitsmaßnahmen.
+Befragten die Möglichkeite anbieten \cite{refbook:EFAF}, sich über die existierenden Schwachstellen des angebotenen
+Dienstes zu äußern und auch über verwendete oder in Naher Zukunft verwendete Sicherheitsmaßnahmen.
 
 \textcolor{red}{\textbf{Die unteren Quellen und deren Themen:}}
 \begin{itemize}
@@ -112,16 +112,15 @@ Im erstem Experiment wird der Host eine normale Anfrage an den Server schicken. 
 also ohne irgendwelche Sicherheitsmechanismen, wie Authentifizierung, Überprüfung der Anzahl von Verbindungen oder Anfragen
 nach Zertifikaten.
 
-Der erste Angriff wird mithilfe des Tools \acrfull{nmap}\footnote{\acrshort{nmap} ist eine freie und Open 
-Source Anwendung für die Entdeckung und Sicherheitsüberprüfung von Netzwerken \cite{refst:nmap}.} durchgeführt
-werden. In diesem Angriff benutzt der Angreifer eine weitere Maschine, um sich selbst zu verbergen und, um den 
-Angriff zu verstärken. Der Angreifer schickt gespoofte\footnote{Angreifer verwenden meistens legitimen Adresse 
-von anderen Rechner, um die eigene Identität zu verbergen. In diesem Fall ist die eigene Adresse gefälscht 
-\cite{refst:IPIO}.} Pakete\footnote{Pakete sind im Netzwerk die Einkapselung von Metainformationen, wie Quell-
-und Zieladresse Protokolltyp und Größe die Nutzdaten, wie Text, Videos oder Bilder \cite{refbook:SWIS}.} an 
-die zwei \textit{Zombie} und diese schicken sehr viele kleine Pakete in sehr kürzem Abstand an das Server, 
-um dessen Kapazität auszulasten, sodass er auf keine Anfragen mehr antworten kann \cite{refip:KSDD}. Im 
-folgenden gibt es eine Abbildung zu dieser Angriffstechnik:
+Der erste Angriff wird mithilfe des Tools \acrfull{nmap}\footnote{\acrshort{nmap} ist eine freie und Open Source Anwendung
+für die Entdeckung und Sicherheitsüberprüfung von Netzwerken \cite{refst:nmap}.} durchgeführt werden. In diesem Angriff 
+benutzt der Angreifer eine weitere Maschine, um sich selbst zu verbergen und, um den Angriff zu verstärken. Der Angreifer
+schickt gespoofte\footnote{Angreifer verwenden meistens legitimen Adresse von anderen Rechner, um die eigene Identität
+zu verbergen. In diesem Fall ist die eigene Adresse gefälscht \cite{refst:IPIO}.} Pakete\footnote{Pakete sind im Netzwerk
+die Einkapselung von Metainformationen, wie Quell-und Zieladresse Protokolltyp und Größe die Nutzdaten, wie Text, 
+Videos oder Bilder \cite{refbook:SWIS}.} an die zwei \textit{Zombie} und diese schicken sehr viele kleine Pakete in sehr
+kürzem Abstand an das Server, um dessen Kapazität auszulasten, sodass er auf keine Anfragen mehr antworten kann 
+\cite{refip:KSDD}. Im folgenden gibt es eine Abbildung zu dieser Angriffstechnik:
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refip_VDSD.png}}
@@ -167,10 +166,10 @@ er kein registrierter Nutzer war. In der Aufzeichnung on Wireshark wurden nicht 
 
 \subsection{Literaturrecherche}
 
-Die Literatur bezüglich Netzwerksicherheit, bargeldlose Zahlungsverfahren und Vending Machines, ist in den 
-letzten 20 Jahren deutlich umfangreicher geworden. Da diese Begriffe viele und nahezu unendlich Konzepte 
-decken, gehen wir hier auf spezifische Aspekte dieser Begriffe ein und zwar auf die Sicherheit von drahtlosen 
-Zahlungsmethode und von Smartcards. 
+Die Literatur bezüglich Netzwerksicherheit, bargeldlose Zahlungsverfahren und Vending Machines, ist in den letzten 20 
+Jahren deutlich umfangreicher geworden. Da diese Begriffe viele und nahezu unendlich Konzepte decken, gehen wir hier
+auf spezifische Aspekte dieser Begriffe ein und zwar auf die Sicherheit von drahtlosen Zahlungsmethode und von 
+Smartcards. 
 
 Folgende Quelle trugen zu der Suche nach vertrauenswürdiger Literatur bei:
 
