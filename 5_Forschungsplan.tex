@@ -65,11 +65,11 @@ Arbeit verdeutlichen.
 
 \subsection{Interview mit Click-and-Buy-Automat Firma}
 
-Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. Für diese Recherche wollen
-wir Interviews mit IT-Sicherheitsfirmen führen \cite{refbook:FWDL}. Dazu haben wir zwei in Deutschland sitzende
-Firmen rausgesucht, die diese Art von Geschäft schon anbieten: ``REWE digital'' und ``myenso''. In diesem Fall werden wir mit Firmen 
-arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze haben. Während die Firma erste ein großes Unternehmen
-ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist das zweite Unternehmen, das weniger
+Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. Für diese Recherche 
+wollen wir Interviews mit IT-Sicherheitsfirmen führen \cite{refbook:FWDL}. Dazu haben wir zwei in Deutschland sitzende
+Firmen rausgesucht, die diese Art von Geschäft schon anbieten: ``REWE digital'' und ``myenso''. In diesem Fall werden wir
+mit Firmen arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze haben. Während die Firma erste 
+ein großes Unternehmen ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist das zweite Unternehmen, das weniger
 als 100 Mitarbeiter beschäftigt \cite{refst:MYENSO}, etwas kleiner und auch neuer.
 
 ``REWE digital'' gehört der REWE Group und ist dafür zuständig, die Marke zu digitalisieren. Die Firma hat sich in verschiedenen 
@@ -93,16 +93,14 @@ Befragten die Möglichkeit bieten \cite{refbook:EFAF}, sich über die existieren
 Dienstes zu äußern und auch über verwendete oder in Naher Zukunft verwendete Sicherheitsmaßnahmen.
 
 \subsection{Durchführung von Experimenten}
-%\textcolor{red}{\textbf{Hier bin ich mir nicht ganz sicher, ob wir schreiben, als ob wir die Experimenten 
-%schon ausgeführt haben oder wie wir es ausführen wollen.}}
 
 Die Tests für die Objekte dieser Untersuchung sollen im Labor der Hochschule Worms durchgeführt werden \cite{refbook:FWDL}.
-Dazu werden 5 Maschinen verwendet, die folgende Rollen übernahmen sollen: Server, Host, Angreifer und zwei Leerlauf-Maschine oder auch
-\textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschine, die für Angriff
-verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine nicht bewusst, dass Angreifer ihre Maschine für
-diesen Zweck verwenden \cite{refart:XGDD}.}. Der Host soll eine Anfrage an den Server schicken, die eine Simulation
-von einem Bezahlvorgang darstellen soll. Der Server soll unter normalen Umstände auf diese Anfrage antworten und wenn er es 
-als Angriff detektiert, keine Antwort geben. Dieses Verfahren findet sowohl bei drahtlosen Verbindungen als auch bei Smartcards statt.
+Dazu werden 5 Maschinen verwendet, die folgende Rollen übernahmen sollen: Server, Host, Angreifer und zwei Leerlauf-Maschine 
+oder auch \textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschine, die für Angriff
+verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine nicht bewusst, dass Angreifer ihre Maschine für diesen 
+Zweck verwenden \cite{refart:XGDD}.}. Der Host soll eine Anfrage an den Server schicken, die eine Simulation von einem Bezahlvorgang 
+darstellen soll. Der Server soll unter normalen Umstände auf diese Anfrage antworten und wenn er es als Angriff detektiert, keine 
+Antwort geben. Dieses Verfahren findet sowohl bei drahtlosen Verbindungen als auch bei Smartcards statt.
 
 
 \subsubsection{Angriffe und Härtungsmaßnahmen eines drahtlosen Servers}
@@ -160,17 +158,21 @@ verworfen werden.
 
 
 \subsubsection{Angriff und Härtungsmaßnahme von Smartcard}
-Um einen Angriff auf Smartcards zu starten, gibt es nicht nur eine Möglichkeit (https://link.springer.com/content/pdf/10.1007/s11623-011-0186-8.pdf)
-Bei dem Angriff, den wir planen durchzuführen erstellen wir eine Kopie einer Smartcard, sodass sie von der eigentlich echten Smartcard nicht zu unterscheiden ist.
-Da Smartcards unter anderem auch für Zugangskontrollen genutzt werden, könnte sich somit ein Angreifer relativ einfach durch die Kopie der Smartcard
-Zugang zu einem Gebäude verschaffen, bei dem eigentlich eine Smartcard für den Zugang benötigt wird.
-Konkret wollen wir eine Kopie unseres Studierendenausweises erstellen, um uns mit der Kopie Zugang zu den Hochschulgebäuden zu verschaffen.
-Hierbei ist es relativ schwierig Härtungsmaßnahmen zu ergreifen. Die einzige Möglichkeit wäre hierbei eine Art Zwei-Faktor-Authentisierung (https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Zwei-Faktor-Authentisierung/zwei-faktor-authentisierung_node.html).
-Das würde konkret bedeuten, dass neben der Smartcard noch der Fingerabdruck benötigt wird, damit die Person Zugang zu einem Gebäude bekommt.
+Um einen Angriff auf Smartcards zu starten, gibt es nicht nur eine Möglichkeit \cite{refart:TKSK}. Bei dem Angriff, den wir planen 
+durchzuführen erstellen wir eine Kopie einer Smartcard, sodass sie von der eigentlich echten Smartcard nicht zu unterscheiden ist.
+Da Smartcards unter anderem auch für Zugangskontrollen genutzt werden, könnte sich somit ein Angreifer relativ einfach durch 
+die Kopie der Smartcard Zugang zu einem Gebäude verschaffen, bei dem eigentlich eine Smartcard für den Zugang benötigt wird.
+Konkret wollen wir eine Kopie unseres Studierendenausweises erstellen, um uns mit der Kopie Zugang zu den Hochschulgebäuden 
+zu verschaffen. Hierbei ist es relativ schwierig Härtungsmaßnahmen zu ergreifen. Die einzige Möglichkeit wäre hierbei eine Art
+\acrfullpl{2fa}\footnote{\acrfullpl{2fa} bezeichnet das Authentifizierungsverfahren, indem zwei oder mehrere unabhängige 
+Komponenten verwendet werden, z.B. ein Passwort zusammen mit dem Fingerabdruck,oder eine Karte  zusammen mit der Erkennung 
+des Muster der Iris im Auge \cite{refip:simf}.} \cite{refst:2fa}. Das würde konkret bedeuten, dass neben der Smartcard noch 
+der Fingerabdruck benötigt wird, damit die Person Zugang zu einem Gebäude bekommt.
 
 
 \subsubsection{Erwartete Beobachtung von Angriffsmöglichkeiten von Smartcard}
-Unser erwartetes Ergebnis bei dem Angriff ist, dass wir uns mit der Kopie der Smartcrd Zugang zun den Hochschulgebäuden verschaffen können. 
+Unser erwartetes Ergebnis bei dem Angriff ist, dass wir uns mit der Kopie der Smartcard Zugang zun den Hochschulgebäuden 
+verschaffen können. 
 
 
 \subsection{Literaturrecherche}
