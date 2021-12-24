@@ -72,11 +72,11 @@ arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze
 ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist das zweite Unternehmen, das weniger
 als 100 Mitarbeiter beschäftigt \cite{refst:MYENSO}, etwas kleiner und auch neuer.
 
-``REWE digital'' gehört der REWE Group und ist dafür zuständig, die Marke zu digitalisieren. Die Firma hat sich
-in verschiedenen Bereichen der Digitalisierung entwickelt, wie Liefer- und Abholservice, oder auch Mobile Anwendung. 
-``myenso'' will ein neues Konzept vom Einkauf anbieten, indem die Kunden mehr Entscheidungen selber treffen können. 
-Im Vergleich zu größeren Ketten will ``myenso'' Kunden in Orten erreichen, wo es weniger Einkaufsmöglichkeiten gibt
-oder die Mehrheit der Bürger kein Interesse an großen Ketten haben.
+``REWE digital'' gehört der REWE Group und ist dafür zuständig, die Marke zu digitalisieren. Die Firma hat sich in verschiedenen 
+Bereichen der Digitalisierung entwickelt, wie Liefer- und Abholservice, oder auch Mobile Anwendung. ``myenso'' will ein 
+neues Konzept vom Einkauf anbieten, indem die Kunden mehr Entscheidungen selber treffen können. Im Vergleich zu größeren
+Ketten will ``myenso'' Kunden in Orten erreichen, wo es weniger Einkaufsmöglichkeiten gibt oder die Mehrheit der Bürger
+kein Interesse an großen Ketten haben.
 
 
 Für die Interviews stellen wir sowohl quantitative als auch qualitative Fragen. Aus dem quantitativen Fragenkatalog
@@ -131,27 +131,32 @@ kurzen Abständen an den Server, um dessen Kapazität auszureizen, sodass er auf
 %\cite{refip:VDSD}
 
 \subsubsection{Erwartete Beobachtung von Angriffsmöglichkeiten auf einen drahtlosen Servers}
-Vor dem Angriff konnte der Host normal mit dem Server kommunizieren, also Anfragen schicken und er hat eine Antwort bekommen.
-Während des Angriffes war die Kommunikation mit dem Server entweder sehr langsam oder sogar unterbrochen. In diesem Fall
-bekam der Host selten eine Antwort auf seine Anfrage. In einigen Momenten gab es überhaubt keine Antwort. 
+Vor dem Angriff wird erwartet, dass der Host normal mit dem Server kommunizieren kann. Für jede Anfragen sollte eine
+Antwort kommen. Während des Angriffes soll die Kommunikation mit dem Server entweder sehr langsam oder sogar unterbrochen 
+werden. In diesem Fall soll der Host selten eine Antwort auf seine Anfrage bekommen. In einigen Momenten soll es überhaubt 
+keine Antwort geben. 
 
-Seitens des Servers wurde das Tool Wireshark\footnote{Wireshark ist eine Anwendung für die Analyse von Networkprotoklle.
+Seitens des Servers wird das Tool Wireshark\footnote{Wireshark ist eine Anwendung für die Analyse von Networkprotoklle.
 Es beschreibt ein- und ausgehende Pakete und dessen Bestandteile \cite{refst:wisa}.} verwendet, um die Ein- und Ausgehenden
-Pakete zu beobachten und zu analysieren \cite{refart:UBEC}. Unter normalen Umstände kamen die Pakete in einem angemessenen
-Zeitabstand. Während des Angriffes bekam der Server viele kleine Pakete ohne nützlichen Inhalt und in sehr kurzem Zeitabstand.
-Im folgenden gibt es eine Abbildung, wie Wireshark die Kommunikation aufezeichnet hat:
+Pakete zu beobachten und zu analysieren \cite{refart:UBEC}. Unter normalen Umstände sollen die Pakete in einem angemessenen
+Zeitabstand kommen. Während des Angriffes soll der Server viele kleine Pakete ohne nützlichen Inhalt bekommen und in sehr 
+kurzem Zeitabstand. Im folgenden gibt es eine Abbildung, die darstellt, wie Wireshark die Kommunikation aufzeichnet:
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refst_wisa.png}}
-  \caption{Ausgabe von Wireshark \\Quelle: Wireshark, 2021}
+  \caption{Beispiel Ausgabe von Wireshark \\Quelle: Wireshark, 2021}
   \label{fig:refst_wisa}
 \end{figure}
 %\cite{refst:wisa}
 
 Um den Angriff zu verhindern, schlug \cite{refip:NYRS} vor, den Server erneut zu konfigurieren, indem er nur Anfragen von
-registrierten Hosts akzeptiert \textcolor{red}{\textbf{Zero Trust Modell, Beleg, Fussnote und kurze Erklärung.}} . Nach dieser 
-Anpassung konnte sich der Angreifer nicht mehr mit dem Server verbinden, da er kein registrierter Nutzer war. In der Aufzeichnung 
-on Wireshark wurden nicht angemeldete Pakete direkt verworfen.
+registrierten Hosts akzeptiert. Ein anderer Ansatz ist die verwendung von \textit{Zero Trust Architektur}\footnote{Die 
+\textit{Zero Trust Architektur} geht davon aus, dass alle Zugänge auf IT-Ressource, sowohl von internen als auch von
+externen Quellen, nicht glaubenswürdig sind und eine Sicherheitsrisiko darstellen. Deshalb finden z.B. Authentifizierungsverfahren
+und Registrierung von Aktionen (Logs) für jeden Zugang statt \cite{refart:EBZT}.}, um solche und auch andere Angriffe 
+zu vermeiden \cite{refip:LYSP}.  Nach dieser Anpassung sollte sich der Angreifer nicht mehr in der Lage sein, sich mit dem Server
+verbinden, da er kein registrierter Nutzer ist. In der Aufzeichnung on Wireshark sollten nicht angemeldete Pakete direkt
+verworfen werden.
 
 
 \subsubsection{Angriff und Härtungsmaßnahme von Smartcard}
