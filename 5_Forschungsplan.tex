@@ -37,32 +37,6 @@ Arbeit verdeutlichen.
   \label{fig:FD}
 \end{figure}
 
-%Abschluss zur Literatur in dem Diagramm
-%Abschluss 
-%      _____ Smartcard \____
-%xxxx /                 ____Endgültige Schlussfolge
-%     \_____    NFC    /
-%
-%Quelle für Interview (methode für wirtschafts informatik)
-
-%bis 12 aufschreiben
-
-%Durchführung von Experiment und Quelleangabe
-%Experiment Quelle
-%Interview Quelle
-
-
-
-%\begin{landscape}
-%  \thispagestyle{mylandscape}
-%  \begin{figure}[h]  
-%  \centering
-%    \centering{\includegraphics[width=20cm]{Bilder/Diagram2.png}}
-%         \caption{Recherchespfad\\ Quelle: eigene Darstellung}
-%          \label{fig:diagramfrage}
-%  \end{figure}
-%\end{landscape}
-
 \subsection{Interview mit Click-and-Buy-Automat Firma}
 
 Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. Für diese Recherche 
@@ -94,17 +68,21 @@ Dienstes zu äußern und auch über verwendete oder in Naher Zukunft verwendete 
 
 \subsection{Durchführung von Experimenten}
 
-Die Tests für die Objekte dieser Untersuchung sollen im Labor der Hochschule Worms durchgeführt werden \cite{refbook:FWDL}.
-Dazu werden 5 Maschinen verwendet, die folgende Rollen übernahmen sollen: Server, Host, Angreifer und zwei Leerlauf-Maschine 
-oder auch \textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschine, die für Angriff
-verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine nicht bewusst, dass Angreifer ihre Maschine für diesen 
-Zweck verwenden \cite{refart:XGDD}.}. Der Host soll eine Anfrage an den Server schicken, die eine Simulation von einem Bezahlvorgang 
-darstellen soll. Der Server soll unter normalen Umstände auf diese Anfrage antworten und wenn er es als Angriff detektiert, keine 
-Antwort geben. Dieses Verfahren findet sowohl bei drahtlosen Verbindungen als auch bei Smartcards statt.
+Die Tests für die Objekte dieser Untersuchung sollen im Labor der Hochschule Worms durchgeführt werden \cite{refbook:FWDL}. 
+Für beide Experimenten, \acrshort{nfc} und Smartcards, werden wir fünf Maschine und zwei Kopien unserer Hochschulkarte verwenden.
+Die Maschinen werden folgende Rolle übernehmen: Server und Hosts. Wir verwenden hier sowohl kabellose und als auch Kabelverbindung.
+Wir verwenden zusätzlich einen Authenticator, der der Gebäudezugang zu der Hochschule simuliert.
 
 
 \subsubsection{Angriffe und Härtungsmaßnahmen eines drahtlosen Servers}
-Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \acrfull{ddos}.
+Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \acrfull{ddos}. Dazu werden 5 Maschinen
+verwendet, die folgende Rollen übernahmen sollen: Server, Host, Angreifer und zwei Leerlauf-Maschine oder auch 
+\textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschine, die für 
+Angriff verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine nicht bewusst, dass Angreifer ihre
+Maschine für diesen Zweck verwenden \cite{refart:XGDD}.}. Der Host soll eine Anfrage an den Server schicken, die
+eine Simulation von einem Bezahlvorgang darstellen soll. Der Server soll unter normalen Umstände auf diese Anfrage
+antworten und wenn er es als Angriff detektiert, keine Antwort geben. Dieses Verfahren findet sowohl bei drahtlosen
+Verbindungen als auch bei Smartcards statt.
 
 Im erstem Experiment wird der Host eine normale Anfrage an den Server schicken. Dieser wird ohne zusätzliche 
 Sicherheitsmechanismen, wie Authentifizierung, Überprüfung der Anzahl von Verbindungen oder Anfragen nach Zertifikaten 
@@ -126,7 +104,6 @@ kurzen Abständen an den Server, um dessen Kapazität auszureizen, sodass er auf
   \\ Quelle: Durcekova et al., 2012}
   \label{fig:VDSD}
 \end{figure}
-%\cite{refip:VDSD}
 
 \subsubsection{Erwartete Beobachtung von Angriffsmöglichkeiten auf einen drahtlosen Servers}
 Vor dem Angriff wird erwartet, dass der Host normal mit dem Server kommunizieren kann. Für jede Anfragen sollte eine
@@ -162,17 +139,36 @@ Um einen Angriff auf Smartcards zu starten, gibt es nicht nur eine Möglichkeit 
 durchzuführen erstellen wir eine Kopie einer Smartcard, sodass sie von der eigentlich echten Smartcard nicht zu unterscheiden ist.
 Da Smartcards unter anderem auch für Zugangskontrollen genutzt werden, könnte sich somit ein Angreifer relativ einfach durch 
 die Kopie der Smartcard Zugang zu einem Gebäude verschaffen, bei dem eigentlich eine Smartcard für den Zugang benötigt wird.
+Unten gibt es eine Darstellung, die dieser Angriff besser erläutert:
+
+
+\begin{figure}[H]
+  \centering{\includegraphics[width=8cm]{Bilder/refst_scpt.png}}
+  \caption{Abbildung eines Seitenkanalangriffes\\ Quelle: Tavares P., 2020}
+  \label{fig:refart_scpt}
+\end{figure}
+
+
 Konkret wollen wir eine Kopie unseres Studierendenausweises erstellen, um uns mit der Kopie Zugang zu den Hochschulgebäuden 
-zu verschaffen. Hierbei ist es relativ schwierig Härtungsmaßnahmen zu ergreifen. Die einzige Möglichkeit wäre hierbei eine Art
-\acrfullpl{2fa}\footnote{\acrfullpl{2fa} bezeichnet das Authentifizierungsverfahren, indem zwei oder mehrere unabhängige 
-Komponenten verwendet werden, z.B. ein Passwort zusammen mit dem Fingerabdruck,oder eine Karte  zusammen mit der Erkennung 
-des Muster der Iris im Auge \cite{refip:simf}.} \cite{refst:2fa}. Das würde konkret bedeuten, dass neben der Smartcard noch 
-der Fingerabdruck benötigt wird, damit die Person Zugang zu einem Gebäude bekommt.
+zu verschaffen. Hierbei ist es relativ schwierig Härtungsmaßnahmen zu ergreifen. Die einzige Möglichkeit wäre laut dem \acrfullpl{bsi} 
+hierbei eine Art \acrfullpl{2fa} oder \acrfullpl{mfa}\footnote{\acrfullpl{2fa} oder \acrfullpl{mfa} bezeichnen das 
+Authentifizierungsverfahren, indem zwei oder mehrere unabhängige Komponenten zur Authentifizierung verwendet werden, z.B.
+ein Passwort zusammen mit dem Fingerabdruck,oder eine Karte zusammen mit der Erkennung des Muster der Iris im Auge 
+\cite{refip:simf}.} \cite{refst:2fa}. Das würde konkret bedeuten, dass neben der Smartcard noch der Fingerabdruck z.B. 
+benötigt wird, damit die Person Zugang zu einem Gebäude bekommt. Die untere Abbildung zeigt, wie ein \acrshort{mfa} 
+zu einer Entscheidung kommt:
+
+
+\begin{figure}[H]
+  \centering{\includegraphics[width=8cm]{Bilder/refart_AOMF.png}}
+  \caption{Authentifizierungsverfahren mit \acrshort{mfa} \\ Quelle: Ometov et al., 2018}
+  \label{fig:refart_AOMF}
+\end{figure}
 
 
 \subsubsection{Erwartete Beobachtung von Angriffsmöglichkeiten von Smartcard}
-Unser erwartetes Ergebnis bei dem Angriff ist, dass wir uns mit der Kopie der Smartcard Zugang zun den Hochschulgebäuden 
-verschaffen können. 
+Unter normalen Umstände sollte die falsche Kopie der Karte sofort von dem System abgelehnt werden. Während eines Angriffes
+sowohl die echte als auch die falsche Karte ermöglichen einen einwandfreien Zugang zu den Hochschulgebäuden.
 
 
 \subsection{Literaturrecherche}
