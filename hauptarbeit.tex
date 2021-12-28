@@ -16,10 +16,6 @@
 \newacronym{ai}{AI}{Artificial Intelligence}
 
 
-
-
-
-
 \fancypagestyle{mylandscape}{
 \fancyhf{} %Clears the header/footer
 \fancyfoot{% Footer
@@ -33,14 +29,21 @@
 }
 
 
-
 \begin{document}
     \include{titelseite}
     \tableofcontents
     \newpage
+    \phantomsection
+    \addcontentsline{toc}{section}{Abstract}
+    \addcontentsline{toc}{section}{Zusammenfassung}
+    \include{abstract}
+    \newpage
+    \phantomsection
+    \addcontentsline{toc}{section}{\listfigurename}
     \listoffigures
-   \clearpage
-   \printglossary[type=acronym,title=Abkürzungsverzeichnis,toctitle=Abkürzungsverzeichnis]
+    \newpage
+    \clearpage
+    \printglossary[type=acronym,title=Abkürzungsverzeichnis,toctitle=Abkürzungsverzeichnis]
 	  \clearpage
     \include{1_Einfuehrung}
     \include{2_Ziele}
