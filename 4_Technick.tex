@@ -8,7 +8,7 @@ Smartcards.
 
 Viele digitale Zahlungen finden über NFC statt. Diese Technologie ermöglicht ein Zahlungs- und
 Identifizierungsverfahren, indem ein passives Gerät oder auch Tag genannt mit einem aktiven Gerät,
-auch Ermitter genannt, kommuniziert. In dieser Situation will das passive Gerät eine Autorisierung initiieren,
+auch Ermittler genannt, kommuniziert. In dieser Situation will das passive Gerät eine Autorisierung initiieren,
 während das aktive Gerät für die Erlaubnis zuständig ist \cite{refart:NFNK}. 
 
 \begin{figure}[H]
@@ -25,16 +25,16 @@ und Härtungsmaßnahmen nicht in ihrer Vollständigkeit bekannt. Drahtlose Verbi
 Schattenseite bekannt \cite{refip:NYRS}. Maßnahmen zu entwickeln, die sich an verschiedene Systeme anpassen,
 kosten Zeit und Investitionen von Banken und Sicherheitsfirmen. Für jeden möglichen Angriffe müssten 
 Gegenmaßnahmen existieren, sodass das Schutzziel der Integrität\footnote{Es ist Subjekten nicht möglich, 
-die zu schützenden Daten unatorisiert und unbemerkt zu manipulieren \cite{refbook:SWIS}.} nicht verletzt wird.
+die zu schützenden Daten unautorisiert und unbemerkt zu manipulieren \cite{refbook:SWIS}.} nicht verletzt wird.
 
 Bekannte Angriffe für kabellose Verbindungen können auch bei \acrshort{nfc} verwendet werden\cite{refip:NYRS}, wie die
 Erstellung und das Hinzufügen von Dateien in einem Opfersystem mit umfangreichen Privilegien; die Konzipierung
 von schwachen digitalen Zertifikaten oder auch die Verwendung von Reverse Engineering\footnote{Reverse
-Engineering ist ein Prozess von der Identifzierung von Bestandteilen eines Systems und von die Wiederherstellung 
+Engineering ist ein Prozess von der Identifizierung von Bestandteilen eines Systems und von die Wiederherstellung 
 dieser in einem anderen Format \cite{refart:CHRE}. Im Bereich der Cybersicherheit wird Reverse Engineering 
-verwendent, um Schwachstellen von Systemen zu entedecken, sodass diese gegen Hardware und Software ausgenutzt
+verwendet, um Schwachstellen von Systemen zu ent=decken, sodass diese gegen Hardware und Software ausgenutzt
 werden können \cite{refip:CMBM}.}. \cite{refart:ALSI} hebt andere Schwachstellen hervor: 
-\textit{Eavesdropping}\footnote{Eavesdropping ist das unauthorisierte Mithören von einer Kummunikation 
+\textit{Eavesdropping}\footnote{Eavesdropping ist das unautorisierte Mithören von einer Kommunikation 
 \cite{refbook:SWIS}.} je nachdem, wie viele Ressourcen investiert werden, kann ein Angreifer in der 
 Lage sein, der Kommunikation zu lauschen; \acrfull{ddos}\footnote{Bei solchen Angriffen wird die
 Verfügbarkeit des Dienstes verletzt, sodass die Kommunikation nicht mehr einwandfrei funktioniert \cite{refbook:SWIS}. 
@@ -45,12 +45,17 @@ um die Authentifizierung und Verfügbarkeit der Kommunikation zu beeinträchtige
 \subsubsection{Gegenmaßnahmen für die Härtung von drahtlose Verbindung}
 
 Um die Risiken bei der Verwendung von \acrshort{nfc} zu abzuschwächen, schlägt \cite{refip:NYRS} einige Sicherheitsmechanismen vor, 
-die sich eher auf allgemeine drahtlose Verbindungen beziehen und die auch für \acrshort{nfc} verwendet werden können: Nutzung von modernen 
-kryptographischen Standards für die Validierung von Zertifikaten; Verwendung von Zwei-Faktor- Authentifizierung; Erstellung
-von schwer zu erratenden Passwörtern; Registrierung von authorisierten Geräten; Einsetzung von künstlicher Intelligenz 
-(KI) für die Detektion von abweichendem Verhalten; Kontrolle gegen Social Engineering \footnote{Beim Social Engineering
-nutzt der Täter den ``Faktor Mensch'' als vermeintlich schwächstes Glied der Sicherheitskette aus, um seine kriminelle
-Absicht zu verwirklichen.\cite{booklet:BSSE}}
+die sich eher auf allgemeine drahtlose Verbindungen beziehen und die auch für \acrshort{nfc} verwendet werden können: Nutzung
+von modernen kryptographischen Standards für die Validierung von Zertifikaten; \acrfullpl{2fa} oder \acrfullpl{mfa}\footnote{\acrfullpl{2fa} oder \acrfullpl{mfa} bezeichnen das Authentifizierungsverfahren, indem zwei oder mehrere 
+unabhängige Komponenten zur Authentifizierung verwendet werden, z.B. ein Passwort zusammen mit dem Fingerabdruck,oder eine Karte 
+zusammen mit der Erkennung des Muster der Iris im Auge \cite{refip:simf}.}; Erstellung von schwer zu erratenden Passwörtern;
+Registrierung von autorisierten Geräten; Einsetzung von \acrlong{ki}\footnote{\acrlong{ki} oder \acrlong{ai} im Original
+bezeichnet das Verfahren, in dem Computer in der Lage sind, menschliche Entscheidung zu treffen\cite{refart:HAKI}. Ein Ziel
+von \acrshort{ki} ist das menschliches Gehirn zu verstehen und in einer Maschine nachzubauen. Da Die Definition nicht eindeutig 
+ist und sich von viele andere wichtigen Wissenschaftler erklären lässt, verwenden hier für diese wissenschaftliche Arbeit die oben
+genannte Definition.} für die Detektion von abweichendem Verhalten; Kontrolle gegen Social Engineering\footnote{Beim Social Engineering 
+nutzt der Täter den ``Faktor Mensch'' als vermeintlich schwächstes Glied der Sicherheitskette aus, um seine kriminelle Absicht zu 
+verwirklichen.\cite{booklet:BSSE}}
 
 Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem \acrshort{cba} akzeptiert werden. 
 In Bezug auf diese Zahlungsmittel, wird die Sicherheit im folgenden untersucht.
@@ -62,12 +67,12 @@ des Nutzenden. Im folgenden ist ein Beispiel von einer Smartcard für eine zahle
 
 \begin{figure}[H]
    \centering{\includegraphics[width=4cm]{Bilder/eigenes_Bild_Karte.png}}
-   \caption{Eine Smartcard und deren eingebetete Mikrochip\\Quelle: eigene Darstellung}
+   \caption{Eine Smartcard und deren eingebettete Mikrochip\\Quelle: eigene Darstellung}
    \label{fig:eigenes_Bild}
 \end{figure}
 
 Die Smartcard wurde vor mehr als 40 Jahren erfunden und ihr Ziel ist die Sicherheit von Kartenzahlungen und 
-allgemeine Authentifizierungsverfahren zu erhöhen \cite{refip:JFSB}. Sie unterscheiden sich von traditionelen 
+allgemeine Authentifizierungsverfahren zu erhöhen \cite{refip:JFSB}. Sie unterscheiden sich von traditionellen 
 Magnetstreifenkarten, weil sie verschiedene Authentifizierungsmethoden ermöglichen auch ohne eine direkte 
 Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierungsprozess einer Smartcard 
 \ref{fig:refbook_ATMS} dargestellt. 
@@ -94,62 +99,18 @@ muss ein Angriff auf die Hardware initiiert werden, um an relevante Informatione
 Möglichkeit wäre, die Schwachstellen eines bestimmten Protokolls, das für die Kommunikation verwendet wird auszunutzen.
 
 \subsubsection{Gegenmaßnahmen für die Härtung von Smartcards}
-Um einen Angriff auf die Hardware möglichst zu vermeiden, ist es sinnvoll den Chip nicht rekonstruierbar zu machen,
-d.h. dass keine Standardzellen oder ähnliches verwendet werden. Zusätzlich spielt die Verschlüsselung 
-der Daten eine große Rolle und erhöht die Sicherheit enorm \cite{refst:ARES}. Außerdem können Mechanismen in 
-die Smartcard eingebaut werden, die permanent die Spannung oder Frequenz überprüfen und sobald etwas
-nicht dem Normalzustand entspricht, wird der Chip ausgeschaltet, sodass kein Lesegerät mit der 
-Karte kommunizieren kann. Letztlich ist es wichtig, dass jede Karte individuell ist, sodass ein 
-erfolgreicher Angriff kein Sicherheitsrisiko für andere Karten darstellt \cite{refmas:ASSS}. 
-Dazu wären asymmetrische Verschlüsselungsverfahren sinnvoller als symmetrische, da jede Karte bei
-asymmetrischer Verschlüsselung einen öffentlichen und privaten Schlüssel hat und somit alle einen unterschiedlichen
-Schlüssel haben.
+Um einen Angriff auf die Hardware möglichst zu vermeiden, ist es sinnvoll den Chip nicht rekonstruierbar zu machen, d.h. dass
+keine Standardzellen oder ähnliches verwendet werden. Zusätzlich spielt die Verschlüsselung der Daten eine große Rolle und 
+erhöht die Sicherheit enorm \cite{refst:ARES}. Außerdem können Mechanismen in die Smartcard eingebaut werden, die permanent 
+die Spannung oder Frequenz überprüfen und sobald etwas nicht dem Normalzustand entspricht, wird der Chip ausgeschaltet, sodass 
+kein Lesegerät mit der Karte kommunizieren kann. Letztlich ist es wichtig, dass jede Karte individuell ist, sodass ein 
+erfolgreicher Angriff kein Sicherheitsrisiko für andere Karten darstellt \cite{refmas:ASSS}. Dazu wären asymmetrische 
+Verschlüsselungsverfahren\footnote{Bei asymmetrischer Verschlüsselung werden einen öffentlichen Schlüssel für die Verschlüsselung
+und eine privaten Schlüssel für die Entschlüsselung der Daten verwendet \cite{refbook:SWIS}.} sinnvoller als 
+symmetrische\footnote{Bei symmetrischer Verschlüsselung gibt es nur einen Schlüssel die sowohl für die Ver- als auch
+für die Entschlüsselung der Daten verwendet wird\cite{refbook:SWIS}.}, da jede Karte bei asymmetrischer Verschlüsselung einen
+öffentlichen und privaten Schlüssel hat und somit alle einen unterschiedlichen Schlüssel haben.
 
-
-%- Smartcards sind auf der Hardwareebene extrem sicher. \cite{refmas:ASSS}  bezeichent Smartcards auch als 
-%  ein in Hrdware gegossener Tresor für Informationen. 
-%- das Guthaben oder der Verfügungsrahmen wird direkt auf der Karte gespeichert, sodass der ganze Prozess nicht über ein Backend-System laufen muss
-%- die Komunikation wird immer vom Leser initiiert, die Karte reagiert nur
-%- Angriffe richten sich direkt gegen die Hardware, nicht etwa Socail Engineering 
-%- Analyse von übertragenen Daten --> Rückschlüsse auf Schwachstellen vom verwendeten Protokoll
-%
-%Gegenmaßnahmen:
-%- damit der Chip nicht rekonstruierbar ist, sollte dieser möglichst Komplex sein, keine Standardzellen oder ähnliches einbauen
-%- Zusätzlich lassen sich die Inhalte von Bussen und Speichern bereits auf Hardwareebene
-%  durch Scrambling, das heißt das Vertauschen von Adressen, oder durch Verschlüsselung
-%  der Daten schützen [2, S.540f][2, S.544f]. Schutzschichten, die den gesamten Chip umgeben
-%  und von diesem permanent auf ihre Unversehrtheit geprüft werden, bilden eine weitere
-%  Barriere die interne Funktionsweise zu analysieren [2, S.539f]. Andere Sensoren, etwa
-%  zur Überwachung von Spannung oder Frequenz, können den Chip abschalten, sobald
-%  diese einen Betrieb außerhalb der zulässigen Spezifikationen und damit einen möglichen
-%  Angriff erkennen
-%- Seitenkanal Angriffe können zum Beispiel durch immer gleich bleibenden Stromverbrauch verhindert werden
-%- Grundvoraussetzung für ein sicheres System ist eine Authentifizierung der jeweiligen
-%  Gegenstelle bei der Kommunikation, da nur so sicher gestellt werden kann, dass es sich
-%  beim Kommunikationspartner nicht um einen Angreifer handelt [2, S.571]. Obwohl es
-%  auch möglich ist, allein die Integrität übertragener Daten zu schützen, werden diese
-%  oftmals zusätzlich verschlüsselt, sodass auch die Vertraulichkeit gewährleistet ist [2, S.570].
-%  Alle für derartige kryptografische Operationen eingesetzten Algorithmen sollten öffentlich
-%  bekannt und untersucht sein, um Sicherheitslücken soweit wie möglich auszuschließen [30,
-%  S.9].
-%  Bei der Implementierung der Algorithmen ist darauf zu achten, dass ein konstantes
-%  Zeitverhalten gewährleistet wird, das heißt unabhängig von den Eingabedaten die gleiche
-%  Ausführungszeit benötigt wird, um so darauf basierende Seitenkanalattacken zu unterbin-
-%  den [2, S.560f]. Zufallszahlen, die unter anderem bei der Authentifizierung eine wichtige
-%  Rolle spielen, sind auf kryptografisch sichere Weise zu erzeugen
-%- Auf organisatorischer Ebene ist es wichtig, die Verwendung von kartenindividuellem
-%  Schlüsselmaterial sicherzustellen, um zu verhindern, dass ein erfolgreicher Angriff auf
-%  eine Karte auch andere Karten unmittelbar gefährdet. Dies geschieht entweder durch den
-%  Einsatz asymmetrischer Kryptografie, bei der für jede Karte eigenes Schlüsselmaterial
-%  generiert und von einer zentralen Instanz signiert wird, oder durch die so genannte
-%  Key Diversification bei Verwendung symmetrischer Kryptografie. Hierbei wird unter
-%  Einsatz einer Einwegfunktion ein kartenindividueller Schlüssel von einem Hauptschlüssel
-%  abgeleitet und nur der abgeleitete Schlüssel auf der Karte gespeichert [30, S.22].
-%  Sollte es zu einem Verlust oder einem erfolgreichen Angriff auf eine Karte kommen,
-%  muss es möglich sein, diese Karte (genauer: ihr Schlüsselmaterial) im System zu sperren,
-%  indem entsprechende Sperrlisten gepflegt werden [2, S.572]. Dass eine Karte angegriffen
-%  und beispielsweise geklont wurde, lässt sich durch das Erstellen von Logeinträgen für
-%  jede Verwendung und deren Überprüfung auf Unregelmäßigkeiten erkennen
 
 \subsection{Fazit}
 
