@@ -1,6 +1,6 @@
 \section{Stand der Technik}
 
-Für die Bezahlungsmethoden werden hier zwei verschiedene Arten von Zahlungsverfahren analysiert und deren
+Im folgenden werden zwei verschiedene Arten von Zahlungsverfahren analysiert und deren
 Vorteile in Bezug auf Sicherheit und Härtungsmaßnahmen dargestellt: drahtlose Zahlung mit und 
 Smartcards.
 
@@ -27,12 +27,12 @@ kosten Zeit und Investitionen von Banken und Sicherheitsfirmen. Für jeden mögl
 Gegenmaßnahmen existieren, sodass das Schutzziel der Integrität\footnote{Es ist Subjekten nicht möglich, 
 die zu schützenden Daten unautorisiert und unbemerkt zu manipulieren \cite{refbook:SWIS}.} nicht verletzt wird.
 
-Bekannte Angriffe für kabellose Verbindungen können auch bei \acrshort{nfc} verwendet werden\cite{refip:NYRS}, wie die
+Bekannte Angriffe für drahtlose Verbindungen können auch bei \acrshort{nfc} verwendet werden\cite{refip:NYRS}, wie die
 Erstellung und das Hinzufügen von Dateien in einem Opfersystem mit umfangreichen Privilegien; die Konzipierung
 von schwachen digitalen Zertifikaten oder auch die Verwendung von Reverse Engineering\footnote{Reverse
 Engineering ist ein Prozess von der Identifizierung von Bestandteilen eines Systems und von die Wiederherstellung 
 dieser in einem anderen Format \cite{refart:CHRE}. Im Bereich der Cybersicherheit wird Reverse Engineering 
-verwendet, um Schwachstellen von Systemen zu ent=decken, sodass diese gegen Hardware und Software ausgenutzt
+verwendet, um Schwachstellen von Systemen zu entdecken, sodass diese gegen Hardware und Software ausgenutzt
 werden können \cite{refip:CMBM}.}. \cite{refart:ALSI} hebt andere Schwachstellen hervor: 
 \textit{Eavesdropping}\footnote{Eavesdropping ist das unautorisierte Mithören von einer Kommunikation 
 \cite{refbook:SWIS}.} je nachdem, wie viele Ressourcen investiert werden, kann ein Angreifer in der 
@@ -45,13 +45,13 @@ um die Authentifizierung und Verfügbarkeit der Kommunikation zu beeinträchtige
 \subsubsection{Gegenmaßnahmen für die Härtung von drahtlose Verbindung}
 
 Um die Risiken bei der Verwendung von \acrshort{nfc} zu abzuschwächen, schlägt \cite{refip:NYRS} einige Sicherheitsmechanismen vor, 
-die sich eher auf allgemeine drahtlose Verbindungen beziehen und die auch für \acrshort{nfc} verwendet werden können: Nutzung
+die sich eher auf allgemeine drahtlose Verbindungen beziehen die aber auch für \acrshort{nfc} verwendet werden können: Nutzung
 von modernen kryptographischen Standards für die Validierung von Zertifikaten; \acrfullpl{2fa} oder \acrfullpl{mfa}\footnote{\acrfullpl{2fa} oder \acrfullpl{mfa} bezeichnen das Authentifizierungsverfahren, indem zwei oder mehrere 
 unabhängige Komponenten zur Authentifizierung verwendet werden, z.B. ein Passwort zusammen mit dem Fingerabdruck,oder eine Karte 
 zusammen mit der Erkennung des Muster der Iris im Auge \cite{refip:simf}.}; Erstellung von schwer zu erratenden Passwörtern;
 Registrierung von autorisierten Geräten; Einsetzung von \acrlong{ki}\footnote{\acrlong{ki} oder \acrlong{ai} im Original
 bezeichnet das Verfahren, in dem Computer in der Lage sind, menschliche Entscheidung zu treffen\cite{refart:HAKI}. Ein Ziel
-von \acrshort{ki} ist das menschliches Gehirn zu verstehen und in einer Maschine nachzubauen. Da Die Definition nicht eindeutig 
+von \acrshort{ki} ist das menschliche Gehirn zu verstehen und in einer Maschine nachzubauen. Da die Definition nicht eindeutig 
 ist und sich von viele andere wichtigen Wissenschaftler erklären lässt, verwenden hier für diese wissenschaftliche Arbeit die oben
 genannte Definition.} für die Detektion von abweichendem Verhalten; Kontrolle gegen Social Engineering\footnote{Beim Social Engineering 
 nutzt der Täter den ``Faktor Mensch'' als vermeintlich schwächstes Glied der Sicherheitskette aus, um seine kriminelle Absicht zu 
@@ -61,7 +61,7 @@ Kredit- und EC-Karten sollen auch als Zahlungsmittel bei unserem \acrshort{cba} 
 In Bezug auf diese Zahlungsmittel, wird die Sicherheit im folgenden untersucht.
 
 \subsection{Anwendung von Smartcards und sicheres Bezahlen}
-Smartcards sind heutzutage stark verbreitet für eine Zahlungsabwicklung und auch für die Identifizierung.
+Smartcards sind heutzutage stark verbreitet im Bezug auf Zahlungsabwicklungen und auch für die Identifizierung.
 Viele Ausweise, wie der Reisepass und die Krankenkassenkarte, verwenden diese Technologie zur Authentifizierung
 des Nutzenden. Im folgenden ist ein Beispiel von einer Smartcard für eine zahlende Karte zu sehen: 
 
@@ -84,11 +84,11 @@ Verbindung zur Bank \cite{refbook:ATMS}. Im folgenden wird der Authentifizierung
 \end{figure}
 
 Die meisten Angriffe bei Smartcards geschehen laut \cite{refmas:ASSS} auf Hardwareebene. Er beschreibt folgende 
-Techniken für Angriffe: Protokollanalyse, bei schwacher Konzipierung oder mangelnder Verschlüsselung ermöglichen Zugang 
-zum Klartext; Hardware Reverse Engineering: Verständnis über die Algorithmen oder Extrahieren des Schlüssels
+Techniken für Angriffe: Protokollanalyse, schwache Konzipierung oder mangelnde Verschlüsselung ermöglichen Zugang 
+zum Klartext; Hardware Reverse Engineering: Verständnis über die Algorithmen oder Extrahieren des Schlüssels.
 
 
-\subsubsection{Angriffsmöglichkeit auf Smartcards}
+\subsubsection{Angriffsmöglichkeiten auf Smartcards}
 Smartcards sind auf Hardwareebene extrem sicher. \cite{refmas:ASSS} bezeichnet sie auch als ein in Hardware gegossener
 Tresor für Informationen. Wenn eine Smartcard für das Bezahlen verwendet wird, ist kein Backend-System nötig,
 denn alle wichtigen Informationen wie das Guthaben sind direkt auf der Karte gespeichert. Aus diesem Grund können

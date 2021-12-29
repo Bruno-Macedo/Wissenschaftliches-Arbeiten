@@ -42,7 +42,7 @@ Arbeit verdeutlichen.
 Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. Für diese Recherche 
 wollen wir Interviews mit IT-Sicherheitsfirmen führen \cite{refbook:FWDL}. Dazu haben wir zwei in Deutschland sitzende
 Firmen rausgesucht, die diese Art von Geschäft schon anbieten: ``REWE digital'' und ``myenso''. In diesem Fall werden wir
-mit Firmen arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze haben. Während die Firma erste 
+mit Firmen arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze haben. Während die erste Firma  
 ein großes Unternehmen ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist das zweite Unternehmen, das weniger
 als 100 Mitarbeiter beschäftigt \cite{refst:MYENSO}, etwas kleiner und auch neuer.
 
@@ -61,7 +61,7 @@ und Mechanismen beschäftigen, die die Firma verwendet, um die Sicherheit ihres 
 Sowohl die Entwicklung von Zahlungsmethoden bei den Produkten als auch der aktuelle technische Stand der Zahlungsverfahren
 sollen in dieser Umfrage gedeckt sein. Für die qualitative Datenerhebung werden Methoden von Fokusgruppen\footnote{Fokusgruppe
 aus dem Englischen ``focus group'' bezeichnet eine Art von qualitativen Diskussionen, wo die Teilnehmer mithilfe eines 
-Moderators ein Thema besprechen \cite{refbook:APGF}.} verwendet, um die wichtigsten Anforderungen in Bezug auf Sicherheit von 
+Moderators ein Thema bespricht \cite{refbook:APGF}.} verwendet, um die wichtigsten Anforderungen in Bezug auf Sicherheit bei 
 Zahlungsverfahren aufzudecken, zu analysieren und zu bewerten. Die gezielten und auch gleichzeitig offenen Fragen sollen dem
 Befragten die Möglichkeit bieten \cite{refbook:EFAF}, sich über die existierenden Schwachstellen des angebotenen
 Dienstes zu äußern und auch über verwendete oder in Naher Zukunft verwendete Sicherheitsmaßnahmen.
@@ -70,18 +70,18 @@ Dienstes zu äußern und auch über verwendete oder in Naher Zukunft verwendete 
 
 Die Tests für die Objekte dieser Untersuchung sollen im Labor der Hochschule Worms durchgeführt werden \cite{refbook:FWDL}. 
 Für beide Experimenten, \acrshort{nfc} und Smartcards, werden wir fünf Maschine und zwei Kopien unserer Hochschulkarte verwenden.
-Die Maschinen werden folgende Rolle übernehmen: Server und Hosts. Wir verwenden hier sowohl kabellose und als auch Kabelverbindung.
-Wir verwenden zusätzlich einen Authenticator, der der Gebäudezugang zu der Hochschule simuliert.
+Die Maschinen werden folgende Rolle übernehmen: Server und Hosts. Wir verwenden hier sowohl kabellose und als auch Kabelgebundene.
+Wir verwenden zusätzlich einen Authenticator, der den Gebäudezugang zu der Hochschule simuliert.
 
 
 \subsubsection{Angriffe und Härtungsmaßnahmen eines drahtlosen Servers}
 Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \acrfull{ddos}. Dazu werden 5 Maschinen
 verwendet, die folgende Rollen übernahmen sollen: Server, Host, Angreifer und zwei Leerlauf-Maschine oder auch 
-\textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschine, die für 
-Angriff verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine nicht bewusst, dass Angreifer ihre
+\textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschinen, die für 
+Angriffe verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine sich nicht bewusst, dass Angreifer ihre
 Maschine für diesen Zweck verwenden \cite{refart:XGDD}.}. Der Host soll eine Anfrage an den Server schicken, die
-eine Simulation von einem Bezahlvorgang darstellen soll. Der Server soll unter normalen Umstände auf diese Anfrage
-antworten und wenn er es als Angriff detektiert, keine Antwort geben. Dieses Verfahren findet sowohl bei drahtlosen
+eine Simulation von einem Bezahlvorgang darstellen soll. Der Server soll unter normalen Umständen auf diese Anfrage
+antworten und wenn er es aber als Angriff detektiert, keine Antwort geben. Dieses Verfahren findet sowohl bei drahtlosen
 Verbindungen als auch bei Smartcards statt.
 
 Im erstem Experiment wird der Host eine normale Anfrage an den Server schicken. Dieser wird ohne zusätzliche 
@@ -91,7 +91,7 @@ konfiguriert.
 Der erste Angriff soll mithilfe des Tools \acrfull{nmap}\footnote{\acrshort{nmap} ist eine freie und Open Source Anwendung
 für die Entdeckung und Sicherheitsüberprüfung von Netzwerken \cite{refst:nmap}.} durchgeführt werden. In diesem Angriff 
 benutzt der Angreifer eine weitere Maschine, um sich selbst zu verbergen und um den Angriff zu verstärken. Der Angreifer
-schickt gespoofte\footnote{Angreifer verwenden meistens legitimen Adresse von anderen Rechner, um die eigene Identität
+schickt gespoofte\footnote{Angreifer verwenden meistens legitime Adressen von anderen Rechnern, um die eigene Identität
 zu verbergen. In diesem Fall ist die eigene Adresse gefälscht \cite{refst:IPIO}.} Pakete\footnote{Pakete sind im Netzwerk
 die Einkapselung von Metainformationen, wie Quell-und Zieladresse Protokolltyp und Größe die Nutzdaten, wie Text, 
 Videos oder Bilder \cite{refbook:SWIS}.} an die zwei \textit{Zombies} und diese schicken sehr viele kleine Pakete in sehr
@@ -106,12 +106,12 @@ kurzen Abständen an den Server, um dessen Kapazität auszureizen, sodass er auf
 \end{figure}
 
 \subsubsection{Erwartete Beobachtung von Angriffsmöglichkeiten auf einen drahtlosen Servers}
-Vor dem Angriff wird erwartet, dass der Host normal mit dem Server kommunizieren kann. Für jede Anfragen sollte eine
-Antwort kommen. Während des Angriffes soll die Kommunikation mit dem Server entweder sehr langsam oder sogar unterbrochen 
-werden. In diesem Fall soll der Host selten eine Antwort auf seine Anfrage bekommen. In einigen Momenten soll es überhaubt 
+Vor dem Angriff wird erwartet, dass der Host normal mit dem Server kommunizieren kann. Für jede Anfrage sollte eine
+Antwort gesendet werden. Während des Angriffes soll die Kommunikation mit dem Server entweder sehr langsam oder sogar unterbrochen 
+werden. In diesem Fall soll der Host selten eine Antwort auf seine Anfrage bekommen. Teilweise soll es überhaubt 
 keine Antwort geben. 
 
-Seitens des Servers wird das Tool Wireshark\footnote{Wireshark ist eine Anwendung für die Analyse von Netzwerkprotokolle.
+Seitens des Servers wird das Tool Wireshark\footnote{Wireshark ist eine Anwendung für die Analyse von Netzwerkprotokollen.
 Es beschreibt ein- und ausgehende Pakete und dessen Bestandteile \cite{refst:wisa}.} verwendet, um die Ein- und Ausgehenden
 Pakete zu beobachten und zu analysieren \cite{refart:UBEC}. Unter normalen Umstände sollen die Pakete in einem angemessenen
 Zeitabstand kommen. Während des Angriffes soll der Server viele kleine Pakete ohne nützlichen Inhalt bekommen und in sehr 
@@ -127,10 +127,10 @@ kurzem Zeitabstand. Im folgenden gibt es eine Abbildung, die darstellt, wie Wire
 Um den Angriff zu verhindern, schlug \cite{refip:NYRS} vor, den Server erneut zu konfigurieren, indem er nur Anfragen von
 registrierten Hosts akzeptiert. Ein anderer Ansatz ist die Verwendung von \textit{Zero Trust Architektur}\footnote{Die 
 \textit{Zero Trust Architektur} geht davon aus, dass alle Zugänge auf IT-Ressource, sowohl von internen als auch von
-externen Quellen, nicht glaubenswürdig sind und eine Sicherheitsrisiko darstellen. Deshalb finden z.B. Authentifizierungsverfahren
-und Registrierung von Aktionen (Logs) für jeden Zugang statt \cite{refart:EBZT}.}, um solche und auch andere Angriffe 
-zu vermeiden \cite{refip:LYSP}.  Nach dieser Anpassung sollte sich der Angreifer nicht mehr in der Lage sein, sich mit dem Server
-verbinden, da er kein registrierter Nutzer ist. In der Aufzeichnung on Wireshark sollten nicht angemeldete Pakete direkt
+externen Quellen, nicht glaubwürdig sind und ein Sicherheitsrisiko darstellen. Deshalb gibt es z.B. Authentifizierungsverfahren
+und Registrierungen von Aktionen (Logs) für jeden Zugriff \cite{refart:EBZT}.}, um solche und auch andere Angriffe 
+zu vermeiden \cite{refip:LYSP}.  Nach dieser Anpassung sollte sich der Angreifer nicht mehr mit dem Server
+verbinden können, da er kein registrierter Nutzer ist. In der Aufzeichnung von Wireshark sollten nicht angemeldete Pakete direkt
 verworfen werden.
 
 
@@ -150,9 +150,9 @@ Unten gibt es eine Darstellung, die dieser Angriff besser erläutert:
 
 
 Konkret wollen wir eine Kopie unseres Studierendenausweises erstellen, um uns mit der Kopie Zugang zu den Hochschulgebäuden 
-zu verschaffen. Hierbei ist es relativ schwierig Härtungsmaßnahmen zu ergreifen. Die einzige Möglichkeit wäre laut dem
-\acrfullpl{bsi} hierbei eine Art \acrshort{2fa} oder \acrshort{mfa} \cite{refst:2fa}. Das würde konkret bedeuten, dass
-neben der Smartcard noch der Fingerabdruck z.B. benötigt wird, damit die Person Zugang zu einem Gebäude bekommt. Die untere
+zu verschaffen. Hierbei ist es relativ schwierig Härtungsmaßnahmen zu ergreifen. Die einzige Möglichkeit wäre laut 
+\acrfullpl{bsi} hierbei eine Art \acrshort{2fa} oder \acrshort{mfa} zu nutzen \cite{refst:2fa}. Das würde konkret bedeuten, dass
+neben der Smartcard zusätzlich zum Beispiel der Fingerabdruck benötigt wird, damit die Person Zugang zu einem Gebäude bekommt. Die untere
 Abbildung zeigt, wie ein \acrshort{mfa} zu einer Entscheidung kommt:
 
 
@@ -165,7 +165,7 @@ Abbildung zeigt, wie ein \acrshort{mfa} zu einer Entscheidung kommt:
 
 \subsubsection{Erwartete Beobachtung von Angriffsmöglichkeiten von Smartcard}
 Unter normalen Umstände sollte die falsche Kopie der Karte sofort von dem System abgelehnt werden. Während eines Angriffes
-sowohl die echte als auch die falsche Karte ermöglichen einen einwandfreien Zugang zu den Hochschulgebäuden.
+sollte sowohl die echte als auch die falsche Karte es ermöglichen einen einwandfreien Zugang zu den Hochschulgebäuden zu bekommen.
 
 
 \subsection{Literaturrecherche}
