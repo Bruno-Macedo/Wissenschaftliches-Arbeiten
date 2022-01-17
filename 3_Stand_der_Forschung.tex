@@ -34,7 +34,7 @@ Auch das kontaktlose Bezahlen, bei dem kleine Beträge nicht einmal mit einer \a
 werden müssen, nimmt immer weiter zu. Doch gerade bei dieser Variante ist es sehr einfach im Namen 
 eines anderen zu bezahlen, was ein Sicherheitsrisiko darstellt. Diese Tendenz hat \cite{refart:TDMP} auch 
 in seiner Studie beobachtet, bei der er die meist verbreiteten Zahlungsarten in verschiedenen Regionen
- dieser Welt vergleicht. 
+dieser Welt vergleicht. 
 
 
 Immer wenn mit Karte bezahlt wird, gehen die Kunden davon aus, dass die Zahlungsabwicklung sicher ist. 
@@ -59,7 +59,7 @@ einem Kunden und systemkritischen Mechanismen wurde von \cite{refart:HARE} so da
 \vfill
 
 \cite{refart:JTAS} beschreibt didaktisch ein Zahlungsverfahren, dass die Vertraulichkeit gewährleisten kann.
-Dieses findet in 2 getrennten Schritten statt.
+Dieses findet in zwei getrennten Schritten statt.
 
 Im ersten Schritt sendet der Nutzer seinen Namen. Es wird ein Sitzungsschlüssel generiert und 
 eine Anfrage für die Transaktion wird gesendet. Diese Anfrage wird daraufhin an den Händler geschickt, der 
@@ -70,7 +70,7 @@ Im zweiten Schritt wird die Zahlungsanfrage an das Zahlungsgerät gesendet, die 
 Uhrzeit enthält. Das Zahlungsgerät leitet die empfangene Nachricht an den Händler weiter. Dieser empfängt die Daten 
 und prüft auf Aktualität der Daten. Wenn dieser Test erfolgreich ist, wird wieder eine Nachricht an das Zahlungsgerät 
 geschickt. Dieses schickt die Daten dann wiederum an die Bank, welche überprüft, ob das Geld von dem Konto 
-abgebucht werden kann. Wenn das geprüft wurde, wird eine Nachricht an das Zahlungsgerät gesendet, in der steht, 
+abgebucht werden kann \cite{refip:ZYAM}. Wenn das geprüft wurde, wird eine Nachricht an das Zahlungsgerät gesendet, in der steht, 
 dass das Geld abgebucht wurde. 
 
 Besonders wichtig ist, dass bei jeder Kommunikation die Daten kryptographisch verschlüsselt werden, sodass es einem 

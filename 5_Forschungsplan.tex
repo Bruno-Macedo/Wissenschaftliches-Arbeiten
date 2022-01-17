@@ -42,7 +42,7 @@ Arbeit verdeutlichen.
 Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. Für diese Recherche 
 wollen wir Interviews mit IT-Sicherheitsfirmen führen \cite{refbook:FWDL}. Dazu haben wir zwei in Deutschland sitzende
 Firmen rausgesucht, die diese Art von Geschäft schon anbieten: ``REWE digital'' und ``myenso''. In diesem Fall werden wir
-mit Firmen arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Einsätze haben. Während die erste Firma  
+mit Firmen arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Ansätze haben. Während die erste Firma  
 ein großes Unternehmen ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist das zweite Unternehmen, das weniger
 als 100 Mitarbeiter beschäftigt \cite{refst:MYENSO}, etwas kleiner und auch neuer.
 
@@ -64,7 +64,7 @@ aus dem Englischen ``focus group'' bezeichnet eine Art von qualitativen Diskussi
 Moderators ein Thema bespricht \cite{refbook:APGF}.} verwendet, um die wichtigsten Anforderungen in Bezug auf Sicherheit bei 
 Zahlungsverfahren aufzudecken, zu analysieren und zu bewerten. Die gezielten und auch gleichzeitig offenen Fragen sollen dem
 Befragten die Möglichkeit bieten \cite{refbook:EFAF}, sich über die existierenden Schwachstellen des angebotenen
-Dienstes zu äußern und auch über verwendete oder in Naher Zukunft verwendete Sicherheitsmaßnahmen.
+Dienstes zu äußern und auch über verwendete oder in naher Zukunft verwendete Sicherheitsmaßnahmen.
 
 \subsection{Durchführung von Experimenten}
 
@@ -75,7 +75,7 @@ Wir verwenden zusätzlich einen Authenticator, der den Gebäudezugang zu der Hoc
 
 
 \subsubsection{Angriffe und Härtungsmaßnahmen eines drahtlosen Servers}
-Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \acrfull{ddos}. Dazu werden 5 Maschinen
+Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \acrfull{ddos}. Dazu werden fünf Maschinen
 verwendet, die folgende Rollen übernahmen sollen: Server, Host, Angreifer und zwei Leerlauf-Maschine oder auch 
 \textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschinen, die für 
 Angriffe verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine sich nicht bewusst, dass Angreifer ihre
@@ -96,7 +96,7 @@ zu verbergen. In diesem Fall ist die eigene Adresse gefälscht \cite{refst:IPIO}
 die Einkapselung von Metainformationen, wie Quell-und Zieladresse Protokolltyp und Größe die Nutzdaten, wie Text, 
 Videos oder Bilder \cite{refbook:SWIS}.} an die zwei \textit{Zombies} und diese schicken sehr viele kleine Pakete in sehr
 kurzen Abständen an den Server, um dessen Kapazität auszureizen, sodass er auf keine Anfragen mehr antworten kann 
-\cite{refip:KSDD}. Im folgenden gibt es eine Abbildung zu dieser Angriffstechnik:
+\cite{refip:KSDD}. In der folgenden Abbildung gibt es eine Abbildung zu dieser Angriffstechnik:
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refip_VDSD.png}}
@@ -136,7 +136,7 @@ verworfen werden.
 
 \subsubsection{Angriff und Härtungsmaßnahme von Smartcard}
 Um einen Angriff auf Smartcards zu starten, gibt es nicht nur eine Möglichkeit \cite{refart:TKSK}. Bei dem Angriff, den wir planen 
-durchzuführen erstellen wir eine Kopie einer Smartcard, sodass sie von der eigentlich echten Smartcard nicht zu unterscheiden ist.
+durchzuführen, erstellen wir eine Kopie einer Smartcard, sodass sie von der eigentlich echten Smartcard nicht zu unterscheiden ist.
 Da Smartcards unter anderem auch für Zugangskontrollen genutzt werden, könnte sich somit ein Angreifer relativ einfach durch 
 die Kopie der Smartcard Zugang zu einem Gebäude verschaffen, bei dem eigentlich eine Smartcard für den Zugang benötigt wird.
 Unten gibt es eine Darstellung, die dieser Angriff besser erläutert:
@@ -144,7 +144,7 @@ Unten gibt es eine Darstellung, die dieser Angriff besser erläutert:
 
 \begin{figure}[H]
   \centering{\includegraphics[width=8cm]{Bilder/refst_scpt.png}}
-  \caption{Abbildung eines Seitenkanalangriffes\\ Quelle: Tavares P., 2020}
+  \caption{Abbildung eines Seitenkanalangriffes\\ Quelle: Tavares, 2020}
   \label{fig:refart_scpt}
 \end{figure}
 
@@ -168,18 +168,18 @@ Unter normalen Umstände sollte die falsche Kopie der Karte sofort von dem Syste
 sollte sowohl die echte als auch die falsche Karte es ermöglichen einen einwandfreien Zugang zu den Hochschulgebäuden zu bekommen.
 
 
-\subsection{Literaturrecherche}
+% \subsection{Literaturrecherche}
 
-Die Literatur bezüglich Netzwerksicherheit, bargeldlose Zahlungsverfahren und Vending Machines, ist in den letzten 20 
-Jahren deutlich umfangreicher geworden. Da diese Begriffe viele und nahezu unendlich Konzepte decken, gehen wir hier
-auf spezifische Aspekte dieser Begriffe ein und zwar auf die Sicherheit von drahtlosen Zahlungsmethode und von 
-Smartcards. 
+% Die Literatur bezüglich Netzwerksicherheit, bargeldlose Zahlungsverfahren und Vending Machines, ist in den letzten 20 
+% Jahren deutlich umfangreicher geworden. Da diese Begriffe viele und nahezu unendlich Konzepte decken, gehen wir hier
+% auf spezifische Aspekte dieser Begriffe ein und zwar auf die Sicherheit von drahtlosen Zahlungsmethode und von 
+% Smartcards. 
 
-Folgende Quellen trugen zu der Suche nach vertrauenswürdiger Literatur bei:
+% Folgende Quellen trugen zu der Suche nach vertrauenswürdiger Literatur bei:
 
-\begin{itemize}
-    \item ScienceDirect
-    \item Researchg Gate
-    \item IEEE Xplore
-    \item Google Scholar.
-\end{itemize}
+% \begin{itemize}
+%     \item ScienceDirect
+%     \item Researchg Gate
+%     \item IEEE Xplore
+%     \item Google Scholar.
+% \end{itemize}
