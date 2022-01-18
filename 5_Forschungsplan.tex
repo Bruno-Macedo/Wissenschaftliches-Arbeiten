@@ -58,9 +58,9 @@ Folgende Quellen trugen zu der Suche nach vertrauenswürdiger Literatur bei:
 \subsection{Interview mit Click-and-Buy-Automat Firma}
 
 Die Sicherheit eines Bezahlsystems steht im Mittelpunkt jeder Firma, die \acrfull{cba} entwickeln. Für diese Recherche 
-wollen wir Interviews mit IT-Sicherheitsfirmen führen \cite{refbook:FWDL}. Dazu haben wir zwei in Deutschland sitzende
-Firmen rausgesucht, die diese Art von Geschäft schon anbieten: ``REWE digital'' und ``myenso''. In diesem Fall werden wir
-mit Firmen arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Ansätze haben. Während die erste Firma  
+wollen wir Interviews mit IT-Sicherheitsfirmen führen, um auf mögliche Probleme aufmerksam gemacht zu werden, die wir bisher nicht bedacht haben \cite{refbook:FWDL}. 
+Dazu haben wir zwei in Deutschland sitzende Firmen rausgesucht, die diese Art von Geschäft schon anbieten: ``REWE digital'' und ``myenso''. 
+In diesem Fall werden wir mit Firmen arbeiten, die zwar einen ähnlichen Dienst anbieten, aber verschiedene Ansätze haben. Während die erste Firma  
 ein großes Unternehmen ist und mehr als 300.000 Mitarbeiter hat \cite{refst:REWE}, ist das zweite Unternehmen, das weniger
 als 100 Mitarbeiter beschäftigt \cite{refst:MYENSO}, etwas kleiner und auch neuer.
 
@@ -71,7 +71,8 @@ Ketten will ``myenso'' Kunden in Orten erreichen, wo es weniger Einkaufsmöglich
 kein Interesse an großen Ketten haben.
 
 
-Für die Interviews stellen wir sowohl quantitative als auch qualitative Fragen. Aus dem quantitativen Fragenkatalog
+Für die Interviews werden wir IT-Sicherheitsexperten der Firmen in die Hochschule einladen. 
+Wir werden sowohl quantitative als auch qualitative Fragen stellen (Siehe Anhang). Aus dem quantitativen Fragenkatalog
 wollen wir messbare Daten hervorheben \cite{refbook:SRJR}, die den Umgang der Firma mit Sicherheit in Zahlungsverfahren
 beschreibt: Anzahl von \acrfull{cba} und von Mitarbeitern, die sich nur mit digitalen Sicherheitsverfahren beschäftigen;
 und Beschreibung möglicher Angriffe. Aus der qualitativen Fragensammlung wollen wir uns mit Verfahren 
@@ -87,13 +88,15 @@ Dienstes zu äußern und auch über verwendete oder in naher Zukunft verwendete 
 \subsection{Durchführung von Experimenten}
 
 Die Tests für die Objekte dieser Untersuchung sollen im Labor der Hochschule Worms durchgeführt werden \cite{refbook:FWDL}. 
-Für beide Experimenten, \acrshort{nfc} und Smartcards, werden wir fünf Maschine und zwei Kopien unserer Hochschulkarte verwenden.
-Die Maschinen werden folgende Rolle übernehmen: Server und Hosts. Wir verwenden hier sowohl kabellose und als auch Kabelgebundene.
+Das Ziel dieser Experimente ist es, die Dinge nicht nur in der Theorie durchzugehen, sondern auch echte analysierbare Daten zu bekommen,
+die wir im nächsten Schritt auswerten und bewerten können. Außerdem können wir dadurch eventuelle Gegenmaßnahmen erschließen.
+Für beide Experimente, \acrshort{nfc} und Smartcards, werden wir fünf Maschine und zwei Kopien unserer Hochschulkarte verwenden.
+Die Maschinen werden folgende Rolle übernehmen: Server und Hosts. Wir verwenden hier sowohl kabellose als auch kabelgebundene.
 Wir verwenden zusätzlich einen Authenticator, der den Gebäudezugang zu der Hochschule simuliert.
 
 
 \subsubsection{Angriffe und Härtungsmaßnahmen eines drahtlosen Servers}
-Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \acrfull{ddos}. Dazu werden fünf Maschinen
+Für dieses Experiment sollen folgende Angriffstechniken verwendet werden: \acrfull{ddos}. Dazu werden fünf Maschinen der Hochschule Worms
 verwendet, die folgende Rollen übernahmen sollen: Server, Host, Angreifer und zwei Leerlauf-Maschine oder auch 
 \textit{Zombie-botnet}\footnote{Leerlaufe, \textit{idle} oder \textit{Zombie-botnet} bezeichnen Maschinen, die für 
 Angriffe verwendet werden. In den meisten Fälle sind die Nutzer dieser Maschine sich nicht bewusst, dass Angreifer ihre
@@ -150,6 +153,7 @@ und Registrierungen von Aktionen (Logs) für jeden Zugriff \cite{refart:EBZT}.},
 zu vermeiden \cite{refip:LYSP}.  Nach dieser Anpassung sollte sich der Angreifer nicht mehr mit dem Server
 verbinden können, da er kein registrierter Nutzer ist. In der Aufzeichnung von Wireshark sollten nicht angemeldete Pakete direkt
 verworfen werden.
+Das Ziel dieses Expermientes ist es also, den Vorschlag von \cite{refip:NYRS} zu überprüfen und eventuell zusätzliche Gegenmaßnahmen zu bestimmen.
 
 
 \subsubsection{Angriff und Härtungsmaßnahme von Smartcard}
