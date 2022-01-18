@@ -30,6 +30,11 @@
 
 
 \begin{document}
+
+  \pagestyle{empty}
+    \includepdf[pages=1-2, pagecommand={\thispagestyle{empty}}]{Bilder/bewertung_ss2021.pdf}
+\pagestyle{plain} 
+    \setcounter{page}{1}  
     \include{titelseite}
     \tableofcontents
     \newpage
@@ -58,6 +63,9 @@
       \include{A_interview}
       \include{B_focusgruppe} 
     \end{appendices}
+
+    
+
 
         
 \end{document}
